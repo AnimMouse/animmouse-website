@@ -1,0 +1,3 @@
+[submodule "themes/hermit"]
+	path = themes/hermit
+	url = git@github.com:Track3/hermit.git
