@@ -1,3 +1,4 @@
-# animmouse-website
-AnimMouse's Website
-work in progress
+# AnimMouse's Website
+This is our website.
+
+Hosted on [Google App Engine](https://cloud.google.com/appengine/).

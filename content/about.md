@@ -8,4 +8,4 @@ Back in the old days, when I play GTA San Andreas multiplayer, I want my usernam
 
 This website is hosted on [Google App Engine](https://cloud.google.com/appengine/).
 
-The source of is website is hosted on [Github](https://github.com/AnimMouse/animmouse-website)
+The source of is website is hosted on [GitHub](https://github.com/AnimMouse/animmouse-website).
