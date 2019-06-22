@@ -1,0 +1,6 @@
+dispatch:
+- url: "animmouse.eu.org/*"
+  service: redirect
+  
+- url: "*.appspot.com/*"
+  service: redirect  
