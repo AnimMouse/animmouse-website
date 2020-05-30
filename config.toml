@@ -1,8 +1,10 @@
+title = "Anim Mouse"
 baseURL = "https://www.animmouse.eu.org"
 languageCode = "en-us"
-defaultContentLanguage = "en"
-title = "Anim Mouse"
 theme = "hermit"
+publishDir = "google-app-engine/animmouse-website/public"
+
+defaultContentLanguage = "en"
 # enableGitInfo = true
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
