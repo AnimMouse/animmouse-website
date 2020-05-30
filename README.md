@@ -10,5 +10,10 @@ Hosted on [Google App Engine](https://cloud.google.com/appengine/).
 ## Build Instructions
 
 1. Run hugo to build website.
-2. Put "public" folder to /google-app-engine/animmouse-website
-3. Deploy animmouse-website to Google App Engine.
+2. Deploy animmouse-website to Google App Engine.
+
+## Update Submodule
+
+```
+git submodule update --remote --merge
+```
