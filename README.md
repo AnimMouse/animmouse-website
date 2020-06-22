@@ -5,7 +5,7 @@ Powered by [Hugo](https://gohugo.io/).
 
 Hugo Theme is [Hermit](https://github.com/Track3/hermit).
 
-Hosted on [Google App Engine](https://cloud.google.com/appengine/).
+Hosted on [GitHub Pages](https://pages.github.com/).
 
 ## Build Instructions
 
