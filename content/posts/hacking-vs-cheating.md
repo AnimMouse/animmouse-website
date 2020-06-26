@@ -2,7 +2,6 @@
 title: "Hacking vs. Cheating"
 date: 2017-06-17T21:33:00+08:00
 ---
-
 "Hacking is like going to the top of Mt. Everest with a helicopter, while cheating is teleporting."
 
 When someone hacks, a lot of people says that he is cheating, but hacking and cheating is different.
