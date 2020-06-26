@@ -7,10 +7,11 @@ Hugo Theme is [Hermit](https://github.com/Track3/hermit).
 
 Hosted on [GitHub Pages](https://pages.github.com/).
 
-## Build Instructions
+Continuous Integration and Continuous Delivery (CI/CD) using [GitHub Actions](https://github.com/features/actions).
 
-1. Run hugo to build website.
-2. Deploy animmouse-website to Google App Engine.
+Automated Build using [GitHub Actions for Hugo](https://github.com/peaceiris/actions-hugo).
+
+Automated Deployment using [GitHub Actions for GitHub Pages](https://github.com/peaceiris/actions-gh-pages).
 
 ## Update Submodule
 
