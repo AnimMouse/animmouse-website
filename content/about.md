@@ -1,5 +1,6 @@
 ---
 title: "About Me"
+comments: false
 ---
 A person with interest and knowledge about computers.
 
