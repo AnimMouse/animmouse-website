@@ -1,10 +1,13 @@
-name: Hugo Deploy
+name: Deploy Hugo Website
 
 on:
   push:
     branches:
       - master
-
+  pull_request:
+    branches:
+      - master
+      
 jobs:
   deploy:
     runs-on: ubuntu-20.04
@@ -14,18 +17,25 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
+          
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-        
+          
       - name: Build Hugo
-        run: HUGO_ENV=production hugo
-
-      - name: Deploy
+        run: hugo
+        
+      - name: Upload Website Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: website
+          path: public
+          
+      - name: Deploy to GitHub Pages
+        if: ${{ github.event_name == 'push' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: public
           cname: www.animmouse.eu.org
