@@ -1,5 +1,5 @@
 # AnimMouse's Website
-This is our website.
+This is AnimMouse's blog.
 
 Powered by [Hugo](https://gohugo.io/).
 
@@ -12,9 +12,3 @@ Continuous Integration and Continuous Delivery (CI/CD) using [GitHub Actions](ht
 Automated Build using [GitHub Actions for Hugo](https://github.com/peaceiris/actions-hugo).
 
 Automated Deployment using [GitHub Actions for GitHub Pages](https://github.com/peaceiris/actions-gh-pages).
-
-## Update Submodule
-
-```
-git submodule update --remote --merge
-```
