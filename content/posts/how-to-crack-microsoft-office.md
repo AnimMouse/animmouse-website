@@ -4,23 +4,23 @@ date: 2020-08-02T00:33:54+08:00
 comments: false
 images:
 ---
-Before you proceed, you SHOULD follow this [guide](../how-to-install-microsoft-office-2016).
+Before you proceed, make sure Microsoft Office is volume licensed (not retail). If not, you SHOULD follow this [guide](../how-to-convert-microsoft-office-to-volume).
 
-Method 1: External KMS Server
+## Method 1: External KMS Server
 
 This method will activate Microsoft Office against external KMS servers, leaving no traces of activator.
 
 1. Open command prompt in administrator.
-2. Type `cd C:\Program Files\Microsoft Office\Office16` to change directory to MS Office.
-3. Type `cscript ospp.vbs /dstatus` to check the status of the license. It SHOULD be in KMS mode.
+2. Type `cd C:\Program Files\Microsoft Office\Office16` to change directory to MS Office. If you are using MS Office older than 2016, consult this [site](https://www.ryadel.com/en/microsoft-office-default-installation-folders-versions/) to know your installation folder.
+3. Type `cscript ospp.vbs /dstatus` to check the status of the license. It SHOULD be in KMS mode. If not, you are on retail license.
 4. Find a list of external KMS server [here](https://gist.github.com/CHEF-KOCH/29cac70239eed583ad1c96dcb6de364b).
 5. Type `cscript ospp.vbs /sethst:kms.com` replacing kms.com with your chosen KMS server.
 6. Type `cscript ospp.vbs /act` to activate.
-7. Type `cscript ospp.vbs /dstatus` to check the status of the license. It SHOULD be activated.
+7. Type `cscript ospp.vbs /dstatus` to check the status of the license. It SHOULD be activated. If not, try another KMS server.
 
-After 180 days, it will automatically activate.
+After 180 days, it will automatically activate against your chosen external KMS server.
 
-Method 2: Internal KMS Server / KMS Emulator
+## Method 2: Internal KMS Server / KMS Emulator
 
 This method will activate Microsoft Office against internal KMS emulator installed on your PC, so it can activate without internet.
 
@@ -28,8 +28,13 @@ This method will activate Microsoft Office against internal KMS emulator install
 2. Turn off any real time antivirus, it MAY trip off and block activation.
 3. Extract the archive.
 4. Run AutoRenewal-Setup.cmd as administrator.
+5. If you use Antivirus software, it is best to exclude this file from scanning protection: C:\Windows\System32\SppExtComObjHook.dll (If you are using Windows Defender, KMS_VL_ALL will automatically add exclusion for you.
 
 Source:
 
 1. Reddit [Piracy Megathread](https://www.reddit.com/r/Piracy/wiki/megathread/tools)
 2. MyDigitalLife [page](https://forums.mydigitallife.net/threads/kms_vl_all-smart-activation-script.79535/#post-838808)
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
+
+"Support the software developers, if you like this software, BUY IT!" - RELOADED
