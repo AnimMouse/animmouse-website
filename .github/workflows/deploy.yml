@@ -26,11 +26,12 @@ jobs:
       - name: Build Hugo
         run: hugo
         
-      - name: Upload Website Artifact
+      - name: Upload Website Source Code
+        if: ${{ github.event_name == 'pull_request' }}
         uses: actions/upload-artifact@v2
         with:
-          name: website
-          path: public
+          name: source
+          path: ${{ github.workspace }}
           
       - name: Deploy to GitHub Pages
         if: ${{ github.event_name == 'push' }}
