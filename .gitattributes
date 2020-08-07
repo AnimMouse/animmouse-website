@@ -1,0 +1,3 @@
+# Ignore scripts on linguist
+*.bat linguist-detectable=false
+*.sh linguist-detectable=false
