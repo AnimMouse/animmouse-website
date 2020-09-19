@@ -1,7 +1,7 @@
 ---
 title: "How to Crack Microsoft Office"
 date: 2020-08-02T00:33:54+08:00
-comments: false
+comments: true
 images:
 ---
 Before you proceed, make sure Microsoft Office is volume licensed (not retail). If not, you SHOULD follow this [guide](../how-to-convert-microsoft-office-to-volume).
