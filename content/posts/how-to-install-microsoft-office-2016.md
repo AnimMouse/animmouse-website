@@ -1,7 +1,7 @@
 ---
 title: "How to Install Microsoft Office 2016"
 date: 2020-08-02T00:25:58+08:00
-comments: false
+comments: true
 images:
 ---
 This installs the MSI volume licensed Microsoft Office 2016 Professional Plus that can be used to activate against your organization KMS server or crack using KMS. If you need to install retail version, just download it from [TechBench](https://tb.rg-adguard.net/public.php).

@@ -1,7 +1,7 @@
 ---
 title: "Convert SWF to Video"
 date: 2020-09-07T01:08:01+08:00
-comments: false
+comments: true
 images:
 draft: true
 ---

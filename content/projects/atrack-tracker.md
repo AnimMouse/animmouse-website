@@ -1,7 +1,7 @@
 ---
 title: "Atrack Torrent Tracker"
 date: 2020-08-02T00:20:21+08:00
-comments: false
+comments: true
 images:
 ---
 Atrack is a Bittorrent tracker designed from the ground up to run on [Google’s App Engine](https://cloud.google.com/appengine/) grid.

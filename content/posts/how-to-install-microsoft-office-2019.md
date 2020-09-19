@@ -1,7 +1,7 @@
 ---
 title: "How to Install Microsoft Office 2019"
 date: 2020-08-02T00:31:16+08:00
-comments: false
+comments: true
 images:
 ---
 This installs the C2R retail licensed Microsoft Office 2016 Professional Plus that cannot be used to activate against your organization KMS server or crack using KMS. You need to [convert](../how-to-convert-microsoft-office-to-volume) it first after installation to use it on KMS servers.

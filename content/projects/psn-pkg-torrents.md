@@ -1,7 +1,7 @@
 ---
 title: "PSN PKG Torrents"
 date: 2020-08-07T19:33:11+08:00
-comments: false
+comments: true
 images:
 ---
 [PlayStation Network PKG Torrents](https://github.com/AnimMouse/psn-pkg-torrents)

@@ -1,7 +1,7 @@
 ---
 title: "How to Install GUI on Google Compute Engine VPS"
 date: 2020-08-13T20:46:45+08:00
-comments: false
+comments: true
 images:
 ---
 Installing Graphical User Interface (GUI) on Ubuntu is easy on Google Compute Engine VPS, or any VPS that let's you have shell.
