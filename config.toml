@@ -1,5 +1,5 @@
 title = "Anim Mouse"
-baseURL = "https://www.animmouse.eu.org"
+baseURL = "https://www.animmouse.com"
 languageCode = "en-us"
 theme = "hermit"
 
@@ -15,7 +15,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 # disqusShortname = "yourdiscussshortname"
 
 [author]
-  name = "Shawn"
+  name = "Shawn M."
 
 [blackfriday]
   # hrefTargetBlank = true
@@ -62,7 +62,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 
   [[params.social]]
     name = "youtube"
-    url = "https://www.youtube.com/channel/UCiDwKkI6nPcJxwFTg0FUblw"
+    url = "https://www.youtube.com/c/AnimMouse/"
 
   [[params.social]]
     name = "github"

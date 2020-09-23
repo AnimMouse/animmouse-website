@@ -39,4 +39,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: public
-          cname: www.animmouse.eu.org
+          cname: www.animmouse.com
