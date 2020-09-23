@@ -1,4 +1,4 @@
 @echo off
 setlocal
-hugo server
+hugo server -D
 exit
