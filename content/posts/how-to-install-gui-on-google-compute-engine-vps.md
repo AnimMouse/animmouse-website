@@ -16,4 +16,4 @@ Installing Graphical User Interface (GUI) on Ubuntu is easy on Google Compute En
 
 If you restarted the VPS, just type `vncserver` again to run VNC server.
 
-If you want to resize the resolution of the desktop, type `vncserver geometry 1920x1080` replacing the resolution of your choice.
+If you want to resize the resolution of the desktop, type `vncserver -geometry 1920x1080` replacing the resolution of your choice.
