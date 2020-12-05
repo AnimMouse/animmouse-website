@@ -1,5 +1,5 @@
 ---
-title: "Ffmpeg Stable Autobuild"
+title: "FFmpeg Stable Autobuild"
 date: 2020-12-05T23:53:14+08:00
 comments: true
 images:
