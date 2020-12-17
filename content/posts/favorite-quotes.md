@@ -25,3 +25,7 @@ The truth is the truth regardless of whether someone has gone through an accredi
 Do one thing and do it well. - [Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)
 
 Human brain loves a challenge, but only if it is within an optimal zone of difficulty. - [James Clear](https://jamesclear.com/goldilocks-rule)
+
+A fine is a tax for doing wrong, a tax is a fine for doing well. - [Mark Twain](https://quotefancy.com/quote/862573/Mark-Twain-A-tax-is-a-fine-for-doing-well-a-fine-is-a-tax-for-doing-wrong)
+
+If you're absent during my struggle, don't expect to be present during my success. – [Will Smith](https://www.goodreads.com/quotes/7160107-if-you-re-absent-during-my-struggle-don-t-expect-to-be)
