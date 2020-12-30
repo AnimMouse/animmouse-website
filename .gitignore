@@ -1,2 +1,4 @@
 # Ignore generated website
-public
+public/
+# Ignore generated resources
+resources/_gen/
