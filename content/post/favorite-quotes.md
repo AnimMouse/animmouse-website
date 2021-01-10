@@ -1,8 +1,6 @@
 ---
 title: "Favorite Quotes"
 date: 2020-09-21T00:33:48+08:00
-comments: true
-images:
 ---
 ### List of my Favorite Quotes
 

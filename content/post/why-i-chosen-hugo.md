@@ -1,8 +1,6 @@
 ---
 title: "Why I Chosen Hugo"
 date: 2020-12-05T23:04:26+08:00
-comments: true
-images:
 ---
 TL;DR: Just the right abstraction.
 

@@ -1,8 +1,8 @@
 ---
 title: "Convert SWF to Video"
 date: 2020-09-07T01:08:01+08:00
-comments: true
-images:
+tags:
+  - tutorials
 ---
 ## How to Convert Adobe Flash SWF Flash file to Video/Movie/MP4/MKV file
 

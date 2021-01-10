@@ -1,8 +1,6 @@
 ---
 title: "Xeon vs. Ryzen"
 date: 2020-12-18T00:43:13+08:00
-comments: true
-images:
 ---
 ### Old Intel Xeon vs New AMD Ryzen
 
