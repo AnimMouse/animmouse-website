@@ -1,6 +1,8 @@
 ---
 title: "How to Install SumatraPDF for All Users"
 date: 2020-12-18T00:56:17+08:00
+tags:
+  - tutorials
 ---
 1. Download [SumatraPDF](https://www.sumatrapdfreader.org/download-free-pdf-viewer.html)
 2. Open Command Prompt
