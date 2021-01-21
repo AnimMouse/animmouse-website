@@ -3,7 +3,7 @@ This is AnimMouse's blog.
 
 Powered by [Hugo](https://gohugo.io/).
 
-Hugo Theme is [Hermit](https://github.com/Track3/hermit).
+Hugo Theme is [Stack](https://github.com/CaiJimmy/hugo-theme-stack).
 
 Hosted on [GitHub Pages](https://pages.github.com/).
 
