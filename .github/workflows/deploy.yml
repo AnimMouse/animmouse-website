@@ -23,7 +23,7 @@ jobs:
           hugo-version: 'latest'
           
       - name: Cache resources
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: resources
           key: resources-${{ github.run_number }}
