@@ -1,5 +1,3 @@
-baseurl: ''
-relativeURLs: true
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
