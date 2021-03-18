@@ -2,3 +2,5 @@
 public/
 # Ignore generated resources
 resources/_gen/
+# Ignore generated jsconfig.json
+assets/jsconfig.json

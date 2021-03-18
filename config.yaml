@@ -7,6 +7,9 @@ title: Anim Mouse
 # Change it to your Disqus shortname before using
 #disqusShortname: hugo-theme-stack
 
+# GA Tracking ID
+#googleAnalytics:
+
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn
 DefaultContentLanguage: en
@@ -15,7 +18,7 @@ permalinks:
     post: /p/:slug/
     projects: /pr/:slug/
     page: /:slug/
-    
+
 params:
     mainSections:
         - post
@@ -23,77 +26,85 @@ params:
     featuredImageField: image
     rssFullContent: true
     favicon:
-    
+
     footer:
         since: 2017
         customText: By Shawn M.
-        
+
     dateFormat:
         published: January 02, 2006 03:04:05 PM MST
         lastUpdated: January 02, 2006 03:04:05 PM MST
-        
+
     sidebar:
         emoji: 🖱️
         subtitle: A person with interest and knowledge about computers.
         avatar:
             local: true
             src: img/animmouse.png
-            
+
     article:
         math: false
         license:
             enabled: true
             default: Licensed under CC BY-NC-SA 4.0
-            
+
     comments:
         enabled: true
         provider: utterances
+
         utterances:
             repo: AnimMouse/animmouse-website-comments
             issueTerm: pathname
             label:
             theme: preferred-color-scheme
-            
+
+#        remark42:
+#            host:
+#            site:
+#            locale:
+
     widgets:
         enabled:
             - search
             - archives
             - tag-cloud
-            
+
         archives:
             limit: 5
-            path: archives
-            
+
         tagCloud:
             limit: 10
-            
+
     opengraph:
         twitter:
             # Your Twitter username
             site:
-            
+
             # Available values: summary, summary_large_image
             card: summary_large_image
-            
+
     defaultImage:
         opengraph:
             enabled: false
             local: false
             src:
-            
+
     colorScheme:
         # Display toggle
         toggle: true
-        
+
         # Available values: auto, light, dark
         default: auto
-        
+
     imageProcessing:
         cover:
             enabled: true
         content:
             enabled: true
-            
+
+### Custom menu
+### See https://docs.stack.jimmycai.com/configuration/custom-menu
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main:
         - identifier: home
@@ -101,25 +112,7 @@ menu:
           url: /
           weight: -100
           pre: home
-          
-        - identifier: about
-          name: About
-          url: about
-          weight: -90
-          pre: user
-          
-        - identifier: archives
-          name: Archives
-          url: archives
-          weight: -70
-          pre: archives
-          
-        - identifier: search
-          name: Search
-          url: search
-          weight: -60
-          pre: search
-          
+
 related:
     includeNewer: true
     threshold: 60
@@ -127,10 +120,10 @@ related:
     indices:
         - name: tags
           weight: 100
-          
+
         - name: categories
           weight: 200
-          
+
 markup:
     highlight:
         noClasses: false

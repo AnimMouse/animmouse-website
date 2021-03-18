@@ -1,6 +1,15 @@
 ---
-title: "About"
+title: About
 comments: false
+description: About Anim Mouse
+aliases:
+  - about-us
+  - about-hugo
+  - contact
+menu:
+    main: 
+        weight: -90
+        pre: user
 ---
 A person with interest and knowledge about computers.
 
