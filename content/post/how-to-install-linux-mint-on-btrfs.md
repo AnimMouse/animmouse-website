@@ -10,7 +10,7 @@ tags:
 ---
 #### Do you want to use Timeshift on Linux Mint just like System Restore in Windows?
 
-The B-tree file system or Btrfs is a file system on Linux that ~~behaves like the NTFS on Windows~~. Btrfs is actually better than NTFS because it uses Copy-on-write while NTFS is just a Journaling Filesystem\
+The B-tree file system or Btrfs is a file system on Linux that ~~behaves like the NTFS on Windows~~. Btrfs is actually better than NTFS because it uses Copy-on-write while NTFS is just a Journaling Filesystem.\
 The ext4 file system is a pure file system, do it's one job, no extra stuff like NTFS or Btrfs.\
 When you use Timeshift on ext4, it uses rsync to make copies of the files, above the file system, that is why it is slow.\
 When you use System Restore on NTFS, the copies of the files are made as an atomic transaction to the file system, that is why it is fast.\

@@ -2,6 +2,7 @@
 title: "FFmpeg Binaries"
 description: "FFmpeg Binaries Downloads"
 date: 2021-05-14T23:40:10+08:00
+lastmod: 2021-06-01T23:40:00+08:00
 hidden: false
 comments: true
 tags:
@@ -40,7 +41,6 @@ tags:
 * [ffmpeg-static-2020](https://github.com/TNTPro/ffmpeg-static-2020)
 
 #### Outdated
-* [AnimMouse ffmpeg-autobuild-gpl](https://github.com/AnimMouse/ffmpeg-autobuild-gpl)
 * [FFBinaries](https://ffbinaries.com/downloads)
 * [Zeranoe win32](https://web.archive.org/web/20200918193245/https://ffmpeg.zeranoe.com/builds/win32/)
 * [Zeranoe win64](https://web.archive.org/web/20200918193258/https://ffmpeg.zeranoe.com/builds/win64/)
