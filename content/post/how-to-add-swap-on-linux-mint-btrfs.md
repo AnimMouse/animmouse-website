@@ -2,8 +2,6 @@
 title: "How to Add Swap on Linux Mint Btrfs"
 description: "Add Swap on Linux Mint installed on Btrfs"
 date: 2021-03-20T21:20:24+08:00
-hidden: false
-comments: true
 tags:
   - tutorials
 ---

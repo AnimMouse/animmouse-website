@@ -2,8 +2,6 @@
 title: "Google Cloud response to Atrack Tracker"
 description: "What will happen if you run a torrent tracker on Google"
 date: 2021-06-02T23:53:11+08:00
-hidden: false
-comments: true
 ---
 ### What will happen if you run a tracker on Google App Engine while paying for it.
 Google contacted us because they said that [Atrack Tracker](https://github.com/AnimMouse/atrack) is exceeding its quota aggressively.\

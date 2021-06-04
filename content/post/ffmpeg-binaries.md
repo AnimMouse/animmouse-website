@@ -3,8 +3,6 @@ title: "FFmpeg Binaries"
 description: "FFmpeg Binaries Downloads"
 date: 2021-05-14T23:40:10+08:00
 lastmod: 2021-06-01T23:40:00+08:00
-hidden: false
-comments: true
 tags:
   - downloads
 ---

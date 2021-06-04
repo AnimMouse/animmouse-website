@@ -3,8 +3,6 @@ title: "How to Install Linux Mint on Btrfs"
 description: "Install Linux Mint on B-tree file system"
 date: 2021-03-20T19:51:42+08:00
 lastmod: 2021-05-14T23:40:10+08:00
-hidden: false
-comments: true
 tags:
   - tutorials
 ---

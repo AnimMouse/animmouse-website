@@ -3,8 +3,6 @@ title: "Windows 10 Enterprise LTSC 2019 Torrent"
 description: "Windows 10 LTSC 2019 Torrent Download"
 date: 2021-03-20T18:47:53+08:00
 lastmod: 2021-06-02T11:00:00+08:00
-hidden: false
-comments: true
 tags:
   - downloads
 ---
