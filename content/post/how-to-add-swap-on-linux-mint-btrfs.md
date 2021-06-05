@@ -2,6 +2,7 @@
 title: "How to Add Swap on Linux Mint Btrfs"
 description: "Add Swap on Linux Mint installed on Btrfs"
 date: 2021-03-20T21:20:24+08:00
+lastmod: 2021-06-05T22:25:00+08:00
 tags:
   - tutorials
 ---
@@ -32,6 +33,8 @@ UUID=XXXXXXXXXXXXXXX /swap btrfs defaults,noatime,subvol=@swap 0 0
 ```
 Use the UUID on the one of your /dev/sda2. Save the file.
 15. Remove the old swapfile created by the installer. `sudo rm -f /swapfile`
+
+Note: If your CPU is fast enough for zRAM, [use zRAM](../how-to-enable-zram-in-linux-mint/) instead.
 
 Sources:\
 [Can I have a swapfile on btrfs? 1](https://askubuntu.com/a/1206161)\

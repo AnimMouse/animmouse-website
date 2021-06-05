@@ -26,3 +26,5 @@ The source of is website is hosted on [GitHub](https://github.com/AnimMouse/anim
 
 This website contents is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)\
 This website source code is licensed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/)
+
+[Old Website on Blogger](https://old.animmouse.com/)

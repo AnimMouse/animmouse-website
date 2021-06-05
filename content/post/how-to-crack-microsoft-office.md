@@ -4,7 +4,7 @@ date: 2020-08-02T00:33:54+08:00
 tags:
   - tutorials
 ---
-Before you proceed, make sure Microsoft Office is volume licensed (not retail). If not, you SHOULD follow this [guide](../how-to-convert-microsoft-office-to-volume).
+Before you proceed, make sure Microsoft Office is volume licensed (not retail). If not, you SHOULD follow this [guide](../how-to-convert-microsoft-office-to-volume/).
 
 ## Method 1: External KMS Server
 

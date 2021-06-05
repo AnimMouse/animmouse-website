@@ -10,6 +10,6 @@ This installs the MSI volume licensed Microsoft Office 2016 Professional Plus th
 2. Mount ISO or extract ISO.
 3. Run setup.exe to install Microsoft Office 2016.
 
-If you want to crack Microsoft Office 2016, follow this [guide](../how-to-crack-microsoft-office).
+If you want to crack Microsoft Office 2016, follow this [guide](../how-to-crack-microsoft-office/).
 
 ISO file name: en_office_professional_plus_2016_x86_x64_dvd_6962141.iso

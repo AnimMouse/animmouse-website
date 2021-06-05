@@ -11,7 +11,7 @@ Because Microsoft Office 2019 does not provide MSI installation, only Click-to-R
 3. Go to [Office Customization Tool XML generator](https://config.office.com/) to generate your own config file.
 4. Answer the following questions.
 
-If you are following my [crack guide](../how-to-crack-microsoft-office), you need to follow this steps because the XML generator does not acknowledge Professional Plus 2019 Retail, only volume version.
+If you are following my [crack guide](../how-to-crack-microsoft-office/), you need to follow this steps because the XML generator does not acknowledge Professional Plus 2019 Retail, only volume version.
 
 1. Open your generated XML file.
 2. Change the product ID to ProPlus2019Retail like this `<Product ID="ProPlus2019Retail" PIDKEY="NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP">`
