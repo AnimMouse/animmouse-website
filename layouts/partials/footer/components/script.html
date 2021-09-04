@@ -1,7 +1,0 @@
-{{- partial "helper/external" (dict "Context" . "Namespace" "Vibrant") -}}
-
-{{- $opts := dict "minify" hugo.IsProduction -}}
-{{- $script := resources.Get "ts/main.ts" | js.Build $opts -}}
-
-<script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eaa0fef781cf45b2a68ed25ce2fc6138"}'></script><!-- End Cloudflare Web Analytics -->
