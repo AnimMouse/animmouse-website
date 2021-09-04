@@ -12,7 +12,7 @@ Sumatra PDF does not provide system wide GUI installer yet. So we need to use wo
 3. Change directory to the folder where you downloaded SumatraPDF. If it is in Downloads, enter `cd Downloads`
 4. Enter `SumatraPDF-3.3-64-install.exe -s -with-preview -d "C:\Program Files\SumatraPDF"`\
 Replace "SumatraPDF-3.3-64-install.exe" with the file name of the installer. (Leave at is if you don't need to change it.)\
-Replace "C:\Program Files\SumatraPDF" with your prefered install location. (Leave at is if you don't need to change it.)
+Replace "C:\Program Files\SumatraPDF" with your preferred install location. (Leave at is if you don't need to change it.)
 
 Explanation:\
 -s : silent installation. Doesn't show any UI\

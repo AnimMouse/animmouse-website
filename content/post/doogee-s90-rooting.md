@@ -1,11 +1,12 @@
 ---
 title: "Doogee S90 Rooting"
+description: "How to root the Doogee S90"
 date: 2021-01-26T19:16:21+08:00
 draft: true
 tags:
   - tutorials
 ---
-## How to root Doogee S90
+The Doogee S90 is currently my main phone.
 
 ### Download and install this first
 * [Universal ADB Drivers](https://adb.clockworkmod.com/)
