@@ -2,7 +2,7 @@
 title: "How to Install Sumatra PDF for All Users"
 description: "Install Sumatra PDF System Wide for All Users"
 date: 2020-12-18T00:56:17+08:00
-lastmod: 2021-07-09T00:39:00+08:00
+lastmod: 2021-09-07T22:35:00+08:00
 tags:
   - tutorials
 ---
@@ -18,6 +18,8 @@ Explanation:\
 -s : silent installation. Doesn't show any UI\
 -d <directory> : set directory where program is installed.\
 -with-preview : install shell preview (for viewing PDF on Explorer)
+
+You can also use my [Batch File](https://github.com/AnimMouse/batch-files/blob/main/SumatraPDF%20Install%20for%20All%20Users/SumatraPDF%20Install%20for%20All%20Users.cmd) for installation.
 
 Sources:\
 [SumatraPDF documentation](https://www.sumatrapdfreader.org/docs/Installer-cmd-line-arguments.html)\

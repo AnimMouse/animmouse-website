@@ -1,7 +1,7 @@
 ---
 title: "FFmpeg Stable Autobuild"
 date: 2020-12-05T23:53:14+08:00
-lastmod: 2021-06-05T22:18:00+08:00
+lastmod: 2021-09-07T23:10:00+08:00
 categories:
   - projects
 ---
@@ -25,6 +25,10 @@ Mentioned in:
 * [Multimedia Xpert](https://www.facebook.com/AtlasMultimediaXpert/posts/2782498562001023)
 * [FFmpeg Builds Internet Archive](https://archive.org/details/zeranoe)
 * [AiOwares](https://www.aiowares.com/archive/index.php?thread-907.html)
+* [r/FFmpeg](https://www.reddit.com/r/ffmpeg/comments/ikht2k/ffmpegzeranoecom_will_close_on_sep_18_2020/g3rm2nk)
+* [forums.ru-board.com](https://forum.ru-board.com/topic.cgi?forum=5&topic=45173)
 
-Used in:
+Used by:
 * [Advanced Youtube Client - AYC](https://www.videohelp.com/software/Advanced-Youtube-Client-AYC/version-history)
+
+For other builds of FFmpeg built by others, go to [My list of FFmpeg Binaries](../../p/ffmpeg-binaries/).
