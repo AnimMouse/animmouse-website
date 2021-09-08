@@ -4,8 +4,9 @@ description: "Activating/Cracking Microsoft Office Manually"
 date: 2020-08-02T00:33:54+08:00
 lastmod: 2021-09-07T22:05:00+08:00
 tags:
-  - tutorials
   - Microsoft Office
+  - Windows
+  - tutorials
 ---
 Before you proceed, make sure Microsoft Office is volume licensed (not retail). If not, you SHOULD follow this [guide](../how-to-convert-microsoft-office-to-volume/).
 

@@ -4,10 +4,12 @@ description: "Add Swap on Linux Mint installed on Btrfs"
 date: 2021-03-20T21:20:24+08:00
 lastmod: 2021-06-05T22:25:00+08:00
 tags:
+  - Linux Mint
+  - Ubuntu
+  - Linux
   - tutorials
 ---
-#### Linux Mint (Ubuntu) always use a swapfile on installation, 
-but swapfile on the main subvolume does not work on Btrfs.\
+Linux Mint (Ubuntu) always use a swapfile on installation, but swapfile on the main subvolume does not work on Btrfs.\
 To fix this, we need to create a new subvolume and put the swapfile there.
 
 Assuming that the / is on /dev/sda2 (/dev/sda1 if you are still using old BIOS, /dev/nvme0n1p2 if you are using NVME) and Linux Mint is installed with / on @ subvolume and /home is on @home subvolume.

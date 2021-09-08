@@ -4,6 +4,7 @@ description: "Install Sumatra PDF System Wide for All Users"
 date: 2020-12-18T00:56:17+08:00
 lastmod: 2021-09-07T22:35:00+08:00
 tags:
+  - Windows
   - tutorials
 ---
 Sumatra PDF does not provide system wide GUI installer yet. So we need to use workaround to install it system wide.

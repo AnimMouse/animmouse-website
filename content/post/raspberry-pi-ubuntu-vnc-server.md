@@ -3,9 +3,12 @@ title: "Raspberry Pi Ubuntu GUI VNC Server"
 description: "How to install headless GUI VNC Server on Raspberry Pi"
 date: 2021-09-01T01:27:40+08:00
 tags:
+  - Raspberry Pi
+  - Ubuntu
+  - Linux
   - tutorials
 ---
-### Use your Raspberry Pi as an headless server that has a GUI you can control using VNC.
+## Use your Raspberry Pi as an headless server that has a GUI you can control using VNC.
 
 Pick what desktop environment to use, if you want a barebones desktop just to control the GUI on the Raspberry Pi, use an window manager like Openbox.\
 Or if you want the full desktop experience on your Raspberry Pi, use a full desktop environment like LXQT.

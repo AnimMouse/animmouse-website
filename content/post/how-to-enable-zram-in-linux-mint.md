@@ -3,6 +3,9 @@ title: "How to Enable zRAM in Linux Mint"
 description: "Configure zRAM swap on Linux Mint"
 date: 2021-06-03T00:37:37+08:00
 tags:
+  - Linux Mint
+  - Ubuntu
+  - Linux
   - tutorials
 ---
 If you have a fast CPU and/or don't want swap eating up your storage, zRAM is for you.

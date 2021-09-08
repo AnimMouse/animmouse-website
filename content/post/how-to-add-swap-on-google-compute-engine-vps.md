@@ -2,6 +2,8 @@
 title: "How to Add Swap on Google Compute Engine VPS"
 date: 2020-08-14T12:20:12+08:00
 tags:
+  - Linux
+  - Ubuntu
   - tutorials
 ---
 By default, Google Compute Engine VPS does not come with any swap space, If your program eat more memory, you can just add swap space instead of increasing RAM.

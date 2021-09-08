@@ -3,8 +3,9 @@ title: "How to Activate Microsoft Office"
 description: "Activating/Cracking Microsoft Office"
 date: 2021-09-07T21:50:00+08:00
 tags:
-  - tutorials
   - Microsoft Office
+  - Windows
+  - tutorials
 ---
 Download [Microsoft Activation Scripts (MAS) 1.4](https://github.com/massgravel/Microsoft-Activation-Scripts/releases/tag/1.4) [here](https://github.com/massgravel/Microsoft-Activation-Scripts/releases/download/1.4/MAS_1.4_Password_1234.7z).
 

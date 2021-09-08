@@ -4,9 +4,10 @@ description: "FFmpeg Binaries Downloads"
 date: 2021-05-14T23:40:10+08:00
 lastmod: 2021-06-05T20:50:00+08:00
 tags:
+  - FFmpeg
   - downloads
 ---
-### List of all [FFmpeg](https://ffmpeg.org/) Binaries that I can find.
+## List of all [FFmpeg](https://ffmpeg.org/) Binaries that I can find.
 
 ### [Official](https://ffmpeg.org/download.html)
 #### Windows
@@ -35,6 +36,7 @@ tags:
 * [maeyanie](https://jenkins.maeyanie.com/job/ffmpeg/) (GPL, nightly, win-multi, static)
 * [sudo-nautilus](https://github.com/sudo-nautilus/FFmpeg-Builds-Win32/releases) (BtbN, GPL & LGPL, nightly & stable, win-32, static & shared)
 * [wang-bin avbuild](https://github.com/wang-bin/avbuild) (LGPL, nightly & stable, win-multi & win-ARM, shared)
+* [MPlayer Sherpya FFmpeg Builds](https://sourceforge.net/projects/mplayer-win32/files/FFmpeg/) (GPL, nightly, win-multi, static)
 
 ##### Build Scripts
 * [media-autobuild_suite](https://github.com/m-ab-s/media-autobuild_suite)
@@ -43,7 +45,6 @@ tags:
 * [ffmpeg-static-2020](https://github.com/TNTPro/ffmpeg-static-2020)
 
 ##### Outdated
-* [MPlayer Sherpya FFmpeg Builds](https://sourceforge.net/projects/mplayer-win32/files/FFmpeg/) (GPL, nightly, win-multi, static)
 * [Zeranoe win64](https://web.archive.org/web/20200918193258/https://ffmpeg.zeranoe.com/builds/win64/) (GPL & LGPL, nightly & stable, win-64, static & shared)
 * [Zeranoe win32](https://web.archive.org/web/20200918193245/https://ffmpeg.zeranoe.com/builds/win32/) (GPL & LGPL, nightly & stable, win-32, static & shared)
 * [ShareX](https://github.com/ShareX/FFmpeg) (GPL, stable, win-multi, static)
