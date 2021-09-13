@@ -1,7 +1,7 @@
 baseurl: https://www.animmouse.com
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 5
+paginate: 10
 title: Anim Mouse
 
 # Theme i18n support
@@ -61,10 +61,10 @@ params:
             - tag-cloud
 
         archives:
-            limit: 5
+            limit: 10
 
         tagCloud:
-            limit: 10
+            limit: 15
 
     opengraph:
         twitter:

@@ -18,8 +18,8 @@ Username Etymology:
 Back in the days around 2010, when I play GTA San Andreas SA-MP (San Andreas Multiplayer), I want my username to be "Anonymous" but because I was young at that time (I'm still learning English at that time), I misspelled it into AnimMouse and since then, I'm using it on Minecraft, etc. and that's the story of my username.
 
 [GitHub](https://github.com/AnimMouse) | [GitLab](https://gitlab.com/AnimMouse) | [Stack Overflow](https://stackoverflow.com/users/16732830/anim-mouse)\
-[YouTube](https://www.youtube.com/c/AnimMouse/) | [Facebook](https://www.facebook.com/anim.mouse/) | [Twitter](https://twitter.com/Anim_Mouse) | [Reddit](https://www.reddit.com/user/Anim_Mouse) | [TipidPC](https://tipidpc.com/useritems.php?username=AnimMouse)\
-[OpenStreetMap](https://www.openstreetmap.org/user/Anim%20Mouse)\
+[YouTube](https://www.youtube.com/c/AnimMouse/) | [YouTube Gaming](https://www.youtube.com/c/AnimsGamingMouse) | [Facebook](https://www.facebook.com/anim.mouse/) | [Twitter](https://twitter.com/Anim_Mouse) | [Reddit](https://www.reddit.com/user/Anim_Mouse) | [TipidPC](https://tipidpc.com/useritems.php?username=AnimMouse)\
+[OpenStreetMap](https://www.openstreetmap.org/user/Anim%20Mouse) | [VirusTotal](https://www.virustotal.com/gui/user/AnimMouse)\
 [Email](mailto:contact@animmouse.com)
 
 [Status page](https://status.animmouse.com/)
