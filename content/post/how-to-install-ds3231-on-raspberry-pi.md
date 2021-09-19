@@ -3,7 +3,7 @@ title: "How to Install DS3231 on Raspberry Pi"
 description: "Use/Enable the DS3231 RTC module on Raspberry Pi"
 date: 2021-09-04T22:59:45+08:00
 tags:
-  - Linux Mint
+  - Raspberry Pi
   - Ubuntu
   - Linux
   - tutorials
