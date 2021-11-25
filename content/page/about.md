@@ -1,6 +1,6 @@
 ---
 title: About
-description: "About Anim Mouse"
+description: About Anim Mouse
 date: 2020-12-30T15:40:00+08:00
 lastmod: 2021-09-07T22:50:00+08:00
 aliases:
@@ -10,7 +10,8 @@ aliases:
 menu:
     main: 
         weight: -90
-        pre: user
+        params:
+            icon: user
 ---
 Hi! I'm a person with interest and knowledge about computers and currently pursuing Computer Science.
 
