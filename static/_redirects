@@ -1,0 +1,2 @@
+/posts/* /p/:splat
+/projects/* /pr/:splat
