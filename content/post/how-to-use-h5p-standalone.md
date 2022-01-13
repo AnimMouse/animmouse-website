@@ -1,5 +1,5 @@
 ---
-title: "How to Use H5P Standalone"
+title: How to Use H5P Standalone
 date: 2021-11-05T16:59:05+08:00
 lastmod: 2021-11-26T01:03:00+08:00
 tags:
@@ -36,7 +36,7 @@ You can now host your H5P module on your website or host it on free static hosti
 
 ## Hosting standalone on free static hosting
 This is an [example H5P Standalone hosted on GitHub Pages](https://github.com/AnimMouse/h5p-standalone-gh-pages-example)
-You can view [here](https://h5p-standalone.114913.xyz) the website.
+You can view [here](https://h5p-standalone.0000004.xyz) the website.
 
 1. Create a repository in GitHub.
 2. Clone your repository.
