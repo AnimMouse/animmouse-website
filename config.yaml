@@ -28,7 +28,7 @@ params:
         lastUpdated: January 02, 2006 03:04:05 PM MST
 
     sidebar:
-        emoji: 🖱️
+        emoji:
         subtitle: A person with interest and knowledge about computers.
         avatar:
             enabled: true
