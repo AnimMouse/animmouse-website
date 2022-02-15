@@ -1,6 +1,6 @@
 ---
-title: "Windows 10 Enterprise LTSC LTSB 2016 Torrent"
-description: "Windows 10 LTSB 2016 Torrent Download"
+title: Windows 10 Enterprise LTSB 2016 Torrent
+description: Windows 10 LTSC LTSB 2016 Torrent Download
 date: 2021-03-20T18:47:52+08:00
 lastmod: 2021-09-01T01:15:00+08:00
 tags:

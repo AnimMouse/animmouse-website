@@ -1,6 +1,6 @@
 ---
-title: "How to Stream HEVC on YouTube HLS Using OBS"
-description: "Stream HEVC on YouTube using Open Broadcaster Software"
+title: How to Stream HEVC on YouTube HLS Using OBS
+description: Stream HEVC on YouTube using Open Broadcaster Software
 date: 2021-09-12T22:45:07+08:00
 tags:
   - OBS
@@ -31,4 +31,4 @@ For example if your URL is `https://a.upload.youtube.com/http_upload_hls?cid=***
 10. Now you can tweak Video and Audio Bitrate. My preferred settings are 3000 Kbps on Video for HEVC and 96 Kbps on Audio for libopus or 128 Kbps for aac.
 11. Save the settings.
 
-Now you can stream HEVC to YouTube by clicking "Start Recording" (not Start Steaming, yes this is counterintuitive but it is what it is. OBS should add a feature that allow custom output on Start Streaming.)
+Now you can stream HEVC to YouTube by clicking "Start Recording" (not Start Streaming, yes this is counterintuitive but it is what it is. OBS should add a feature that allow custom output on Start Streaming.)

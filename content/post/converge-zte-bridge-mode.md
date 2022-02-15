@@ -1,5 +1,6 @@
 ---
-title: "Converge ZTE Bridge Mode"
+title: Converge ZTE Bridge Mode
+description: How to bridge mode Converge ZTE modem
 date: 2021-01-26T19:17:48+08:00
 tags:
   - tutorials
