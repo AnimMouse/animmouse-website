@@ -45,13 +45,16 @@ params:
 
     comments:
         enabled: true
-        provider: utterances
+        provider: giscus
 
-        utterances:
-            repo: AnimMouse/animmouse-website-comments
-            issueTerm: pathname
-            label:
-            theme: preferred-color-scheme
+        giscus:
+            repo: AnimMouse/animmouse-website
+            repoID: MDEwOlJlcG9zaXRvcnkxOTE3NzcwODE=
+            category: General
+            categoryID: DIC_kwDOC25JOc4CBHiI
+            mapping: pathname
+            reactionsEnabled: 1
+            emitMetadata: 0
 
     widgets:
         enabled:
@@ -129,3 +132,9 @@ markup:
         startLevel: 2
     highlight:
         noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4
