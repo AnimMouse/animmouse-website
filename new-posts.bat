@@ -13,5 +13,5 @@ echo Use dash for spacing
 set Name=
 set /p Name=Name:
 if NOT defined Name goto Naming
-hugo new content\%category%\%Name%.md
+hugo new -k %category% content\%category%\%Name%.md
 exit
