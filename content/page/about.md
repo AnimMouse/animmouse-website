@@ -2,15 +2,15 @@
 title: About
 description: About Anim Mouse
 date: 2020-12-30T15:40:00+08:00
-lastmod: 2021-09-07T22:50:00+08:00
+lastmod: 2022-04-02T23:40:00+08:00
 aliases:
   - about-us
   - contact
 menu:
-    main: 
-        weight: -90
-        params:
-            icon: user
+  main:
+    weight: -90
+    params:
+      icon: user
 ---
 Hi! I'm a person with interest and knowledge about computers and currently pursuing Computer Science.
 
@@ -22,10 +22,9 @@ Back in the days around 2010, when I play GTA San Andreas SA-MP (San Andreas Mul
 [OpenStreetMap](https://www.openstreetmap.org/user/Anim%20Mouse) | [Wikipedia](https://en.wikipedia.org/wiki/User:AnimMouse) | [VirusTotal](https://www.virustotal.com/gui/user/AnimMouse)\
 [Email](mailto:contact@animmouse.com)
 
-[Status page](https://status.animmouse.com/)
-
-Bitcoin: 1AnimMouL6hbyFZEkCDp7iek8dGV6rpzm1\
-Bitcoin Cash: bitcoincash:qp44ad4798jhn5s6pky7k6pz8hthevuasyeaq2jyz8
+Bitcoin: `1AnimMouL6hbyFZEkCDp7iek8dGV6rpzm1`\
+Bitcoin Cash: `bitcoincash:qp44ad4798jhn5s6pky7k6pz8hthevuasyeaq2jyz8`\
+Ethereum: `0xDD712Ba48F68CD61452B063F84dF72Cc7d0FE099`
 
 This website is hosted on [Cloudflare Pages](https://pages.cloudflare.com).
 
