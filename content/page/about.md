@@ -2,7 +2,7 @@
 title: About
 description: About Anim Mouse
 date: 2020-12-30T15:40:00+08:00
-lastmod: 2022-04-02T23:40:00+08:00
+lastmod: 2022-05-04T01:10:00+08:00
 aliases:
   - about-us
   - contact
@@ -17,11 +17,11 @@ Hi! I'm a person with interest and knowledge about computers and currently pursu
 Username Etymology:
 Back in the days around 2010, when I play GTA San Andreas SA-MP (San Andreas Multiplayer), I want my username to be "Anonymous" but because I was young at that time (I'm still learning English at that time), I misspelled it into AnimMouse and since then, I'm using it on Minecraft, etc. and that's the story of my username.
 
-[GitHub](https://github.com/AnimMouse) | [GitLab](https://gitlab.com/AnimMouse) | [Stack Overflow](https://stackoverflow.com/users/16732830/anim-mouse) | [Hacker News](https://news.ycombinator.com/user?id=AnimMouse)\
-[YouTube](https://www.youtube.com/c/AnimMouse) | [YouTube Gaming](https://www.youtube.com/c/AnimsGamingMouse) | [Facebook](https://www.facebook.com/anim.mouse) | [Twitter](https://twitter.com/Anim_Mouse) | [Reddit](https://www.reddit.com/user/Anim_Mouse) | [TipidPC](https://tipidpc.com/useritems.php?username=AnimMouse)\
-[OpenStreetMap](https://www.openstreetmap.org/user/Anim%20Mouse) | [Wikipedia](https://en.wikipedia.org/wiki/User:AnimMouse) | [VirusTotal](https://www.virustotal.com/gui/user/AnimMouse)\
-[Email](mailto:contact@animmouse.com)
+Contact us:\
+Email: [contact@animmouse.com](mailto:contact@animmouse.com)\
+Discord: [Anim Mouse#2129](https://discordapp.com/users/879284380596596746)
 
+Donations:\
 Bitcoin: `1AnimMouL6hbyFZEkCDp7iek8dGV6rpzm1`\
 Bitcoin Cash: `bitcoincash:qp44ad4798jhn5s6pky7k6pz8hthevuasyeaq2jyz8`\
 Ethereum: `0xDD712Ba48F68CD61452B063F84dF72Cc7d0FE099`

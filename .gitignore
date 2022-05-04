@@ -4,3 +4,5 @@ public/
 resources/_gen/
 # Ignore generated jsconfig.json
 assets/jsconfig.json
+# Ignore Hugo build lock
+.hugo_build.lock

@@ -2,7 +2,7 @@
 title: Converge ZTE Bridge Mode
 description: How to bridge mode Converge ZTE modem F660 and F670L
 date: 2021-01-26T19:17:48+08:00
-lastmod: 2022-04-03T23:00:00+08:00
+lastmod: 2022-05-02T00:10:00+08:00
 tags:
   - tutorials
 ---
@@ -39,6 +39,7 @@ Tested on F660 and F670L
 5. Disable DHCP on LAN 4 port. (Much better than disabling DHCP on whole ONU.)
    1. Network > LAN > DHCP Port Service
    2. Under LAN4 dropbox, from Default, change to Wan.
+   3. Click Submit.
 
 ![Disable DHCP LAN4](Disable-DHCP-LAN4.png)
 
@@ -49,12 +50,12 @@ At this point 2 routers are connected to Converge's router (the CGNAT), your Con
 6. Disable connection from ONU.
    1. Go to Network > WAN > WAN Connection
    2. Under Connection Name dropbox, click "omci_ipv4_dhcp_1".
-   * Disable method
+   * Disable method. (Recommended method.)
       1. Uncheck Enable VLAN.
       2. Click Modify.
-   * Disconnect method
+   * Disconnect method. (Alternative method.)
       1. Click Release.
-   * Delete method
+   * Delete method. (Not recommended.)
       1. Click Delete.
 
 ![Disable connection ONU](Disable-connection-ONU.png)
@@ -66,7 +67,7 @@ Once na disable na yung connection ng ONU, mawawala yung ilaw ng "Internet" doon
 7. Disable WiFi
    1. Network > WLAN > Basic
    2. Under Wireless RF Mode dropbox, click Disabled.
-   3. Click Modify.
+   3. Click Submit.
 
 ![Disable WiFi](Disable-WiFi.png)
 

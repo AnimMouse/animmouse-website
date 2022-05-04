@@ -93,13 +93,7 @@ params:
             enabled: true
 
 menu:
-    main:
-        - identifier: home
-          name: Home
-          url: /
-          weight: -100
-          params:
-              icon: home
+    main: []
 
     social:
         - identifier: github
