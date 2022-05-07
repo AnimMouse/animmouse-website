@@ -23,11 +23,11 @@ If you are using Retail IMG, you need to convert the generated XML file to Retai
 ## Volume to Retail
 1. Open your generated XML file.
 2. Change the Product tag's ID and PIDKEY attribute.
-  1. For Microsoft Office 2021, change the Product tag to `<Product ID="ProPlus2021Retail" PIDKEY="FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH">`.
-  2. For Microsoft Office 2019, change the Product tag to `<Product ID="ProPlus2019Retail" PIDKEY="NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP">`.
+   1. For Microsoft Office 2021, change the Product tag to `<Product ID="ProPlus2021Retail" PIDKEY="FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH">`.
+   2. For Microsoft Office 2019, change the Product tag to `<Product ID="ProPlus2019Retail" PIDKEY="NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP">`.
 3. Change the Channel attribute to Monthly or Current. (PerpetualVL channel does not work on Retail.)
-  1. For Monthly for stability, change the Channel attribute to `Channel="Monthly"`.
-  2. For Current for the latest features, change the Channel attribute to `Channel="Current"`.
+   1. For Monthly for stability, change the Channel attribute to `Channel="Monthly"`.
+   2. For Current for the latest features, change the Channel attribute to `Channel="Current"`.
 
 In order to install Microsoft Office using your configuration file.
 

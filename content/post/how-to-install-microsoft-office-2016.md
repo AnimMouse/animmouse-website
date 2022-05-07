@@ -1,17 +1,19 @@
 ---
-title: "How to Install Microsoft Office 2016"
+title: How to Install Microsoft Office 2016
+description: Download and install Microsoft Office 2016
 date: 2020-08-02T00:25:58+08:00
-lastmod: 2021-09-08T22:30:00+08:00
+lastmod: 2022-05-07T12:10:00+08:00
 tags:
   - Microsoft Office
   - Windows
   - tutorials
   - downloads
 ---
-This will install the MSI volume licensed Microsoft Office 2016 Professional Plus that can be used to activate against your organization KMS server or activate/crack using KMS. If you need to install retail version, you can download it from [TechBench](https://tb.rg-adguard.net/public.php).\
+This will download and install Microsoft Office 2016 Professional Plus.\
+This will install the MSI volume licensed Office 2016 that can be used to activate against your organization KMS server or activate/crack using KMS. If you need to install retail version, you can download it from [TechBench](https://tb.rg-adguard.net/public.php).\
 Includes both 64-bit & 32-bit.
 
-1. Download Microsoft Office 2016 Professional Plus volume ISO on [the-eye.eu](https://the-eye.eu/) [Download Link](https://the-eye.eu/public/MSDN/Office%202016/en_office_professional_plus_2016_x86_x64_dvd_6962141.iso).
+1. Download Microsoft Office 2016 Professional Plus volume ISO on torrent. [Magnet Link](magnet:?xt=urn:btih:fbfbffeb60968c1abe6a3be5cef96ffe4c50a9e4).
 2. Mount or extract ISO.
 3. Run setup.exe to install Microsoft Office 2016.
 
