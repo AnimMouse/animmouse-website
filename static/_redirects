@@ -1,2 +1,6 @@
-/posts/* /p/:splat
-/projects/* /pr/:splat
+/about-us/ /about/ 308
+/contact/ /about/ 308
+/p/how-to-customize-microsoft-office-2019-installation/ /p/how-to-customize-microsoft-office-c2r-installation/ 308
+/p/how-to-crack-microsoft-office/ /p/how-to-activate-microsoft-office/ 308
+/posts/* /p/:splat 308
+/pr/* /projects/:splat 308

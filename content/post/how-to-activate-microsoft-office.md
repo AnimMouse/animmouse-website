@@ -3,8 +3,6 @@ title: How to Activate Microsoft Office
 description: Activating/Cracking Microsoft Office
 date: 2021-09-07T21:50:00+08:00
 lastmod: 2022-05-04T22:50:00+08:00
-aliases:
-  - how-to-crack-microsoft-office
 tags:
   - Microsoft Office
   - Windows

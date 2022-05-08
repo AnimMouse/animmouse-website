@@ -43,11 +43,14 @@ links:
   - title: VirusTotal
     description: VirusTotal Account
     website: https://www.virustotal.com/gui/user/AnimMouse
+  - title: 0000004.xyz
+    description: Anim Mouse’s project domain
+    website: https://www.0000004.xyz
 menu:
-  main: 
+  main:
     weight: -50
     params:
       icon: link
 comments: false
 ---
-My list of accounts
+My list of accounts and domains.

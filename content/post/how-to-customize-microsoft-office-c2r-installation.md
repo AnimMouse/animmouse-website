@@ -3,8 +3,6 @@ title: How to Customize Microsoft Office C2R Installation
 description: Exclude Office apps that you don't need to install
 date: 2020-08-02T00:39:41+08:00
 lastmod: 2022-05-04T22:35:00+08:00
-aliases:
-  - how-to-customize-microsoft-office-2019-installation
 tags:
   - Microsoft Office
   - Windows

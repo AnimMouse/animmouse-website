@@ -3,9 +3,6 @@ title: About
 description: About Anim Mouse
 date: 2020-12-30T15:40:00+08:00
 lastmod: 2022-05-04T01:10:00+08:00
-aliases:
-  - about-us
-  - contact
 menu:
   main:
     weight: -90
