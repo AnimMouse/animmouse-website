@@ -1,5 +1,5 @@
 ---
-title: "Atrack Torrent Tracker"
+title: Atrack Torrent Tracker
 date: 2020-08-02T00:20:21+08:00
 categories:
   - projects

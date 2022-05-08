@@ -8,6 +8,7 @@ DefaultContentLanguage: en
 
 permalinks:
     post: /p/:slug/
+    projects: /projects/:slug/
     page: /:slug/
 
 params:

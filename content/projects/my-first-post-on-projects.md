@@ -1,5 +1,5 @@
 ---
-title: "My First Post on Projects"
+title: My First Post on Projects
 date: 2019-06-22T13:55:24+08:00
 categories:
   - projects
