@@ -1,11 +1,11 @@
 ---
-title: "FFmpeg Stable Autobuild"
+title: FFmpeg Stable Autobuild
 date: 2020-12-05T23:53:14+08:00
 lastmod: 2021-09-07T23:10:00+08:00
 categories:
   - projects
 ---
-### [FFmpeg Stable Autobuild](https://github.com/AnimMouse/ffmpeg-stable-autobuild)
+# [FFmpeg Stable Autobuild](https://github.com/AnimMouse/ffmpeg-stable-autobuild)
 
 FFmpeg automatic stable build creator that uses GitHub Actions.
 

@@ -1,11 +1,11 @@
 ---
-title: "FFmpeg Autobuild"
+title: FFmpeg Autobuild
 date: 2020-12-05T23:53:07+08:00
 lastmod: 2021-09-07T23:10:00+08:00
 categories:
   - projects
 ---
-### [FFmpeg Autobuild](https://github.com/AnimMouse/ffmpeg-autobuild)
+# [FFmpeg Autobuild](https://github.com/AnimMouse/ffmpeg-autobuild)
 
 FFmpeg automatic latest build creator that uses GitHub Actions.
 

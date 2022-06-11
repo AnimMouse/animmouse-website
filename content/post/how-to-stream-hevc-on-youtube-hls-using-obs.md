@@ -1,14 +1,16 @@
 ---
 title: How to Stream HEVC on YouTube HLS Using OBS
-description: Stream HEVC on YouTube using Open Broadcaster Software
+description: Stream HEVC (H.265) on YouTube using Open Broadcaster Software
 date: 2021-09-12T22:45:07+08:00
+lastmod: 2022-06-10T13:40:00+08:00
 tags:
   - OBS
+  - YouTube
   - tutorials
 ---
-YouTube now [supports HEVC ingestion](https://developers.google.com/youtube/v3/live/guides/ingestion-protocol-comparison) if you use HTTP Live Streaming (HLS), but Open Broadcaster Software (OBS) as of version 27.0.1 still does not support steaming HEVC on YouTube HLS. So in order for us to stream HEVC on OBS, we need to use OBS's FFmpeg custom output to URL on it's recording.
+YouTube now [supports HEVC (H.265) ingestion](https://developers.google.com/youtube/v3/live/guides/ingestion-protocol-comparison) if you use HTTP Live Streaming (HLS), but Open Broadcaster Software (OBS) as of version 27.2.4 still does not support streaming HEVC on YouTube HLS. So in order for us to stream HEVC on OBS, we need to use OBS's FFmpeg custom output to URL on it's recording.
 
-For best results have a hardware encoder that can encode to HEVC.
+For best results have a hardware encoder that can encode to HEVC (H.265).
 
 ## Create YouTube HLS Stream Key
 1. Click Select stream key.
