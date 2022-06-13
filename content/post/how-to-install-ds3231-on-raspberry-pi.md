@@ -28,7 +28,7 @@ The DS3231 is a low-cost, extremely accurate I²C real-time clock (RTC) with an 
 ## For Raspberry Pi OS (formerly Raspbian):
 
 1. Install the DS3231 module to the Raspberry Pi's GPIO.
-1. Open the config.txt file located on the boot partition. (/boot/firmware/config.txt inside Raspberry Pi or D:\config.txt (drive letter might be different) in Windows.)
+1. Open the config.txt file located on the boot partition. (/boot/config.txt inside Raspberry Pi or D:\config.txt (drive letter might be different) in Windows.)
 2. Uncomment the `dtparam=i2c_arm=on` on the config.txt by removing the # in front of the line. Or use raspi-config to enable I²C.
 3. Add the following text below the `[all]` to your config.txt: `dtoverlay=i2c-rtc,ds3231`.
 4. Test the RTC by entering this command `sudo hwclock -r`. A time string should appear.

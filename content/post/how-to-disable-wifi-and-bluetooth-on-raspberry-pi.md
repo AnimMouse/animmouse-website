@@ -29,7 +29,7 @@ Note this disable the interfaces at the hardware level, not software, so it is d
 
 ## For Raspberry Pi OS (formerly Raspbian):
 
-1. Open the config.txt file located on the boot partition. (/boot/firmware/config.txt inside Raspberry Pi or D:\config.txt (drive letter might be different) in Windows.)
+1. Open the config.txt file located on the boot partition. (/boot/config.txt inside Raspberry Pi or D:\config.txt (drive letter might be different) in Windows.)
 2. Add `dtoverlay=disable-wifi` under `[all]` to disable Wi-Fi.
 3. Add `dtoverlay=disable-bt` under `[all]` to disable Bluetooth.
 4. Save and reboot your Raspberry Pi.
