@@ -1,6 +1,12 @@
 ---
 title: Links
 links:
+  - title: Discord Server
+    description: Anim Mouse's server invite link
+    website: https://discord.gg/XJwgb339Gk
+  - title: 0000004.xyz
+    description: Anim Mouse’s project domain
+    website: https://www.0000004.xyz
   - title: GitHub
     description: GitHub Account
     website: https://github.com/AnimMouse
@@ -28,9 +34,9 @@ links:
   - title: Reddit
     description: Reddit Account
     website: https://www.reddit.com/user/Anim_Mouse
-  - title: Discord
-    description: Discord Server
-    website: https://discord.gg/P7KfKcBsW3
+  - title: Discord Profile
+    description: Anim Mouse#2129
+    website: https://discordapp.com/users/879284380596596746
   - title: TipidPC
     description: TipidPC Account
     website: https://tipidpc.com/useritems.php?username=AnimMouse
@@ -43,9 +49,6 @@ links:
   - title: VirusTotal
     description: VirusTotal Account
     website: https://www.virustotal.com/gui/user/AnimMouse
-  - title: 0000004.xyz
-    description: Anim Mouse’s project domain
-    website: https://www.0000004.xyz
 menu:
   main:
     weight: -50
