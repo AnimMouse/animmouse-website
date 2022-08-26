@@ -1,7 +1,7 @@
 ---
 title: How to Use H5P Standalone
 date: 2021-11-05T16:59:05+08:00
-lastmod: 2021-11-26T01:03:00+08:00
+lastmod: 2022-08-24T22:39:00+08:00
 tags:
   - tutorials
 ---
@@ -13,19 +13,19 @@ You can now host your H5P module on your website or host it on free static hosti
 2. Extract it to your website root directory.
 3. Rename the extension of your H5P module from `.h5p` file to `.zip`.
 4. Extract the `.zip` file contents into your `h5p-folder` folder inside of your website root directory.
-5. Add this code on the <head> of your website. This will load the scripts for H5P Standalone.
+5. Add this code on the `<head>` of your website. This will load the scripts for H5P Standalone.
 ```
 <link type="text/css" rel="stylesheet" media="all" href="./dist/styles/h5p.css" />
 <script type="text/javascript" src="./dist/main.bundle.js"></script>
 ```
-6. Place this code on where do you want to put the H5P player on the <body> of your website.
+6. Place this code on where do you want to put the H5P player on the `<body>` of your website.
 ```
 <div id="h5p-container"></div>
 <script type="text/javascript">
   const {
     H5P
   } = H5PStandalone;
-  new H5P(document.getElementById('h5p-container'),  {
+  new H5P(document.getElementById('h5p-container'), {
     h5pJsonPath: 'h5p-folder',
     frameJs: './dist/frame.bundle.js',
     frameCss: './dist/styles/h5p.css'
@@ -36,7 +36,7 @@ You can now host your H5P module on your website or host it on free static hosti
 
 ## Hosting standalone on free static hosting
 This is an [example H5P Standalone hosted on GitHub Pages](https://github.com/AnimMouse/h5p-standalone-gh-pages-example)
-You can view [here](https://h5p-standalone.0000004.xyz) the website.
+You can view [here](https://h5p-standalone.44444444.xyz) the website.
 
 1. Create a repository in GitHub.
 2. Clone your repository.
@@ -62,7 +62,7 @@ You can view [here](https://h5p-standalone.0000004.xyz) the website.
     const {
       H5P
     } = H5PStandalone;
-    new H5P(document.getElementById('h5p-container'),  {
+    new H5P(document.getElementById('h5p-container'), {
       h5pJsonPath: 'h5p-folder',
       frameJs: './dist/frame.bundle.js',
       frameCss: './dist/styles/h5p.css'

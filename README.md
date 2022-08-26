@@ -1,6 +1,19 @@
 # AnimMouse's Website
 This is AnimMouse's blog.
 
+## Deployment
+1. `git submodule update --init --recursive`
+2. `hugo`
+
+## Testing
+1. `hugo server -D`
+
+### Submodule
+```
+git submodule update --init --recursive
+git submodule update --recursive
+```
+
 Powered by [Hugo](https://gohugo.io).
 
 Hugo Theme is [Stack](https://github.com/CaiJimmy/hugo-theme-stack).
