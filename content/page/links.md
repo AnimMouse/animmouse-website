@@ -4,6 +4,9 @@ links:
   - title: Discord Server
     description: Anim Mouse's server invite link
     website: https://discord.gg/XJwgb339Gk
+  - title: 44444444.xyz
+    description: Anim Mouse’s project domain
+    website: https://www.44444444.xyz
   - title: 0000004.xyz
     description: Anim Mouse’s project domain
     website: https://www.0000004.xyz
@@ -37,6 +40,9 @@ links:
   - title: Discord Profile
     description: Anim Mouse#2129
     website: https://discordapp.com/users/879284380596596746
+  - title: GOG
+    description: GOG Profile
+    website: https://www.gog.com/u/AnimMouse
   - title: TipidPC
     description: TipidPC Account
     website: https://tipidpc.com/useritems.php?username=AnimMouse

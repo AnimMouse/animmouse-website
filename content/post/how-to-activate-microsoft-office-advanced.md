@@ -1,8 +1,8 @@
 ---
-title: "How to Activate Microsoft Office (Advanced)"
-description: "Activating/Cracking Microsoft Office Manually"
+title: How to Activate Microsoft Office (Advanced)
+description: Activating/Cracking Microsoft Office Manually
 date: 2020-08-02T00:33:54+08:00
-lastmod: 2021-09-07T22:05:00+08:00
+lastmod: 2022-09-01T13:20:00+08:00
 tags:
   - Microsoft Office
   - Windows
@@ -20,7 +20,7 @@ This method will activate Microsoft Office against external KMS servers, leaving
 2. Type `cd C:\Program Files\Microsoft Office\Office16` to change directory to MS Office. If you are using MS Office older than 2016, consult this [site](https://www.ryadel.com/en/microsoft-office-default-installation-folders-versions/) to know your installation folder.
 3. Type `cscript ospp.vbs /dstatus` to check the status of the license. It SHOULD be in KMS mode. If not, you are on retail license.
 4. Find a list of external KMS server [here](https://gist.github.com/CHEF-KOCH/29cac70239eed583ad1c96dcb6de364b).
-5. Type `cscript ospp.vbs /sethst:kms.com` replacing kms.com with your chosen KMS server.
+5. Type `cscript ospp.vbs /sethst:kms.example.com` replacing kms.example.com with your chosen KMS server.
 6. Type `cscript ospp.vbs /act` to activate. If it failed to activate after 2 tries, try to [troubleshoot](#troubleshooting-method-1) it.
 7. Type `cscript ospp.vbs /dstatus` to check the status of the license. It should be activated. If not, try another KMS server.
 
