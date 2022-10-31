@@ -2,16 +2,18 @@
 title: Converge ZTE Bridge Mode
 description: How to bridge mode Converge ZTE modem F660 and F670L
 date: 2021-01-26T19:17:48+08:00
-lastmod: 2022-05-02T00:10:00+08:00
+lastmod: 2022-10-25T20:55:00+08:00
 tags:
   - tutorials
 ---
 # How to bridge mode Converge ZTE modem
 Tested on F660 and F670L
 
+## Setup bridge mode
+
 1. Sign in using SuperAdmin.
-   1. Username: admin
-   2. Password: Converge@zte123
+   1. Username: `admin`
+   2. Password: `Converge@zte123`
 2. Backup configurations.
    1. Administration > System Management > User Configuration Management > Backup Configuration
    2. Administration > System Management > Default Configuration Management > Backup Configuration
@@ -71,6 +73,22 @@ Once na disable na yung connection ng ONU, mawawala yung ilaw ng "Internet" doon
 
 ![Disable WiFi](Disable-WiFi.png)
 
-Notes:
-No need to clone MAC address, hindi ganon ka stricto si Converge sa mga naka bridge mode. But you can clone it if you want.\
-Kapag naka connect ka doon sa own router mo, di mo na ma-aacess yung GUI ng ONU, para ma-aacess mo yung ONU, connect ka ulit doon sa LAN 1-3 ng ONU.
+Notes:\
+No need to clone MAC address, hindi ganon ka stricto si Converge sa mga naka bridge mode. But you can clone it if you want.
+
+## Connect to bridged modem behind router
+Normally when in bridge mode, you can't access the modem GUI from the router, requiring you to connect to LAN 1-3 just to disable connection from ONU. But if you have a router that allows adding multiple IPs like MikroTik, you can access the bridged modem behind your router.
+
+1. Change the modem LAN IP address to a different subnet than your router. For example, if your router has `192.168.1.1`, change the IP address of the modem to `192.168.10.1`.
+   1. Network > LAN > DHCP Server
+   2. Change LAN IP Address to a different subnet, my router has `192.168.1.1`, so I change it to `192.168.10.1`.
+   3. Click Submit.
+
+![LAN IP Address](LAN-IP-Address.png)
+
+2. Add another IP address on the WAN side of the router. The router IP address should be in the same subnet and different address as the modem.
+   1. For MikroTik, if your modem is on `192.168.10.1`, use this command:\
+   `/ip address add address=192.168.10.2/24 interface=ether1`\
+   This will add another IP address of the router to `192.168.10.2`, allowing you to access the modem at `192.168.10.1`.
+
+3. Now you can access the modem from behind the router by going to `192.168.10.1`.

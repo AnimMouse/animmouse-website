@@ -5,6 +5,7 @@ date: 2022-08-26T23:58:18+08:00
 lastmod: 2022-09-01T13:24:00+08:00
 tags:
   - Windows
+  - IPv6
   - tutorials
 ---
 Windows 10 version 1803 and later disable Teredo by default, so we need to enable it in order to get IPv6 behind NAT using Teredo.

@@ -4,6 +4,7 @@ description: Internet Service Providers in the Philippines with IPv6
 date: 2022-04-03T23:22:58+08:00
 lastmod: 2022-05-04T23:30:00+08:00
 tags:
+  - IPv6
   - dev
 ---
 List of Internet Service Providers in the Philippines with Internet Protocol version 6
