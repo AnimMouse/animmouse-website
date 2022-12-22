@@ -2,12 +2,12 @@
 title: Converge ZTE Bridge Mode
 description: How to bridge mode Converge ZTE modem F660 and F670L
 date: 2021-01-26T19:17:48+08:00
-lastmod: 2022-10-25T20:55:00+08:00
+lastmod: 2022-12-21T19:47:00+08:00
 tags:
   - tutorials
 ---
 # How to bridge mode Converge ZTE modem
-Tested on F660 and F670L
+Tested on ZTE F660 and ZTE F670L
 
 ## Setup bridge mode
 
@@ -73,8 +73,15 @@ Once na disable na yung connection ng ONU, mawawala yung ilaw ng "Internet" doon
 
 ![Disable WiFi](Disable-WiFi.png)
 
-Notes:\
-No need to clone MAC address, hindi ganon ka stricto si Converge sa mga naka bridge mode. But you can clone it if you want.
+## Clone MAC address
+I have discovered that Converge uses modem's MAC address for bandwidth limiter, since I haven't cloned the MAC address ever since, and still getting 120 mbps while I should be getting 250 mbps, I tried to clone MAC address, and the speed becomes 250 mbps. So it is necessary, not mandatory, to clone the MAC address.
+
+1. Go to Status > Network Interface > WAN Connection
+2. The WAN MAC address under omci_ipv4_dhcp_1 is the one you should copy, and clone it to your router's WAN interface.
+
+If you cloned your MAC address, every time the router got rebooted, the modem will connect to the internet, it will cause a MAC address collision, preventing you from accessing the internet, you need to disable the connection first from the modem before the router gets a DHCP lease so that the router will get internet.\
+This is why it is better if your router supports multiple IP address so that you can disable it without connecting to LAN 1-3 ports.\
+If a collision already happened, just disable the connection from ONU, and renew DHCP lease on the router.
 
 ## Connect to bridged modem behind router
 Normally when in bridge mode, you can't access the modem GUI from the router, requiring you to connect to LAN 1-3 just to disable connection from ONU. But if you have a router that allows adding multiple IPs like MikroTik, you can access the bridged modem behind your router.
@@ -92,3 +99,12 @@ Normally when in bridge mode, you can't access the modem GUI from the router, re
    This will add another IP address of the router to `192.168.10.2`, allowing you to access the modem at `192.168.10.1`.
 
 3. Now you can access the modem from behind the router by going to `192.168.10.1`.
+
+## Problems
+If you followed this guide, got messed up, and you lost access to the internet, please, DO NOT HARD RESET YOUR MODEM! You have been warned.\
+A simple reboot of the modem will probably fix the problem, and allows you to access the internet again.\
+If a simple reboot did not fix the problem, restoring the configuration backup you made earlier from the User Configuration Management will fix it on the last resort.
+
+## Other information
+* Alternative bridge mode guide for [ZTE F670L by marfillaster](https://gist.github.com/marfillaster/5cfdc5d2c9e0bed3d8979f07944c051a).
+* Bridge mode for [Huawei modem on TipidPC by Ominous](https://tipidpc.com/viewtopic.php?tid=298525&page=468).

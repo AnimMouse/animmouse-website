@@ -7,9 +7,6 @@ links:
   - title: 44444444.xyz
     description: Anim Mouse’s project domain
     website: https://www.44444444.xyz
-  - title: 0000004.xyz
-    description: Anim Mouse’s project domain
-    website: https://www.0000004.xyz
   - title: GitHub
     description: GitHub Account
     website: https://github.com/AnimMouse
@@ -40,6 +37,9 @@ links:
   - title: Discord Profile
     description: Anim Mouse#2129
     website: https://discordapp.com/users/879284380596596746
+  - title: Ko-fi
+    description: Ko-fi Page
+    website: https://ko-fi.com/animmouse
   - title: GOG
     description: GOG Profile
     website: https://www.gog.com/u/AnimMouse
@@ -55,6 +55,9 @@ links:
   - title: VirusTotal
     description: VirusTotal Account
     website: https://www.virustotal.com/gui/user/AnimMouse
+  - title: 0000004.xyz
+    description: Anim Mouse’s FreeDNS domain
+    website: https://www.0000004.xyz
 menu:
   main:
     weight: -50

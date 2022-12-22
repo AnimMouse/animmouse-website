@@ -2,7 +2,7 @@
 title: How to Activate Microsoft Office (Advanced)
 description: Activating/Cracking Microsoft Office Manually
 date: 2020-08-02T00:33:54+08:00
-lastmod: 2022-09-01T13:20:00+08:00
+lastmod: 2022-12-22T22:50:00+08:00
 tags:
   - Microsoft Office
   - Windows
@@ -25,6 +25,8 @@ This method will activate Microsoft Office against external KMS servers, leaving
 7. Type `cscript ospp.vbs /dstatus` to check the status of the license. It should be activated. If not, try another KMS server.
 
 After 180 days, it will automatically reactivate against your chosen external KMS server.
+
+For being a proud viewer of this website, I host a vlmcsd KMS emulator that you can use for free at `kms.0000004.xyz`.
 
 ## Method 2: Internal KMS Server / KMS Emulator
 
