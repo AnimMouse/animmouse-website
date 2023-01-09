@@ -1,6 +1,8 @@
 ---
 title: Got Mentioned in Weekly OSM
 date: 2022-12-27T00:55:27+08:00
+categories:
+  - Meta
 tags:
   - OpenStreetMap
 ---

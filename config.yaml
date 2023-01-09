@@ -9,15 +9,17 @@ DefaultContentLanguage: en
 permalinks:
     post: /p/:slug/
     projects: /projects/:slug/
+    meta: /meta/:slug/
     page: /:slug/
 
 params:
     mainSections:
         - post
         - projects
+        - meta
     featuredImageField: image
     rssFullContent: true
-    favicon: favicon.ico
+    favicon: /favicon.ico
 
     footer:
         since: 2017
@@ -96,17 +98,41 @@ menu:
     main: []
 
     social:
+        - identifier: discord
+          name: Discord Server
+          url: https://discord.gg/XJwgb339Gk
+          params:
+            icon: brand-discord
+
         - identifier: github
           name: GitHub
           url: https://github.com/AnimMouse
           params:
             icon: brand-github
 
+        - identifier: youtube
+          name: YouTube
+          url: https://www.youtube.com/c/AnimMouse
+          params:
+            icon: brand-youtube
+
+        - identifier: youtube-gaming
+          name: YouTube Gaming
+          url: https://www.youtube.com/c/AnimsGamingMouse
+          params:
+            icon: device-gamepad
+
         - identifier: twitter
           name: Twitter
           url: https://twitter.com/Anim_Mouse
           params:
             icon: brand-twitter
+
+        - identifier: ko-fi
+          name: Ko-fi
+          url: https://ko-fi.com/animmouse
+          params:
+            icon: mug
 
 related:
     includeNewer: true

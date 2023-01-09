@@ -2,7 +2,8 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-tags:
+lastmod: 2023-01-09T13:48:00+08:00
+categories:
   - Meta
 ---
 ## Main Computer
@@ -23,6 +24,7 @@ tags:
 ### RAM
 * 2022 - present: Teamgroup T-Create Expert OC10L 32GB (4x8GB) DDR4-3600 (running on DDR4-3200)
 * 2017 - 2022: Kingmax GLJF62F-D8KFG4 8GB (2x4GB) DDR4-2133
+* 2015 - 2017: 4GB (1x4GB) DDR3-1333
 
 ### SSD
 * 2022 - present: Samsung 970 EVO Plus 1TB
@@ -33,7 +35,7 @@ tags:
 * 2022 - present: Western Digital WD Re WD2004FBYZ 2TB
 * 2018 - 2022: Seagate BarraCuda ST1000DM010 1TB
 * 2017 - 2018: Seagate BarraCuda 500GB
-* 2015 - 2017: Toshiba 500GB
+* 2015 - 2017: Toshiba DT01ACA050 500GB
 * Before 2015: Seagate BarraCuda 80GB
 
 ### PSU
@@ -44,6 +46,8 @@ tags:
 
 ### Monitor
 * 2022 - present: Mi Curved Gaming Monitor 34
+* 2017 - 2022: Samsung S22F355FHE
+* 2015 - 2017: LG E1941T-BN
 
 ## 2nd Computer
 ### CPU
@@ -67,19 +71,29 @@ tags:
 * 2020 - 2022: Kingston A400 240GB
 
 ### HDD
-* 2017 - present: Toshiba 500GB
+* 2017 - present: Toshiba DT01ACA050 500GB
 
 ### PSU
 * 2022 - present: Rakk 400W
 * 2021 - 2022: Electron Generic 700W
 * 2017 - 2021: Generic 700W
 
+### Monitor
+* 2022 - present: Samsung S22F355FHE
+* 2017 - 2022: LG E1941T-BN
+
+## Smartphone
+* 2020 - present: Doogee S90
+* 2017 - 2020: Oppo Neo 5 1201
+* 2017 - 2017: Lenovo A1000
+* 2015 - 2017: Lenovo A316i
+
 ## Internet
-* 2022 - present: Converge ICT 250 mbps
-* 2021 - 2022: Converge ICT 125 mbps
-* 2020 - 2021: Converge ICT 50 mbps
-* 2019 - 2020: Converge ICT 25 mbps
-* 2015 - 2019: Cablelink 2 mbps
-* 2014 - 2015: Sun Broadband Wireless 3G 2 mbps
-* 2013 - 2014: PLDT Wireless 3G 2 mbps
-* 2011 - 2013: Smart Broadband Canopy 512 kbps
+* 2022 - present: Converge ICT 250 mbps ₱1599/month
+* 2021 - 2022: Converge ICT 125 mbps ₱1599/month
+* 2020 - 2021: Converge ICT 50 mbps ₱1500/month
+* 2019 - 2020: Converge ICT 25 mbps ₱1500/month
+* 2015 - 2019: Cablelink 2 mbps ₱1059/month
+* 2011 - 2015: Sun Broadband Wireless 3G 2 mbps ₱100/3 days
+* 2010 - 2011: PLDT Wireless 3G 2 mbps ₱500/month
+* 2009 - 2010: Smart Broadband Canopy 512 kbps ₱999/month
