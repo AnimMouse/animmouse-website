@@ -2,7 +2,7 @@
 title: ISPs in the Philippines with IPv6
 description: Internet Service Providers in the Philippines with IPv6
 date: 2022-04-03T23:22:58+08:00
-lastmod: 2022-05-04T23:30:00+08:00
+lastmod: 2023-01-13T17:05:00+08:00
 tags:
   - IPv6
   - dev
@@ -13,6 +13,7 @@ List of Internet Service Providers in the Philippines with Internet Protocol ver
 2. [DITO Telecommunity](https://stats.labs.apnic.net/ipv6/AS139831) (AS139831)
 3. [Globe Telecom on 5G](https://stats.labs.apnic.net/ipv6/AS132199) (AS132199) [Globe Telecom](https://stats.labs.apnic.net/ipv6/AS4775) (AS4775)
 4. [SKY Cable Sky Fiber](https://stats.labs.apnic.net/ipv6/AS23944) (AS23944) [SKYbroadband Provincial Network](https://stats.labs.apnic.net/ipv6/AS45622) (AS45622)
+5. [Radius Telecoms aka Red Fiber](https://stats.labs.apnic.net/ipv6/AS55821) (AS55821)
 
 References:
 [APNIC Statistics](https://stats.labs.apnic.net/ipv6/PH)

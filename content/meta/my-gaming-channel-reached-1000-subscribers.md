@@ -2,7 +2,7 @@
 title: My Gaming Channel Reached 1000 Subscribers
 date: 2023-01-09T13:54:19+08:00
 categories:
-  - Meta
+  - meta
 tags:
   - YouTube
 ---

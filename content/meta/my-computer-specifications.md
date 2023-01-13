@@ -4,7 +4,7 @@ description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
 lastmod: 2023-01-09T13:48:00+08:00
 categories:
-  - Meta
+  - meta
 ---
 ## Main Computer
 ### CPU

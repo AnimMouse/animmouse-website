@@ -4,6 +4,8 @@ date: 2022-07-24T18:03:31+08:00
 lastmod: 2022-08-27T01:39:00+08:00
 categories:
   - projects
+tags:
+  - torrent
 ---
 [Chihaya on Heroku](https://github.com/AnimMouse/chihaya-heroku)
 
@@ -31,3 +33,5 @@ Tracker has been moved to a separate account to prevent being shut down.
 The torrent tracker has been decommissioned on 2022-08-13, with the expiration of the 120181311.xyz domain.
 
 During the grace period, the IP address was pointed to Namecheap's parking page, their servers are facing the brunt of requests by torrent clients.
+
+After the expiration of the 120181311.xyz domain, Squadhelp brought the domain and tries to sell it for $511 USD. Yea, that's very good deal for a domain I brought for 99¢.
