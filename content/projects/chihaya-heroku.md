@@ -1,7 +1,7 @@
 ---
 title: Chihaya torrent tracker on Heroku
 date: 2022-07-24T18:03:31+08:00
-lastmod: 2022-08-27T01:39:00+08:00
+lastmod: 2023-01-13T19:44:00+08:00
 categories:
   - projects
 tags:

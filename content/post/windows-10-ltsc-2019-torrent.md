@@ -1,20 +1,21 @@
 ---
-title: "Windows 10 Enterprise LTSC 2019 Torrent"
-description: "Windows 10 LTSC 2019 Torrent Download"
+title: Windows 10 Enterprise LTSC 2019 Torrent
+description: Windows 10 LTSC 2019 Torrent Download
 date: 2021-03-20T18:47:53+08:00
-lastmod: 2021-09-01T01:15:00+08:00
+lastmod: 2023-01-19T23:20:00+08:00
 tags:
   - Windows 10 LTSC
   - Windows
+  - torrent
   - downloads
 ---
-## The best and clean version of Windows 10 1809
+The best and clean version of Windows 10 1809
 
 A version of Windows 10 without bloatware.
 
 Windows 10 October 2018 Update (Redstone 5)
 
-### Torrent Download Link (Magnet Link):
+## Torrent Download Link (Magnet Link):
 
 [Windows 10 LTSC 2019 17763.316](magnet:?xt=urn:btih:527ED958E7B901B78BC260DD0BB7364C71D7D403)\
 February 2019 refresh iso 64-bit & 32-bit torrent

@@ -2,7 +2,7 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-lastmod: 2023-01-09T13:48:00+08:00
+lastmod: 2023-01-19T22:58:00+08:00
 categories:
   - meta
 ---
@@ -18,8 +18,8 @@ categories:
 * 2015 - 2017: Biostar H61MLV Ver. 7.0
 
 ### GPU
-* 2022 - present: AMD Radeon RX 6700 XT
-* 2017 - 2022: Nvidia GeForce GTX 1050 Ti
+* 2022 - present: ASRock AMD Radeon RX 6700 XT Challenger D
+* 2017 - 2022: Palit Nvidia GeForce GTX 1050 Ti StormX
 
 ### RAM
 * 2022 - present: Teamgroup T-Create Expert OC10L 32GB (4x8GB) DDR4-3600 (running on DDR4-3200)

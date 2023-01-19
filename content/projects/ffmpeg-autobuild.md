@@ -4,6 +4,8 @@ date: 2020-12-05T23:53:07+08:00
 lastmod: 2021-09-07T23:10:00+08:00
 categories:
   - projects
+tags:
+  - FFmpeg
 ---
 # [FFmpeg Autobuild](https://github.com/AnimMouse/ffmpeg-autobuild)
 
