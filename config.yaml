@@ -112,13 +112,13 @@ menu:
 
         - identifier: youtube
           name: YouTube
-          url: https://www.youtube.com/c/AnimMouse
+          url: https://www.youtube.com/@AnimMouse
           params:
             icon: brand-youtube
 
         - identifier: youtube-gaming
           name: YouTube Gaming
-          url: https://www.youtube.com/c/AnimsGamingMouse
+          url: https://www.youtube.com/@AnimsGamingMouse
           params:
             icon: device-gamepad
 

@@ -2,7 +2,7 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-lastmod: 2023-01-19T22:58:00+08:00
+lastmod: 2023-02-03T16:43:00+08:00
 categories:
   - meta
 ---
@@ -32,11 +32,15 @@ categories:
 * 2019 - 2020: Kingston A400 240GB
 
 ### HDD
-* 2022 - present: Western Digital WD Re WD2004FBYZ 2TB
+* 2023 - present: Western Digital WD Blue WD40EZAZ-00SF3B0 4TB
+* 2022 - 2023: Western Digital WD Re WD2004FBYZ 2TB
 * 2018 - 2022: Seagate BarraCuda ST1000DM010 1TB
 * 2017 - 2018: Seagate BarraCuda 500GB
 * 2015 - 2017: Toshiba DT01ACA050 500GB
 * Before 2015: Seagate BarraCuda 80GB
+
+### 2nd SSD
+* 2022 - present: Intel Optane Memory M10 MEMPEK1J016GAL 16GB
 
 ### PSU
 * 2022 - present: MSI MPG A650GF 650W
@@ -87,6 +91,11 @@ categories:
 * 2017 - 2020: Oppo Neo 5 1201
 * 2017 - 2017: Lenovo A1000
 * 2015 - 2017: Lenovo A316i
+
+## External Hard Drive
+* 2023 - present: Western Digital WD Re WD2004FBYZ 2TB
+* 2022 - 2023: Western Digital WD Blue WD40EZAZ-00SF3B0 4TB
+* 2019 - 2022: Western Digital WD Re WD2004FBYZ 2TB
 
 ## Internet
 * 2022 - present: Converge ICT 250 mbps ₱1599/month

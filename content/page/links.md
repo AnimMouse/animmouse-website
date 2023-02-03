@@ -21,10 +21,10 @@ links:
     website: https://news.ycombinator.com/user?id=AnimMouse
   - title: YouTube
     description: Main YouTube Account
-    website: https://www.youtube.com/c/AnimMouse
+    website: https://www.youtube.com/@AnimMouse
   - title: YouTube Gaming
     description: Gaming YouTube Account
-    website: https://www.youtube.com/c/AnimsGamingMouse
+    website: https://www.youtube.com/@AnimsGamingMouse
   - title: Facebook
     description: Facebook Page
     website: https://www.facebook.com/anim.mouse

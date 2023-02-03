@@ -2,7 +2,7 @@
 title: How to NAT IPv6 in MikroTik
 description: NAT masquerade IPv6 in RouterOS
 date: 2022-10-28T20:29:22+08:00
-lastmod: 2023-01-13T19:33:00+08:00
+lastmod: 2023-02-03T15:26:00+08:00
 tags:
   - RouterOS
   - MikroTik
@@ -30,5 +30,10 @@ RouterOS v7.1 and up supports NAT66.
    2. Add NAT entry on IPv6.\
    `/ipv6 firewall nat add action=masquerade chain=srcnat ipsec-policy=out,none out-interface=ether1`
 
-4. Try to ping an IPv6 server or use [test-ipv6.com](https://test-ipv6.com).\
+4. Make sure you have an IPv6 route that goes to the gateway on where the IPv6 connectivity is coming from. If the route does not exist, add a route.
+   1. Choose the right gateway depending on where the IPv6 connectivity is coming from.
+   2. Add route entry on IPv6.\
+   `/ipv6 route add dst-address=2000::/3 gateway=ether1`
+
+5. Try to ping an IPv6 server or use [test-ipv6.com](https://test-ipv6.com).\
 If you get "Your browser has a real working IPV6 address but is avoiding using it." on test-ipv6.com, this is normal as IPv4 has higher metric than IPv6 ULA. To prefer IPv6 ULA, either change the metric or use an unallocated address like `ace:cab:deca:deed::/64`.

@@ -6,5 +6,7 @@
 /p/windows-10-enterprise-ltsc-ltsb-2016-torrent/ /p/windows-10-enterprise-ltsb-2016-torrent/ 308
 /p/got-mentioned-in-weekly-osm/ /meta/got-mentioned-in-weekly-osm/ 308
 /p/my-computer-specifications/ /meta/my-computer-specifications/ 308
+/p/favorite-quotes/ /meta/favorite-quotes/ 308
+/p/why-i-chosen-hugo/ /meta/why-i-chosen-hugo/ 308
 /posts/* /p/:splat 308
 /pr/* /projects/:splat 308
