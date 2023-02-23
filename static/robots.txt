@@ -1,4 +1,5 @@
 User-Agent: *
+Disallow: */index.xml$
 Disallow: /cdn-cgi/
 
 Sitemap: https://www.animmouse.com/sitemap.xml

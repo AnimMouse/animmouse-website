@@ -31,7 +31,7 @@ params:
 
     sidebar:
         emoji:
-        subtitle: A person with interest and knowledge about computers.
+        subtitle: A person who loves to manipulate computers.
         avatar:
             enabled: true
             local: true

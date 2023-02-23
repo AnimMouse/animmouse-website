@@ -2,14 +2,14 @@
 title: About
 description: About Anim Mouse
 date: 2020-12-30T15:40:00+08:00
-lastmod: 2022-12-22T20:25:00+08:00
+lastmod: 2023-02-24T01:58:00+08:00
 menu:
   main:
     weight: -90
     params:
       icon: user
 ---
-Hi! I'm a person with interest and knowledge about computers and currently pursuing Computer Science.
+Hi! I'm a person with interest and knowledge and loves to manipulate computers, currently pursuing Computer Science.
 
 Username Etymology:\
 Back in the days around 2010, when I play GTA San Andreas SA-MP (San Andreas Multiplayer), I want my username to be "Anonymous" but because I was young at that time (I'm still learning English at that time), I misspelled it into AnimMouse and since then, I'm using it on Minecraft, etc. and that's the story of my username.
