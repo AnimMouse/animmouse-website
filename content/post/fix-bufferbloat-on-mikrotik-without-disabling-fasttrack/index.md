@@ -1,7 +1,8 @@
 ---
 title: Fix Bufferbloat on MikroTik without disabling FastTrack
-description: Enable SQM on RouterOS using Queue Tree
+description: Enable/Setup FQ-CoDel or CAKE SQM on RouterOS using Queue Tree
 date: 2023-02-23T15:05:16+08:00
+lastmod: 2023-03-02T18:20:00+08:00
 tags:
   - RouterOS
   - MikroTik
@@ -13,9 +14,12 @@ We aim to fix that problem by letting someone with a single item in the checkout
 ![Bufferbloat!](The-Simpsons-S05E13-711493-Bufferbloat.jpg)
 
 FastTrack is a feature in MikroTik RouterOS that packets that are marked "fast-tracked" will bypass some of a processing in the router (firewall, connection tracking, etc.)[^3], this will reduce processing overhead and allow to have higher speeds achievable on the router.[^4]\
-The problem is that FastTrack bypasses simple queues, which are used for SQM. Queue tree that are parented to global also bypasses FastTrack. We will instead use queue tree that are parented to interface and apply SQM there.
+The problem is that FastTrack bypasses simple queues, which are used for SQM. Queue tree that are parented to global also bypasses FastTrack. We will instead use queue tree that are parented to interface and apply SQM there.\
+Take note that queue tree requires packet marks, so we set packet-mark to no-mark so packets without mark will go to the queue tree. Any packets that are marked will bypass the queue tree, requiring you to add the name of the mark in `packet-mark=` option.
 
 There are 2 algorithms that we can use for SQM in MikroTik, Fair/Flow Queueing Controlled Delay (FQ-CoDel)[^5] and Common Applications Kept Enhanced (CAKE).[^6] You can use either of those, but I recommend using FQ-CoDel, since it is "fair" (got it?).
+
+RouterOS v7.1 and up supports FQ-CoDel and CAKE.
 
 ## Enabling Smart Queue Management
 
@@ -44,6 +48,8 @@ Configuration is the same with FQ-CoDel except the algorithm.
 `/queue tree add max-limit=249M name=queue-upload packet-mark=no-mark parent=ether1 queue=cake`
 3. Add Queue Tree on downstream.\
 `/queue tree add max-limit=249M name=queue-download packet-mark=no-mark parent=bridge queue=cake`
+
+### Benchmarks
 
 ![Before SQM](Before-SQM.png)
 ![FQ-CoDel](FQ-CoDel.png)
