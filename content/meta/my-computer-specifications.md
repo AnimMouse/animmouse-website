@@ -2,7 +2,7 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-lastmod: 2023-03-01T21:49:00+08:00
+lastmod: 2023-03-17T16:54:00+08:00
 categories:
   - meta
 ---
@@ -11,6 +11,11 @@ categories:
 * 2022 - present: AMD Ryzen 7 5700X
 * 2017 - 2022: Intel Core i5-7400
 * 2015 - 2017: Intel Pentium G2010
+
+#### CPU Cooler
+* 2022 - present: PCCooler Paladin EX400 ARGB
+* 2021 - 2022: PCCooler GI-X4S
+* 2015 - 2021: Intel stock cooler
 
 ### Motherboard
 * 2022 - present: MSI B550-A PRO
@@ -23,7 +28,7 @@ categories:
 
 ### RAM
 * 2022 - present: Teamgroup T-Create Expert OC10L 32 GB (4x8 GB) DDR4-3600 (running on DDR4-3200)
-* 2017 - 2022: Kingmax GLJF62F-D8KFG4 8 GB (2x4GB) DDR4-2133
+* 2017 - 2022: Kingmax GLJF62F-D8KFG4 8 GB (2x4 GB) DDR4-2133
 * 2015 - 2017: 4 GB (1x4 GB) DDR3-1333
 
 ### SSD
@@ -48,6 +53,11 @@ categories:
 * 2017 - 2021: Electron Generic 700 W
 * 2015 - 2017: Generic 700 W
 
+### Computer case
+* 2022 - present: InPlay Meteor 01 Mid Tower ATX
+* 2017 - 2022: Neutron microATX case
+* 2015 - 2017: Acrylic ATX PC case
+
 ### Monitor
 * 2022 - present: Mi Curved Gaming Monitor 34
 * 2017 - 2022: Samsung S22F355FHE
@@ -59,6 +69,10 @@ categories:
 * 2021 - 2022: Intel Core i7-2600k
 * 2018 - 2021: Intel Core i3-3240
 * 2017 - 2018: Intel Pentium G2010
+
+#### CPU Cooler
+* 2021 - present: PCCooler GI-X4S
+* 2017 - 2021: Intel stock cooler
 
 ### Motherboard
 * 2022 - present: Gigabyte A520M DS3H
@@ -82,6 +96,10 @@ categories:
 * 2021 - 2022: Electron Generic 700 W
 * 2017 - 2021: Generic 700 W
 
+### Computer case
+* 2022 - present: InPlay Meteor 01 Mid Tower ATX
+* 2017 - 2022: Acrylic ATX PC case
+
 ### Monitor
 * 2022 - present: Samsung S22F355FHE
 * 2017 - 2022: LG E1941T-BN
@@ -98,11 +116,11 @@ categories:
 * 2019 - 2022: Western Digital WD Re WD2004FBYZ 2 TB
 
 ## Internet
-* 2022 - present: Converge ICT 250 mbps ₱1599/month
-* 2021 - 2022: Converge ICT 125 mbps ₱1599/month
-* 2020 - 2021: Converge ICT 50 mbps ₱1500/month
-* 2019 - 2020: Converge ICT 25 mbps ₱1500/month
-* 2015 - 2019: Cablelink 2 mbps ₱1059/month
-* 2011 - 2015: Sun Broadband Wireless 3G 2 mbps ₱100/3 days
-* 2010 - 2011: PLDT Wireless 3G 2 mbps ₱500/month
-* 2009 - 2010: Smart Broadband Canopy 512 kbps ₱999/month
+* 2022 - present: Converge ICT 250 Mbps ₱1599/month
+* 2021 - 2022: Converge ICT 125 Mbps ₱1599/month
+* 2020 - 2021: Converge ICT 50 Mbps ₱1500/month
+* 2019 - 2020: Converge ICT 25 Mbps ₱1500/month
+* 2015 - 2019: Cablelink 2 Mbps ₱1059/month
+* 2011 - 2015: Sun Broadband Wireless 3G 2 Mbps ₱100/3 days
+* 2010 - 2011: PLDT Wireless 3G 2 Mbps ₱500/month
+* 2009 - 2010: Smart Broadband Canopy 512 Kbps ₱999/month

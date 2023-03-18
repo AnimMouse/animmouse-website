@@ -1,5 +1,6 @@
 ---
 title: Hacking vs. Cheating
+description: The difference between hacking and cheating
 date: 2017-06-17T21:33:00+08:00
 lastmod: 2022-03-25T01:00:00+08:00
 tags:

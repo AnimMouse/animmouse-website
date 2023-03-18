@@ -2,7 +2,7 @@
 title: FFmpeg Binaries
 description: FFmpeg Binaries Builds Downloads
 date: 2021-05-14T23:40:10+08:00
-lastmod: 2022-12-22T23:14:00+08:00
+lastmod: 2023-03-17T15:42:00+08:00
 tags:
   - FFmpeg
   - downloads
@@ -11,32 +11,32 @@ tags:
 
 ## [Official](https://ffmpeg.org/download.html)
 ### Windows
-* [Gyan Doshi](https://www.gyan.dev/ffmpeg/builds/) (GPL, nightly & stable, win-64, static & shared)
-* [BtbN](https://github.com/BtbN/FFmpeg-Builds/releases) (GPL & LGPL, nightly & stable, win-64, static & shared)
+* [Gyan Doshi](https://www.gyan.dev/ffmpeg/builds/) (GPL, master & release, win-64, static & shared)
+* [BtbN](https://github.com/BtbN/FFmpeg-Builds/releases) (GPL & LGPL, master & release, win-64, static & shared)
 
 ### Linux
-* [John Van Sickle](https://johnvansickle.com/ffmpeg/) (GPL, nightly & stable, linux-multi & linux-ARM, static)
-* [BtbN](https://github.com/BtbN/FFmpeg-Builds/releases) (GPL & LGPL, nightly & stable, linux-64, static & shared)
+* [John Van Sickle](https://johnvansickle.com/ffmpeg/) (GPL, master & release, linux-multi & linux-arm-multi, static)
+* [BtbN](https://github.com/BtbN/FFmpeg-Builds/releases) (GPL & LGPL, master & release, linux-64 & linux-arm-64, static & shared)
 
 ### macOS
-* [EverMeet](https://evermeet.cx/ffmpeg/) (GPL, nightly & stable, macOS-64, static)
+* [EverMeet](https://evermeet.cx/ffmpeg/) (GPL, master & release, macOS-64, static)
 
 ## Unofficial
 ### Windows
-* [AnimMouse ffmpeg-autobuild](https://github.com/AnimMouse/ffmpeg-autobuild) (FWBH, nonfree, nightly, win-multi, static)
-* [AnimMouse ffmpeg-stable-autobuild](https://github.com/AnimMouse/ffmpeg-stable-autobuild) (FWBH, nonfree, stable, win-multi, static)
-* [nanake ffmpeg-tinderbox](https://github.com/nanake/ffmpeg-tinderbox) (BtbN, nonfree, nightly, win-multi, static)
-* [kusaanko FFmpeg-Auto-Build](https://github.com/kusaanko/FFmpeg-Auto-Build) (FWBH, GPL & LGPL, nightly & stable, win-multi, static & shared)
-* [marierose147](https://github.com/marierose147/ffmpeg_windows_exe_with_fdk_aac) (FWBH, GPL & LGPL & nonfree, nightly & stable, win-multi, static & shared)
-* [jeremylee](https://jeremylee.sh/bin.html) (MBS, GPL, nightly, win-64, static)
-* [Reino Wijnsma XP compatible](https://rwijnsma.home.xs4all.nl/files/ffmpeg/?C=M;O=D) (FWBH-Reino17, GPL, nightly & stable, win-32, static & shared)
-* [Venomissimo Notion](https://www.notion.so/34dc4ddf501a4b98b46ea9fb4f3470af?v=878345c5d88f4d21a6520db752b5c29f) (FWBH, GPL, nightly & stable, win-32, static)
-* [AbeChin](http://blog.k-tai-douga.com/category/359294-1.html) (GPL, nightly, win-multi, static)
-* [maeyanie](https://jenkins.maeyanie.com/job/ffmpeg/) (GPL, nightly, win-multi, static)
-* [sudo-nautilus](https://github.com/sudo-nautilus/FFmpeg-Builds-Win32/releases) (BtbN, GPL & LGPL, nightly & stable, win-32, static & shared)
-* [wang-bin avbuild](https://github.com/wang-bin/avbuild) [SourceForge](https://sourceforge.net/projects/avbuild/files/) (LGPL, nightly & stable, win-multi & win-ARM, shared)
-* [MPlayer Sherpya FFmpeg Builds](https://oss.netfarm.it/mplayer/) [SourceForge](https://sourceforge.net/projects/mplayer-win32/files/FFmpeg/) (GPL, nightly, win-multi, static)
-* [ffmpeg for homebridge](https://github.com/homebridge/ffmpeg-for-homebridge) (nonfree, stable, win-64, static)
+* [AnimMouse ffmpeg-autobuild](https://github.com/AnimMouse/ffmpeg-autobuild) ([FWBH], nonfree, master, win-multi, static)
+* [AnimMouse ffmpeg-stable-autobuild](https://github.com/AnimMouse/ffmpeg-stable-autobuild) ([FWBH], nonfree, release, win-multi, static)
+* [nanake ffmpeg-tinderbox](https://github.com/nanake/ffmpeg-tinderbox) ([BtbN], nonfree, master, win-multi, static & shared)
+* [kusaanko FFmpeg-Auto-Build](https://github.com/kusaanko/FFmpeg-Auto-Build) ([FWBH], GPL & LGPL, master & release, win-multi, static & shared)
+* [marierose147](https://github.com/marierose147/ffmpeg_windows_exe_with_fdk_aac) ([FWBH], nonfree, release, win-64, static)
+* [jeremylee](https://jeremylee.sh/bin.html) ([MBS], GPL, master, win-64, static)
+* [Reino Wijnsma XP compatible](https://rwijnsma.home.xs4all.nl/files/ffmpeg/?C=M;O=D) ([FWBH-Reino17], GPL, master & release, win-32, static & shared)
+* [Venomissimo Notion](https://venomissimo.notion.site/venomissimo/FFmpeg-86-3b484982448b485eaed6b687b2f67047) ([FWBH], GPL, master & release, win-32, static & shared)
+* [AbeChin](http://blog.k-tai-douga.com/category/359294-1.html) (GPL, master, win-multi, static)[^1]
+* [maeyanie](https://jenkins.maeyanie.com/job/ffmpeg/) (GPL, master, win-multi, static)[^1]
+* [sudo-nautilus](https://github.com/sudo-nautilus/FFmpeg-Builds-Win32/releases) ([BtbN], GPL & LGPL, master & release, win-32, static & shared)[^1]
+* [wang-bin avbuild](https://github.com/wang-bin/avbuild) [SourceForge](https://sourceforge.net/projects/avbuild/files/) (LGPL, master & release, win-multi & win-arm, shared)[^1]
+* [MPlayer Sherpya FFmpeg Builds](https://oss.netfarm.it/mplayer/) [SourceForge](https://sourceforge.net/projects/mplayer-win32/files/FFmpeg/) (GPL, master, win-multi, static)
+* [ffmpeg for homebridge](https://github.com/homebridge/ffmpeg-for-homebridge) (nonfree, release, win-64, static)
 
 #### Build Scripts
 * [media-autobuild_suite](https://github.com/m-ab-s/media-autobuild_suite)
@@ -45,21 +45,25 @@ tags:
 * [ffmpeg-static-2020](https://github.com/TNTPro/ffmpeg-static-2020)
 
 #### Outdated
-* [Zeranoe win64](https://web.archive.org/web/20200918193258/https://ffmpeg.zeranoe.com/builds/win64/) (GPL & LGPL, nightly & stable, win-64, static & shared)
-* [Zeranoe win32](https://web.archive.org/web/20200918193245/https://ffmpeg.zeranoe.com/builds/win32/) (GPL & LGPL, nightly & stable, win-32, static & shared)
-* [ShareX](https://github.com/ShareX/FFmpeg) (GPL, stable, win-multi, static)
-* [FFBinaries](https://ffbinaries.com/downloads) (GPL, nightly & stable, win-multi, static)
-* [Ottverse](https://ottverse.com/ffmpeg-builds/) (GPL, nightly, win-64, static & shared)
+* [Zeranoe win64](https://web.archive.org/web/20200918193258/https://ffmpeg.zeranoe.com/builds/win64/) (GPL & LGPL, master & release, win-64, static & shared)
+* [Zeranoe win32](https://web.archive.org/web/20200918193245/https://ffmpeg.zeranoe.com/builds/win32/) (GPL & LGPL, master & release, win-32, static & shared)
+* [ShareX](https://github.com/ShareX/FFmpeg) (GPL, release, win-multi, static)
+* [FFBinaries](https://ffbinaries.com/downloads) (GPL, master & release, win-multi, static)
+* [Ottverse](https://ottverse.com/ffmpeg-builds/) (GPL, master, win-64, static & shared)
 
 ### Linux
-* [sudo-nautilus](https://github.com/sudo-nautilus/FFmpeg-Builds-Win32/releases) (BtbN, GPL & LGPL, nightly & stable, linux-64, static & shared)
-* [ffmpeg for homebridge](https://github.com/homebridge/ffmpeg-for-homebridge) (nonfree, stable, linux-multi, static)
+* [ffmpeg for homebridge](https://github.com/homebridge/ffmpeg-for-homebridge) (nonfree, release, linux-64 & linux-arm-64, static)
 
 #### Outdated
-* [FFBinaries](https://ffbinaries.com/downloads) (GPL, nightly & stable, linux-multi, static)
+* [FFBinaries](https://ffbinaries.com/downloads) (GPL, master & release, linux-multi, static)
 
 ### macOS
 #### Outdated
-* [FFBinaries](https://ffbinaries.com/downloads) (GPL, nightly & stable, macOS-64, static)
+* [FFBinaries](https://ffbinaries.com/downloads) (GPL, master & release, macOS-64, static)
 
-Special thanks to [Vangelis66](https://github.com/AnimMouse/ffmpeg-autobuild/issues/274#issuecomment-853315861) for additional sources.
+[FWBH]: https://github.com/rdp/ffmpeg-windows-build-helpers "This build uses ffmpeg-windows-build-helpers"
+[BtbN]: https://github.com/BtbN/FFmpeg-Builds "This build uses BtbN/FFmpeg-Builds"
+[MBS]: https://github.com/m-ab-s/media-autobuild_suite "This build uses media-autobuild_suite"
+[FWBH-Reino17]: https://github.com/Reino17/ffmpeg-windows-build-helpers "This build uses forked ffmpeg-windows-build-helpers by Reino17"
+
+[^1]: Special thanks to [Vangelis66](https://github.com/AnimMouse/ffmpeg-autobuild/issues/274#issuecomment-853315861) for additional sources.
