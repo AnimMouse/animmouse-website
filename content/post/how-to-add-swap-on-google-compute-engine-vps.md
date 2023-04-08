@@ -1,7 +1,8 @@
 ---
-title: "How to Add Swap on Google Compute Engine VPS"
+title: How to Add Swap on Google Compute Engine VPS
 date: 2020-08-14T12:20:12+08:00
 tags:
+  - VPS
   - Linux
   - Ubuntu
   - tutorials

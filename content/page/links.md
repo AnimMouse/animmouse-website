@@ -58,6 +58,9 @@ links:
   - title: Chess.com
     description: Chess.com Account
     website: https://www.chess.com/member/AnimMouse
+  - title: ChatGPT with Me
+    description: ChatGPT with Me Project
+    website: https://chatgptwith.me
   - title: 0000004.xyz
     description: Anim Mouse’s FreeDNS domain
     website: https://www.0000004.xyz

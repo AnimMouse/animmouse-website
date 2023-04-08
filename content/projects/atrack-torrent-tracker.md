@@ -5,7 +5,6 @@ categories:
   - projects
 tags:
   - Google App Engine
-  - Google Cloud Platform
   - torrent
 ---
 Atrack is a Bittorrent tracker designed from the ground up to run on [Google’s App Engine](https://cloud.google.com/appengine) grid.

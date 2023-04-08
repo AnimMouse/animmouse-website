@@ -4,7 +4,6 @@ description: Stream HEVC (H.265) on YouTube using Open Broadcaster Software
 date: 2021-09-12T22:45:07+08:00
 lastmod: 2022-12-27T00:53:00+08:00
 tags:
-  - OBS
   - YouTube
   - tutorials
 ---

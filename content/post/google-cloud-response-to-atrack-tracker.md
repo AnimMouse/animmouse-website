@@ -1,18 +1,20 @@
 ---
-title: "Google Cloud response to Atrack Tracker"
-description: "What will happen if you run a torrent tracker on Google"
+title: Google Cloud response to Atrack Tracker
+description: What will happen if you run a torrent tracker on Google
 date: 2021-06-02T23:53:11+08:00
+lastmod: 2023-04-15T02:15:00+08:00
 tags:
   - Google App Engine
-  - Google Cloud Platform
 ---
-## What will happen if you run a tracker on Google App Engine while paying for it.
+This will happen if you run a tracker on Google App Engine while paying for it.
+
 Google contacted us because they said that [Atrack Tracker](https://github.com/AnimMouse/atrack) is exceeding its quota aggressively.\
 They also disabled the app, and they did not enable it so we decided to change project name to continue running the torrent tracker.\
 This only happened when we enabled billing, this does not happen on free tier.
 
 On July 28, 2018, 2:50 AM\
 Subject: Action required: Your product has exceeded quota
+
 > Hello Anim Mouse,
 > 
 > This is *redacted* from Google Cloud Platform - Technical Solutions Engineering. I am contacting you regarding your project atrack-torrent-tracker and that you app is exceeding its quota aggressively enough to cause excess load on the traffic balancing mechanisms in App Engine, pushback in this case, and appears a torrent tracker app (by name).
@@ -28,6 +30,7 @@ Subject: Action required: Your product has exceeded quota
 > Google Cloud Support
 
 My reply on July 30, 2018, 11:12 PM
+
 > Hello *redacted*,
 > 
 > Thank you for contacting us what happened in our app and we will be reviewing our app in order to make sure that we will not cause excess load in the Google's infrastructure.
@@ -37,6 +40,7 @@ My reply on July 30, 2018, 11:12 PM
 > And by the way, I cannot access the link you provided because it always says that "You need permission to access the Google Cloud Support Center."
 
 Their reply on July 31, 2018, 8:02 AM
+
 > Hello Anim Mouse,
 > 
 > My name is *redacted* from Google Cloud Platform Support. I'm taking over this case since *redacted* is out the office.
@@ -56,6 +60,7 @@ Their reply on July 31, 2018, 8:02 AM
 > Google Cloud Platform Support, Mexico
 
 My reply on August 2, 2018, 7:20 PM
+
 > Hello *redacted*,
 > 
 > We have already used the development SDK to test our app in our local computer, but the problem is, we cannot simulate millions of computers requesting on our app in the same place at the same time, so we don't know the problem yet.
@@ -65,6 +70,7 @@ My reply on August 2, 2018, 7:20 PM
 > We also request to enable our app in order to know what's happening in our app, thank you for your understanding.
 
 Their reply on August 8, 2018, 1:08 AM
+
 > Hello Anim Mouse,
 > 
 > App Engine team is working on re-enabling your application. They recommend you take next actions to prevent your application be disabled again:
@@ -81,6 +87,7 @@ Their reply on August 8, 2018, 1:08 AM
 > Google Cloud Platform Support, Mexico
 
 Their reply on August 8, 2018, 8:50 AM
+
 > Hello Anim Mouse,
 > 
 > This message is just to let you know that your App Engine services have been re-enabled. Please let me know if you have any questions about the recommendations I provided in my previous email.
@@ -88,6 +95,7 @@ Their reply on August 8, 2018, 8:50 AM
 At this point they re-enabled Atrack tracker and we started debugging.
 
 Their reply on August 9, 2018, 7:10 AM
+
 > Hello Anim Mouse,
 > 
 > I was just looking how to improve our communication in this case. Looking at our messages seems we might have different time zones. So it would be useful your provide a contact number and a timezone in that way I can determine if one of our sites in another region can handle this case providing faster responses.
@@ -105,6 +113,7 @@ Their reply on August 9, 2018, 7:10 AM
 At this point they disabled Atrack tracker again.
 
 My reply on August 9, 2018, 11:13 PM
+
 > Hello *redacted*,
 > 
 > My time zone is UTC+08:00 (Philippines) and it seams like our project is disabled again. We intentionally disabled billing in order for the app not to exceed its quota aggressively again if it hits the free usage quota, but as of now, we don't know why Google disabled our app again. We have already reviewed and tested our code in the development SDK but we don't really know (Platform as a service limitation) why our app causes excess load on the traffic balancing mechanisms in App Engine.
@@ -112,6 +121,7 @@ My reply on August 9, 2018, 11:13 PM
 > Please let use know why our app causes excess load on the traffic balancing mechanisms in App Engine, and thank you for your understanding.
 
 Their reply on August 11, 2018, 10:12 AM
+
 > Hello Anim Mouse
 > 
 > This is *redacted*, and I am taking care of this case since *redacted* is out of the office.
@@ -130,9 +140,10 @@ Their reply on August 11, 2018, 10:12 AM
 > *redacted*\
 > Google Cloud Platform Support, Manila
 
-Well, it seems that running a torrent tracker will receive that so much traffic, haha.
+Well, it seems that running a torrent tracker will receive that so much traffic, hahahaha.
 
 Their reply on 	August 14, 2018, 10:29 AM 
+
 > Hello Anim Mouse,
 > 
 > Greetings! I haven't heard back from you in a while.
@@ -148,6 +159,7 @@ Their reply on 	August 14, 2018, 10:29 AM
 > Google Cloud Platform Support, Manila
 
 My reply on August 14, 2018, 11:16 PM
+
 > Hello *redacted*,
 > 
 > We have a phone number but the problem is, we are busy doing things around here and we can't actively contact you in real time. If you really needed our phone number, we can give it.
