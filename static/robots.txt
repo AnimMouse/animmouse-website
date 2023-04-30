@@ -1,13 +1,12 @@
-User-Agent: *
+User-agent: *
 Disallow: */index.xml$
 Disallow: /cdn-cgi/
-Disallow: /p/my-first-post/
-Disallow: /projects/my-first-post-on-projects/
 
-User-Agent: Bingbot
+User-agent: Bingbot
 Disallow: /p/how-to-activate-microsoft-office
 Disallow: /p/how-to-install-microsoft-office
 Disallow: /p/how-to-convert-microsoft-office-to-volume/
+Disallow: /p/how-to-customize-microsoft-office-c2r-installation/
 Disallow: /tags/microsoft-office/
 
 Sitemap: https://www.animmouse.com/sitemap.xml

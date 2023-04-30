@@ -9,7 +9,7 @@ tags:
   - Linux
   - tutorials
 ---
-# Use your Raspberry Pi as an headless server that has a GUI you can control using VNC.
+Use your Raspberry Pi as an headless server that has a GUI you can control using VNC.
 
 Pick what desktop environment to use, if you want a barebones desktop just to control the GUI on the Raspberry Pi, use an window manager like Openbox and Fluxbox.\
 Or if you want the full desktop experience on your Raspberry Pi, use a full desktop environment like LXQT.

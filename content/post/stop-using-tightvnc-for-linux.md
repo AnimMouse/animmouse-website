@@ -1,8 +1,8 @@
 ---
 title: Stop using TightVNC for Linux
-description: TightVNC for Linux is outdated
+description: TightVNC for Linux is outdated and unmaintained
 date: 2021-07-25T15:55:00+08:00
-lastmod: 2022-06-11T21:35:00+08:00
+lastmod: 2023-04-28T21:04:00+08:00
 tags:
   - Linux
   - Ubuntu
