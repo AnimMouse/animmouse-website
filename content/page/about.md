@@ -2,7 +2,7 @@
 title: About
 description: About Anim Mouse
 date: 2020-12-30T15:40:00+08:00
-lastmod: 2023-03-19T02:24:00+08:00
+lastmod: 2023-03-19T15:00:00+08:00
 menu:
   main:
     weight: -90
@@ -26,7 +26,7 @@ If you think I can help with anything or you want to say hi, please contact us, 
 Contact us:
 * Email: [contact@animmouse.com](mailto:contact@animmouse.com)
 * Discord Server: [Anim Mouse's server](https://discord.gg/XJwgb339Gk)
-* Discord Profile: [Anim Mouse#2129](https://discordapp.com/users/879284380596596746)
+* Discord Profile: [animmouse](https://discordapp.com/users/879284380596596746)
 * You can also contact on any of the accounts listed on the [links](../links/).
 
 Donations:
@@ -35,7 +35,7 @@ Donations:
 * Bitcoin Cash: `bitcoincash:qp44ad4798jhn5s6pky7k6pz8hthevuasyeaq2jyz8`
 * Ethereum: `0xB94aF482f8eF4425E7d239e7DFfa66Cd5B6FEa2A`
 
-AnimMouse Logo designed by [lilyresh](https://lilyresh.carrd.co).
+Anim Mouse Logo designed by [lilyresh](https://lilyresh.carrd.co).
 
 This website is hosted on [Cloudflare Pages](https://pages.cloudflare.com).
 

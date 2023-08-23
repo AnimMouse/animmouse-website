@@ -35,7 +35,7 @@ links:
     description: Reddit Account
     website: https://www.reddit.com/user/Anim_Mouse
   - title: Discord Profile
-    description: Anim Mouse#2129
+    description: animmouse
     website: https://discordapp.com/users/879284380596596746
   - title: Ko-fi
     description: Ko-fi Page

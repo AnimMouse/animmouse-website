@@ -2,7 +2,7 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-lastmod: 2023-03-17T16:54:00+08:00
+lastmod: 2023-08-23T13:47:00+08:00
 categories:
   - meta
 ---
@@ -15,7 +15,7 @@ categories:
 #### CPU Cooler
 * 2022 - present: PCCooler Paladin EX400 ARGB
 * 2021 - 2022: PCCooler GI-X4S
-* 2015 - 2021: Intel stock cooler
+* 2015 - 2021: Intel E97379-003
 
 ### Motherboard
 * 2022 - present: MSI B550-A PRO
@@ -42,9 +42,9 @@ categories:
 * 2018 - 2022: Seagate BarraCuda ST1000DM010 1 TB
 * 2017 - 2018: Seagate BarraCuda 500 GB
 * 2015 - 2017: Toshiba DT01ACA050 500 GB
-* Before 2015: Seagate BarraCuda 80 GB
+* Before 2015: Seagate BarraCuda ST380815AS 80 GB
 
-### HDD Cache
+### HDD PrimoCache
 * 2022 - present: Intel Optane Memory M10 MEMPEK1J016GAL 16 GB
 
 ### PSU
@@ -59,7 +59,8 @@ categories:
 * 2015 - 2017: Acrylic ATX PC case
 
 ### Monitor
-* 2022 - present: Mi Curved Gaming Monitor 34
+* 2023 - present: Gigabyte GP-G34WQC-A-AP
+* 2022 - 2023: Mi Curved Gaming Monitor 34" (XMMNTWQ34)
 * 2017 - 2022: Samsung S22F355FHE
 * 2015 - 2017: LG E1941T-BN
 
@@ -111,9 +112,12 @@ categories:
 * 2015 - 2017: Lenovo A316i
 
 ## External Hard Drive
-* 2023 - present: Western Digital WD Re WD2004FBYZ 2 TB
+* 2023 - present: Seagate Exos X16 ST14000NM001G 14 TB
 * 2022 - 2023: Western Digital WD Blue WD40EZAZ-00SF3B0 4 TB
 * 2019 - 2022: Western Digital WD Re WD2004FBYZ 2 TB
+* 2017 - 2019: Adata HD650 (Seagate Mobile ST1000LM035) 1 TB
+* 2015 - 2017: Toshiba MQ01UBD100 1 TB
+* 2012 - 2015: Hitachi HTS545050B9A300 500 GB
 
 ## Internet
 * 2022 - present: Converge ICT 250 Mbps ₱1599/month
@@ -122,5 +126,5 @@ categories:
 * 2019 - 2020: Converge ICT 25 Mbps ₱1500/month
 * 2015 - 2019: Cablelink 2 Mbps ₱1059/month
 * 2011 - 2015: Sun Broadband Wireless 3G 2 Mbps ₱100/3 days
-* 2010 - 2011: PLDT Wireless 3G 2 Mbps ₱500/month
+* 2010 - 2011: PLDT Wireless 3G 2 Mbps ₱500/month (Shared bill)
 * 2009 - 2010: Smart Broadband Canopy 512 Kbps ₱999/month

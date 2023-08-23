@@ -1,5 +1,5 @@
-# AnimMouse's Website
-This is AnimMouse's blog.
+# Anim Mouse's Website
+This is Anim Mouse's blog.
 
 ## Deployment
 1. `git submodule update --init --recursive`
