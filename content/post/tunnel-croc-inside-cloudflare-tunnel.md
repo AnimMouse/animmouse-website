@@ -3,6 +3,7 @@ title: Tunnel Croc inside Cloudflare Tunnel
 description: How to tunnel Croc file transfer on Cloudflare Tunnel
 date: 2023-03-03T14:36:06+08:00
 tags:
+  - Cloudflare
   - tutorials
 ---
 [Croc](https://github.com/schollz/croc) is a tool that allows any 2 computers to simply and securely transfer files and folders.\
