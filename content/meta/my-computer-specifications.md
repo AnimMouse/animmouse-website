@@ -2,7 +2,7 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-lastmod: 2023-08-23T13:47:00+08:00
+lastmod: 2023-09-28T23:56:00+08:00
 categories:
   - meta
 ---
@@ -90,7 +90,8 @@ categories:
 * 2020 - 2022: Kingston A400 240 GB
 
 ### HDD
-* 2017 - present: Toshiba DT01ACA050 500 GB
+* 2023 - present: Western Digital WD Blue WD20EZAZ-00L9GB0 2 TB
+* 2017 - 2023: Toshiba DT01ACA050 500 GB
 
 ### PSU
 * 2022 - present: Rakk 400 W

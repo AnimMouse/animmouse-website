@@ -2,7 +2,7 @@
 title: About
 description: About Anim Mouse
 date: 2020-12-30T15:40:00+08:00
-lastmod: 2023-03-19T15:00:00+08:00
+lastmod: 2023-09-28T23:54:00+08:00
 menu:
   main:
     weight: -90
@@ -36,6 +36,8 @@ Donations:
 * Ethereum: `0xB94aF482f8eF4425E7d239e7DFfa66Cd5B6FEa2A`
 
 Anim Mouse Logo designed by [lilyresh](https://lilyresh.carrd.co).
+
+[Privacy Policy](https://privacy.animmouse.com)
 
 This website is hosted on [Cloudflare Pages](https://pages.cloudflare.com).
 
