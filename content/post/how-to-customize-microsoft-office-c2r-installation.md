@@ -38,7 +38,7 @@ In order to install Microsoft Office using your configuration file.
 My configuration file installs the fil-ph language of Office, excludes Access, Groove, Lync, OneDrive, OneNote, and Outlook (as I don't need them) and uses the `E:\` path for the installer, as I mounted the IMG file on Windows.
 
 ### Microsoft Office 2021
-```
+```xml
 <Configuration ID="6201bc15-4b3b-44e0-8bb7-0283ecf3e589">
   <Info Description="Install Office 2021" />
   <Add OfficeClientEdition="64" Channel="Monthly" SourcePath="E:\" AllowCdnFallback="TRUE">
@@ -67,7 +67,7 @@ My configuration file installs the fil-ph language of Office, excludes Access, G
 ```
 
 ### Microsoft Office 2019
-```
+```xml
 <Configuration ID="bd799f92-6cef-4fbe-955c-b7e82ede914a">
   <Info Description="Install Office 2019" />
   <Add OfficeClientEdition="64" Channel="Monthly" SourcePath="E:\" AllowCdnFallback="TRUE">

@@ -7,6 +7,7 @@ tags:
   - Windows 10 LTSC
   - Windows
   - downloads
+  - sysadmin
 ---
 After you have installed Windows 10 LTSC, it's time to install programs that replaces the stock ones.
 

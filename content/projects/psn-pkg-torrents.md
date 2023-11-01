@@ -1,5 +1,5 @@
 ---
-title: "PSN PKG Torrents"
+title: PSN PKG Torrents
 date: 2020-08-07T19:33:11+08:00
 categories:
   - projects

@@ -7,6 +7,7 @@ tags:
   - Cloudflare
   - RouterOS
   - MikroTik
+  - WireGuard
   - IPv6
   - tutorials
 ---

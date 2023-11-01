@@ -6,7 +6,7 @@ categories:
   - meta
 tags:
   - dev
-  - blog
+  - essay
 ---
 TL;DR: Just the right abstraction.
 

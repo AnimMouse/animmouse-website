@@ -5,7 +5,7 @@ date: 2022-05-02T00:15:08+08:00
 lastmod: 2022-05-06T01:10:00+08:00
 tags:
   - IPv6
-  - dev
+  - essay
 ---
 {{< youtube v26BAlfWBm8 >}}
 

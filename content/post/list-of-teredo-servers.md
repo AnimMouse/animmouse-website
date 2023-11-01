@@ -5,7 +5,7 @@ date: 2022-08-26T23:42:40+08:00
 lastmod: 2023-03-17T16:24:00+08:00
 tags:
   - IPv6
-  - dev
+  - list
 ---
 List of currently working Teredo servers and relays.
 

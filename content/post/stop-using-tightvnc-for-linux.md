@@ -7,6 +7,7 @@ tags:
   - Linux
   - Ubuntu
   - Raspberry Pi
+  - sysadmin
 ---
 Unless you brought [TightVNC license on Server for Unix/Linux/X11](https://www.tightvnc.com/licensing-server-x11.php), you should not using an outdated version of TightVNC.
 

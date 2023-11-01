@@ -1,7 +1,8 @@
 ---
 title: How to Convert Microsoft Office to Volume
+description: Convert retail licensed Microsoft Office to volume license
 date: 2020-08-06T15:29:26+08:00
-lastmod: 2022-05-04T23:10:00+08:00
+lastmod: 2023-11-02T01:30:00+08:00
 tags:
   - Microsoft Office
   - Windows

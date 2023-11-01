@@ -1,8 +1,12 @@
 ---
-title: "Xeon vs. Ryzen"
+title: Xeon vs. Ryzen
+description: Old Intel Xeon vs New AMD Ryzen
 date: 2020-12-18T00:43:13+08:00
+lastmod: 2023-11-02T00:51:00+08:00
+tags:
+  - essay
 ---
-### Old Intel Xeon vs New AMD Ryzen
+Note: This essay was created in 2020 and archived for future reference, it may not reflect the current situation today.
 
 Xeon Advantage
 1. More cores.

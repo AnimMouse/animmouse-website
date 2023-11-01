@@ -4,7 +4,7 @@ description: Why DNS-based Authentication of Named Entities failed to take over 
 date: 2022-03-04T15:38:58+08:00
 tags:
   - dev
-  - blog
+  - essay
 ---
 DNS-based Authentication of Named Entities (DANE) is a way to authenticate TLS client and server entities without a certificate authority (CA).
 

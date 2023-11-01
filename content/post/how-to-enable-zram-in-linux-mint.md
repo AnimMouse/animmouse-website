@@ -1,6 +1,6 @@
 ---
-title: "How to Enable zRAM in Linux Mint"
-description: "Configure zRAM swap on Linux Mint"
+title: How to Enable zRAM in Linux Mint
+description: Configure zRAM swap on Linux Mint
 date: 2021-06-03T00:37:37+08:00
 tags:
   - Linux Mint

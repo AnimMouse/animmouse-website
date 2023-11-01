@@ -4,7 +4,7 @@ description: My standardized procedure in Windows post installation
 date: 2023-08-27T01:35:00+08:00
 tags:
   - Windows
-  - dev
+  - sysadmin
 ---
 This is my standardized procedure in Windows post installation.
 

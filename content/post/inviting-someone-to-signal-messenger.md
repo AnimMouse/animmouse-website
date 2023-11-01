@@ -4,7 +4,8 @@ description: My standardized procedure in inviting someone to Signal
 date: 2021-08-05T22:56:55+08:00
 lastmod: 2023-08-27T01:01:00+08:00
 tags:
-  - dev
+  - sysadmin
+  - essay
 ---
 This is my standardized procedure in inviting someone to Signal Messenger to minimize risk of failures.
 

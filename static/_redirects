@@ -1,5 +1,6 @@
 /about-us/ /about/ 308
 /contact/ /about/ 308
+/tags/blog/ /tags/essay/ 308
 /p/how-to-customize-microsoft-office-2019-installation/ /p/how-to-customize-microsoft-office-c2r-installation/ 308
 /p/how-to-crack-microsoft-office/ /p/how-to-activate-microsoft-office/ 308
 /p/how-to-install-sumatrapdf-for-all-users/ /p/how-to-install-sumatra-pdf-for-all-users/ 308
@@ -8,5 +9,6 @@
 /p/my-computer-specifications/ /meta/my-computer-specifications/ 308
 /p/favorite-quotes/ /meta/favorite-quotes/ 308
 /p/why-i-chosen-hugo/ /meta/why-i-chosen-hugo/ 308
+/p/how-to-activate-microsoft-office-advanced/ /p/how-to-activate-microsoft-office/ 308
 /posts/* /p/:splat 308
 /pr/* /projects/:splat 308

@@ -14,12 +14,12 @@ You can now host your H5P module on your website or host it on free static hosti
 3. Rename the extension of your H5P module from `.h5p` file to `.zip`.
 4. Extract the `.zip` file contents into your `h5p-folder` folder inside of your website root directory.
 5. Add this code on the `<head>` of your website. This will load the scripts for H5P Standalone.
-```
+```html
 <link type="text/css" rel="stylesheet" media="all" href="./dist/styles/h5p.css" />
 <script type="text/javascript" src="./dist/main.bundle.js"></script>
 ```
 6. Place this code on where do you want to put the H5P player on the `<body>` of your website.
-```
+```html
 <div id="h5p-container"></div>
 <script type="text/javascript">
   const {
@@ -45,7 +45,7 @@ You can view [here](https://h5p-standalone.44444444.xyz) the website.
 5. Rename the extension of your H5P module from `.h5p` file to `.zip`.
 6. Extract the `.zip` file contents into your `h5p-folder` folder inside of your repository.
 7. Create an HTML file named `index.html` and add this code:
-```
+```html
 <!DOCTYPE html>
 <html>
 

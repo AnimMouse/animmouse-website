@@ -2,9 +2,11 @@
 title: Setup Route64 tunnel broker on MikroTik
 description: Setup Route64 IPv6 WireGuard tunnel on RouterOS
 date: 2023-11-01T01:45:00+08:00
+lastmod: 2023-11-02T02:15:00+08:00
 tags:
   - RouterOS
   - MikroTik
+  - WireGuard
   - IPv6
   - tutorials
 ---
@@ -62,7 +64,7 @@ The IPv6 subnet is the one that you will assign on your devices connected to the
 
 ### LAN side
 
-Route64 gives us `/56` subnet, which we can divide into 256 `/64` subnets. Since we got `2a11:6c7:2001:5300::/56`, I chosen the prefix `2a11:6c7:2001:5304::/64` to be given via SLAAC.
+Route64 gives us `/56` subnet, which we can divide into 256 `/64` subnets. Since we got `2a11:6c7:2001:5300::/56`, I have chosen the prefix `2a11:6c7:2001:5304::/64` to be given via SLAAC.
 
 1. Set the Neighbor Discovery to the correct interface. By default, Neighbor Discovery is enabled for all interfaces, but it's better to run it just at LAN. Take note of the MTU, since the default MTU of WireGuard is 1420, set the MTU of ND to 1420 so that the packets don't fragment.\
 `/ipv6 nd set [ find default=yes ] interface=bridge mtu=1420`
