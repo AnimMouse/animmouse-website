@@ -18,7 +18,7 @@ When you use Timeshift on ext4, it uses rsync to make copies of the files, above
 When you use System Restore on NTFS, the copies of the files are made as an atomic transaction to the file system, that is why it is fast.\
 Timeshift on Btrfs behaves like System Restore in Windows.
 
-# Install Linux Mint on Btrfs
+## Install Linux Mint on Btrfs
 This will erase everything on your hard drive.
 
 1. Open Linux Mint installer and follow everything up to Installation Type.
@@ -34,7 +34,7 @@ This will erase everything on your hard drive.
 
 ![Free space](Free-space.png)
 
-## UEFI
+### UEFI
 5. Make a 128 MB partition, use as EFI System Partition, leave other options at default.
 
 ![Create partition EFI](Create-partition-EFI.png)
@@ -51,7 +51,7 @@ This will erase everything on your hard drive.
 
 ![Install now UEFI](Install-now-UEFI.png)
 
-### GRUB always wait 30 seconds on boot
+#### GRUB always wait 30 seconds on boot
 
 A [patch](https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/1800722/) has been merged fixing grub timeout menu to 30 seconds for UEFI systems with /boot on Btrfs.
 
@@ -62,7 +62,7 @@ To fix this:
 3. Add `GRUB_RECORDFAIL_TIMEOUT=0` on the file. (If you are not sure that you can access UEFI settings, use 1 instead.)
 4. Type `sudo update-grub` to update GRUB settings.
 
-## BIOS
+### BIOS
 5. Use as Btrfs journaling file system with a mount point at '/', leave other options at default.
 
 ![Create partition Btrfs on BIOS](Create-partition-Btrfs-on-BIOS.png)

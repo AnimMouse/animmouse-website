@@ -6,8 +6,8 @@ lastmod: 2023-02-03T16:34:00+08:00
 tags:
   - tutorials
 ---
-# How to bridge mode Converge ZTE modem
-Tested on ZTE F660 and ZTE F670L
+How to bridge mode Converge ZTE modem.\
+Tested on ZTE F660 and ZTE F670L.
 
 ## Setup bridge mode
 
