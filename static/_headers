@@ -4,3 +4,5 @@
   X-Robots-Tag: noindex
 https://:project.pages.dev/*
   X-Robots-Tag: none
+https://:commit.:project.pages.dev/*
+  X-Robots-Tag: none
