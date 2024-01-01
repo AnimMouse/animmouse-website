@@ -28,8 +28,8 @@ links:
   - title: Facebook
     description: Facebook Page
     website: https://www.facebook.com/anim.mouse
-  - title: Twitter
-    description: Twitter Account
+  - title: 𝕏 (Twitter)
+    description: 𝕏 (Twitter) Account
     website: https://twitter.com/Anim_Mouse
   - title: Reddit
     description: Reddit Account
@@ -49,21 +49,30 @@ links:
   - title: OpenStreetMap
     description: OpenStreetMap Account
     website: https://www.openstreetmap.org/user/Anim%20Mouse
+  - title: ChatGPT with Me
+    description: ChatGPT with Me Project
+    website: https://chatgptwith.me
   - title: Wikipedia
     description: Wikipedia Account
     website: https://en.wikipedia.org/wiki/User:AnimMouse
   - title: VirusTotal
     description: VirusTotal Account
     website: https://www.virustotal.com/gui/user/AnimMouse
-  - title: Chess.com
-    description: Chess.com Account
-    website: https://www.chess.com/member/AnimMouse
-  - title: ChatGPT with Me
-    description: ChatGPT with Me Project
-    website: https://chatgptwith.me
+  - title: Keybase
+    description: Keybase Account
+    website: https://keybase.io/animmouse
+  - title: Fandom
+    description: Fandom Account
+    website: https://community.fandom.com/wiki/User:AnimMouse
+  - title: EverybodyWiki
+    description: EverybodyWiki Account
+    website: https://en.everybodywiki.com/User:AnimMouse
   - title: 0000004.xyz
     description: Anim Mouse’s FreeDNS domain
     website: https://www.0000004.xyz
+  - title: Chess.com
+    description: Chess.com Account
+    website: https://www.chess.com/member/AnimMouse
 menu:
   main:
     weight: -50

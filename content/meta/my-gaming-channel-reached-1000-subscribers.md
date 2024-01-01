@@ -16,4 +16,4 @@ I dreamt about Dream, and I can't believe that GTA is the one that will reach me
 
 Reaching 1k subscribers is required to kick-start YouTube's algorithm in order to recommend my videos. Only 5% of my videos are recommended by YouTube, while the other 95% are from "viewers seeking your content".
 
-Thank you to every subscribers and viewers, that joined my 4 year (2018-2022) journey to 1k subscribers. [@benmite](https://www.youtube.com/@benmite) will be considered as my symbolic 1000th subscriber.
+Thank you to every subscribers and viewers, that joined my 4 year (2018-2022) journey to 1k subscribers. [@benmite](https://www.youtube.com/channel/UClJirdL0fa6yfoXuKXYyUzQ) will be considered as my symbolic 1000th subscriber.

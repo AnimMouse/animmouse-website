@@ -1,7 +1,7 @@
 ---
 title: Favorite Quotes
 date: 2020-09-21T00:33:48+08:00
-lastmod: 2023-11-02T02:10:00+08:00
+lastmod: 2024-01-02T01:29:00+08:00
 categories:
   - meta
 ---
@@ -55,6 +55,12 @@ categories:
 > A little knowledge that acts is worth infinitely more than much knowledge that is idle.
 > — <cite>Kahlil Gibran[^16]</cite>
 
+> Everybody has a testing environment. Some people are lucky enough enough to have a totally separate environment to run production in.
+> — <cite>stahnma[^17]</cite>
+
+> All the crap you do all day, who fucking cares anyway!
+> — <cite>GTA IV Pißwasser commercial[^18]</cite>
+
 [^1]: [Albert Einstein](https://www.goodreads.com/quotes/8136665-everybody-is-a-genius-but-if-you-judge-a-fish)
 [^2]: [Antoine de Saint-Exupéry](https://www.goodreads.com/quotes/87476-a-goal-without-a-plan-is-just-a-wish)
 [^3]: [Maimonides](https://www.brainyquote.com/quotes/maimonides_326751) and [Anne Isabella Thackeray Ritchie](https://en.wiktionary.org/wiki/give_a_man_a_fish_and_you_feed_him_for_a_day;_teach_a_man_to_fish_and_you_feed_him_for_a_lifetime)
@@ -71,3 +77,5 @@ categories:
 [^14]: [Idi Amin](https://www.goodreads.com/quotes/9082497-there-is-freedom-of-speech-but-i-cannot-guarantee-freedom)
 [^15]: [Team Edge](https://youtu.be/kuvOgQSaJzc?t=333)
 [^16]: [Kahlil Gibran](https://www.goodreads.com/quotes/213736-a-little-knowledge-that-acts-is-worth-infinitely-more-than)
+[^17]: [stahnma](https://twitter.com/stahnma/status/634849376343429120)
+[^18]: [GTA IV Pißwasser commercial](https://www.grandtheftwiki.com/Pißwasser)

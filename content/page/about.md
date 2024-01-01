@@ -13,7 +13,7 @@ Hi! I'm a person with interest and knowledge, and loves to harness the power of 
 
 My computer journey:\
 In 2007, when I was 4 years old, my parents brought a computer in our home, we did not have internet at that time, my favorite program is Microsoft Paint on Windows XP, that is the program I always play. On around 2008, my parents brought Microsoft Encarta in DVD, that introduced me to Encarta Kids. On 2009, we finally have internet and the rest is history.\
-I started programming around 2011, and my first programming language is batch file scripting, [ScrewTheLotOfYou's](https://www.youtube.com/@ScrewTheLotOfYou) batch scripts are what inspired me to do programming. Fast-forward to 2018, I created an account on GitHub and started learning other programming language like Bash and PowerShell.\
+I started programming around 2011, and my first programming language is batch file scripting, [ScrewTheLotOfYou's](https://www.youtube.com/channel/UCMGfVYXyULr4W4lqCRPWCWQ) batch scripts are what inspired me to do programming. Fast-forward to 2018, I created an account on GitHub and started learning other programming language like Bash and PowerShell.\
 By 2019, I started making this website for the purpose of documenting something I have done on computers, so that I can recreate what I did someday, and I can't believe that this website got popular, and the rest is history.
 
 Username Etymology:\

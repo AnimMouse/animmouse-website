@@ -2,7 +2,7 @@
 title: Windows 10 LTSC Programs to Install
 description: List of programs to install on Windows 10 LTSC
 date: 2021-07-09T01:07:00+08:00
-lastmod: 2023-01-19T23:16:00+08:00
+lastmod: 2024-01-02T00:52:00+08:00
 tags:
   - Windows 10 LTSC
   - Windows
@@ -36,3 +36,6 @@ This is the list of my recommended programs to install on Windows 10 LTSC.
 ## Calculator (Replaces Windows Calculator)
 1. [SpeedCrunch](https://speedcrunch.org)
 2. [Qalculate!](https://qalculate.github.io)
+
+## Anti-Malware
+1. [Malwarebytes](https://www.malwarebytes.com)
