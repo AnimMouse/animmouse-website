@@ -1,7 +1,7 @@
 ---
 title: Favorite Quotes
 date: 2020-09-21T00:33:48+08:00
-lastmod: 2024-01-02T01:29:00+08:00
+lastmod: 2024-01-22T22:42:00+08:00
 categories:
   - meta
 ---
@@ -61,6 +61,9 @@ categories:
 > All the crap you do all day, who fucking cares anyway!
 > — <cite>GTA IV Pißwasser commercial[^18]</cite>
 
+> Sheldon, when your days are over, God will never ask you, "Why weren't you Einstein?" But he might ask you, "Why weren't you Sheldon?"
+> — <cite>Rabbi Schneiderman[^19]</cite>
+
 [^1]: [Albert Einstein](https://www.goodreads.com/quotes/8136665-everybody-is-a-genius-but-if-you-judge-a-fish)
 [^2]: [Antoine de Saint-Exupéry](https://www.goodreads.com/quotes/87476-a-goal-without-a-plan-is-just-a-wish)
 [^3]: [Maimonides](https://www.brainyquote.com/quotes/maimonides_326751) and [Anne Isabella Thackeray Ritchie](https://en.wiktionary.org/wiki/give_a_man_a_fish_and_you_feed_him_for_a_day;_teach_a_man_to_fish_and_you_feed_him_for_a_lifetime)
@@ -79,3 +82,4 @@ categories:
 [^16]: [Kahlil Gibran](https://www.goodreads.com/quotes/213736-a-little-knowledge-that-acts-is-worth-infinitely-more-than)
 [^17]: [stahnma](https://twitter.com/stahnma/status/634849376343429120)
 [^18]: [GTA IV Pißwasser commercial](https://www.grandtheftwiki.com/Pißwasser)
+[^19]: [Rabbi Schneiderman](https://young-sheldon.com/quotes/quote/1885)

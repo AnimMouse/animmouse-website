@@ -9,11 +9,11 @@ tags:
   - tutorials
 ---
 Bufferbloat is a problem for many of us gamers and users that need low latency internet just because the counters at the supermarket don't want to let someone with a single item to cut into the queue of people with multiple items in the cart.[^1]\
-We aim to fix that problem by letting someone with a single item in the checkout lane cut though the line using Smart Queue Management (SQM)[^2].
+We aim to fix that problem by letting someone with a single item in the checkout lane cut though the line using Smart Queue Management (SQM).[^2]
 
 ![Bufferbloat!](The-Simpsons-S05E13-711493-Bufferbloat.jpg)
 
-FastTrack is a feature in MikroTik RouterOS that packets that are marked "fast-tracked" will bypass some of a processing in the router (firewall, connection tracking, etc.)[^3], this will reduce processing overhead and allow to have higher speeds achievable on the router.[^4]\
+FastTrack is a feature in MikroTik RouterOS that packets that are marked "fast-tracked" will bypass some of a processing in the router (firewall, connection tracking, etc.),[^3] this will reduce processing overhead and allow to have higher speeds achievable on the router.[^4]\
 The problem is that FastTrack bypasses simple queues, which are used for SQM. Queue tree that are parented to global also bypasses FastTrack. We will instead use queue tree that are parented to interface and apply SQM there.\
 Take note that queue tree requires packet marks, so we set packet-mark to no-mark so packets without mark will go to the queue tree. Any packets that are marked will bypass the queue tree, requiring you to add the name of the mark in `packet-mark=` option.
 

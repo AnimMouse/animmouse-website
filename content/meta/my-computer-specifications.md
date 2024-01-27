@@ -2,7 +2,7 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-lastmod: 2023-09-28T23:56:00+08:00
+lastmod: 2024-01-22T22:58:00+08:00
 categories:
   - meta
 ---
@@ -103,7 +103,8 @@ categories:
 * 2017 - 2022: Acrylic ATX PC case
 
 ### Monitor
-* 2022 - present: Samsung S22F355FHE
+* 2024 - present: Gigabyte GP-G27Q-AP
+* 2022 - 2024: Samsung S22F355FHE
 * 2017 - 2022: LG E1941T-BN
 
 ## Smartphone
@@ -129,3 +130,9 @@ categories:
 * 2011 - 2015: Sun Broadband Wireless 3G 2 Mbps ₱100/3 days
 * 2010 - 2011: PLDT Wireless 3G 2 Mbps ₱500/month (Shared bill)
 * 2009 - 2010: Smart Broadband Canopy 512 Kbps ₱999/month
+
+## Laptop 1
+* 2020 - present: MaiBenBen DaMai E527
+
+## Laptop 2
+* 2023 - present: HP Laptop 15s-eq3082AU
