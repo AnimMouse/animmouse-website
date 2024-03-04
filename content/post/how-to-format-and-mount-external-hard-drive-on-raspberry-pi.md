@@ -2,6 +2,7 @@
 title: How to Format and Mount External Hard Drive on Raspberry Pi
 description: Format as Btrfs and Mount USB External HDD on Raspberry Pi
 date: 2023-04-28T19:58:00+08:00
+lastmod: 2024-03-04T21:58:00+08:00
 tags:
   - Raspberry Pi
   - Ubuntu
@@ -11,24 +12,23 @@ tags:
 Use your external hard drive formatted to Btrfs for your Raspberry Pi.
 
 ## Select HDD
-1. Find your external HDD.\
-`lsblk | grep -i "sd"`
-2. Find the partition on external HDD.\
+1. Find your external HDD. It mostly starts at `/dev/sd`.\
 `sudo fdisk -l`
-3. Enter fdisk for formatting by selecting your external HDD.\
+2. Enter fdisk for formatting by selecting your external HDD. For this example, we choose `/dev/sda`.\
 `sudo fdisk /dev/sda`
 
 ## fdisk
-1. Delete partition. `d`
+1. Create a new empty GPT partition table. `g`
 2. Create partition. `n`
-4. Select partition number. `1`
-5. Select the first sector instead of using the default 2048, since my external HDD has range of 34-976773134, I choose 34. `34`
-6. Select the last sector. The default is the last sector, so just enter it.
+3. Select partition number. `1`
+4. Select the first sector. The default shown is best so that the partition is aligned properly, so just enter it.
+5. Select the last sector. The default shown is the last sector, so just enter it.
+6. When asked to remove the filesystem signature, enter yes. `y`
 7. Write changes to disk. This will delete all data on the external HDD. `w`
 
 ## Btrfs format
-1. Format external HDD to Btrfs with label Raspberry-Pi-HDD, label is there for easier mounting.\
-`sudo mkfs.btrfs -L Raspberry-Pi-HDD /dev/sda1`
+1. Format external HDD to Btrfs with label Raspberry-Pi-HDD, label is there for easier mounting. Also use xxHash for checksumming.\
+`sudo mkfs.btrfs --csum xxhash -L Raspberry-Pi-HDD /dev/sda1`
 
 You can change label at any time by using this command:\
 `sudo btrfs filesystem label /dev/sda1 Raspberry-Pi-HDD`

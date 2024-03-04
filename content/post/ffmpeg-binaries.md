@@ -101,7 +101,7 @@ List of all [FFmpeg](https://ffmpeg.org) binaries/builds that I can find.
 [BtbN]: https://github.com/BtbN/FFmpeg-Builds "This build uses BtbN/FFmpeg-Builds"
 [MBS]: https://github.com/m-ab-s/media-autobuild_suite "This build uses media-autobuild_suite"
 [FWBH-Reino17]: https://github.com/Reino17/ffmpeg-windows-build-helpers "This build uses forked ffmpeg-windows-build-helpers by Reino17"
-[avbuild]: https://github.com/Reino17/ffmpeg-windows-build-helpers "This build uses avbuild by wang-bin"
+[avbuild]: https://github.com/wang-bin/avbuild "This build uses avbuild by wang-bin"
 
 [^1]: Special thanks to [Vangelis66](https://github.com/AnimMouse/ffmpeg-autobuild/issues/274#issuecomment-853315861) for additional sources.
 [^2]: Special thanks to [HGStyleOfficial](https://www.reddit.com/r/ffmpeg/comments/16pkp7p/i_got_100_links_to_download_ffmpeg_binaries_for) for additional sources.

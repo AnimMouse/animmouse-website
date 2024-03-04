@@ -2,7 +2,7 @@
 title: Windows 10 LTSC Programs to Install
 description: List of programs to install on Windows 10 LTSC
 date: 2021-07-09T01:07:00+08:00
-lastmod: 2024-01-02T00:52:00+08:00
+lastmod: 2024-03-04T22:24:00+08:00
 tags:
   - Windows 10 LTSC
   - Windows
@@ -39,3 +39,7 @@ This is the list of my recommended programs to install on Windows 10 LTSC.
 
 ## Anti-Malware
 1. [Malwarebytes](https://www.malwarebytes.com)
+
+## PDF Reader
+1. [Sumatra PDF](https://www.sumatrapdfreader.org)
+2. [Adobe Acrobat Reader](https://get.adobe.com/reader/) (Not Open Source)

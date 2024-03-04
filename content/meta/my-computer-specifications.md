@@ -2,7 +2,7 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-lastmod: 2024-01-22T22:58:00+08:00
+lastmod: 2024-03-04T22:11:00+08:00
 categories:
   - meta
 ---
@@ -27,7 +27,7 @@ categories:
 * 2017 - 2022: Palit Nvidia GeForce GTX 1050 Ti StormX
 
 ### RAM
-* 2022 - present: Teamgroup T-Create Expert OC10L 32 GB (4x8 GB) DDR4-3600 (running on DDR4-3200)
+* 2022 - present: TeamGroup T-Create Expert OC10L 32 GB (4x8 GB) DDR4-3600 (running on DDR4-3200)
 * 2017 - 2022: Kingmax GLJF62F-D8KFG4 8 GB (2x4 GB) DDR4-2133
 * 2015 - 2017: 4 GB (1x4 GB) DDR3-1333
 
@@ -122,7 +122,8 @@ categories:
 * 2012 - 2015: Hitachi HTS545050B9A300 500 GB
 
 ## Internet
-* 2022 - present: Converge ICT 250 Mbps ₱1599/month
+* 2024 - present: Converge ICT 350 Mbps ₱1599/month
+* 2022 - 2024: Converge ICT 250 Mbps ₱1599/month
 * 2021 - 2022: Converge ICT 125 Mbps ₱1599/month
 * 2020 - 2021: Converge ICT 50 Mbps ₱1500/month
 * 2019 - 2020: Converge ICT 25 Mbps ₱1500/month
@@ -136,3 +137,6 @@ categories:
 
 ## Laptop 2
 * 2023 - present: HP Laptop 15s-eq3082AU
+
+## Laptop 3
+* 2010 - present: ASUS K40IJ
