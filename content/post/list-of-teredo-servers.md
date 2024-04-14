@@ -11,7 +11,7 @@ List of currently working Teredo servers and relays.
 
 ## Teredo servers
 1. iks-jena.de: `teredo.iks-jena.de`
-2. [August Internet](https://august.tw/about): `teredo.august.tw`
+2. [August Internet](https://bgp.co/about): `teredo.august.tw`
 
 ### Microsoft servers
 These servers allow only to connect to other Teredo addresses on the same server for the purpose of NAT traversal.
