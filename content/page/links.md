@@ -67,6 +67,9 @@ links:
   - title: EverybodyWiki
     description: EverybodyWiki Account
     website: https://en.everybodywiki.com/User:AnimMouse
+  - title: AS215150
+    description: Autonomous System Number 215150
+    website: https://as.215150.xyz
   - title: 0000004.xyz
     description: Anim Mouse’s FreeDNS domain
     website: https://www.0000004.xyz

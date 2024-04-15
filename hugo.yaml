@@ -120,13 +120,13 @@ menu:
           name: YouTube Gaming
           url: https://www.youtube.com/@AnimsGamingMouse
           params:
-            icon: device-gamepad
+            icon: device-gamepad-2
 
-        - identifier: twitter
-          name: Twitter
+        - identifier: x
+          name: 𝕏 (Twitter)
           url: https://twitter.com/Anim_Mouse
           params:
-            icon: brand-twitter
+            icon: brand-x
 
         - identifier: ko-fi
           name: Ko-fi
