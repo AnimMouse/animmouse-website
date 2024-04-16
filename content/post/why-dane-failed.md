@@ -3,6 +3,7 @@ title: Why DANE failed
 description: Why DNS-based Authentication of Named Entities failed to take over and what we can do
 date: 2022-03-04T15:38:58+08:00
 tags:
+  - DNS
   - dev
   - essay
 ---

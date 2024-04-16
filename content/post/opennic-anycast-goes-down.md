@@ -3,6 +3,7 @@ title: OpenNIC Anycast goes down
 description: OpenNIC Anycast Tier 2 DNS Resolvers goes down
 date: 2022-03-25T00:35:33+08:00
 tags:
+  - DNS
   - sysadmin
 ---
 I have been using OpenNIC DNS servers recently, and wondering why some of my devices like our TCL smart TV can't connect to the internet but our computers can.
