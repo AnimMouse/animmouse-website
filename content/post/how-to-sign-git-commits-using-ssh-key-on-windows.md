@@ -2,7 +2,7 @@
 title: How to sign Git commits using SSH key on Windows
 description: Sign your Git commits using SSH key instead of GPG key
 date: 2024-04-15T21:24:00+08:00
-lastmod: 2024-04-16T23:18:00+08:00
+lastmod: 2024-04-17T22:54:00+08:00
 tags:
   - GitHub
   - Windows
@@ -47,7 +47,7 @@ Now every time you commit, it will automatically sign using your SSH key. If you
 
 1. Create an allowed signers file to `%UserProfile%\.ssh` folder with filename `allowed_signers`.
 2. Configure Git to read allowed signers file.\
-`git config gpg.ssh.allowedSignersFile "~/.ssh/allowed_signers"`
+`git config --global gpg.ssh.allowedSignersFile "~/.ssh/allowed_signers"`
 3. Add your entry to the allowed signers file following this format: `<email> namespaces="git" <ssh_public_key>`.\
 Example allowed_signers file with my SSH public key:
 ```

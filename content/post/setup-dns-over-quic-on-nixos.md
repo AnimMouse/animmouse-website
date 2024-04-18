@@ -2,6 +2,7 @@
 title: Setup DNS over QUIC on NixOS
 description: Install dnsproxy and use DNS over QUIC on NixOS
 date: 2024-04-17T00:23:00+08:00
+lastmod: 2024-04-18T21:57:00+08:00
 tags:
   - DNS
   - Linux
@@ -22,10 +23,11 @@ networking.networkmanager.dns = "none";
 ```
 
 ## Create a systemd service to run DNS Proxy
+Note that you need to specify a bootstrap server since by default, dnsproxy uses a system-provided DNS server, which is the dnsproxy itself `127.0.0.1` which causes a loop.
 ```nix
 systemd.services.dnsproxy = {
   description = "dnsproxy";
-  serviceConfig.ExecStart = "${pkgs.dnsproxy}/bin/dnsproxy -l 127.0.0.1 -u quic://dns.nextdns.io";
+  serviceConfig.ExecStart = "${pkgs.dnsproxy}/bin/dnsproxy -l 127.0.0.1 -u quic://dns.nextdns.io -b 192.168.1.1";
   wantedBy = [ "multi-user.target" ];
 };
 ```

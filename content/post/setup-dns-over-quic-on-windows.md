@@ -2,6 +2,7 @@
 title: Setup DNS over QUIC on Windows
 description: Install dnsproxy and use DNS over QUIC on Windows
 date: 2024-04-17T00:12:00+08:00
+lastmod: 2024-04-18T21:57:00+08:00
 tags:
   - DNS
   - Windows
@@ -37,9 +38,10 @@ Unlike DNS over HTTPS and HTTPS/3 (DoH and DoH3), DoQ does not attempt to hide i
 2. Click "New".
 3. At the "Program/script:" text field, enter `"C:\Program Files\dnsproxy\dnsproxy.exe"`.
 4. At the "Add arguments (optional):" text field, this is where your dnsproxy config goes.\
-Here is an example config that uses NextDNS's DNS-over-QUIC resolver:
+Here is an example config that uses NextDNS's DNS-over-QUIC resolver:\
+Note that you need to specify a bootstrap server since by default, dnsproxy uses a system-provided DNS server, which is the dnsproxy itself `127.0.0.1` which causes a loop.
 ```
--l 127.0.0.1 -u quic://dns.nextdns.io
+-l 127.0.0.1 -u quic://dns.nextdns.io -b 192.168.1.1
 ```
 If you have local DNS server at `192.168.1.1`, you can specify `home.arpa` to resolve at `192.168.1.1`. Also enable cache.
 ```
