@@ -1,7 +1,7 @@
 ---
 title: FFmpeg Stable Autobuild
 date: 2020-12-05T23:53:14+08:00
-lastmod: 2021-09-07T23:10:00+08:00
+lastmod: 2024-04-19T17:15:00+08:00
 categories:
   - projects
 tags:
@@ -11,7 +11,7 @@ tags:
 
 FFmpeg automatic stable build creator that uses GitHub Actions.
 
-This uses the latest release source code of FFmpeg, not the git source code.
+This uses the latest release source code of FFmpeg.
 
 It uses [ffmpeg-windows-build-helpers](https://github.com/rdp/ffmpeg-windows-build-helpers) helper script to compile FFmpeg.
 
@@ -30,7 +30,7 @@ Mentioned in:
 * [r/FFmpeg](https://www.reddit.com/r/ffmpeg/comments/ikht2k/ffmpegzeranoecom_will_close_on_sep_18_2020/g3rm2nk)
 * [forums.ru-board.com](https://forum.ru-board.com/topic.cgi?forum=5&topic=45173)
 
-Used by:
+Formerly used by:
 * [Advanced Youtube Client - AYC](https://www.videohelp.com/software/Advanced-Youtube-Client-AYC/version-history)
 
 For other builds of FFmpeg built by others, go to [My list of FFmpeg Binaries](../../p/ffmpeg-binaries/).

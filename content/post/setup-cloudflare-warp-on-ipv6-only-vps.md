@@ -1,5 +1,5 @@
 ---
-title: Setup Cloudflare WARP-to-WARP on IPv6 Only VPS
+title: Setup Cloudflare WARP on IPv6 Only VPS
 description: Get IPv4 connectivity and setup Cloudflare Zero Trust on your IPv6 only VPS
 date: 2024-04-15T20:29:00+08:00
 tags:
