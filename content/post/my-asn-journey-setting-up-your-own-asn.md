@@ -2,6 +2,7 @@
 title: 'My ASN Journey: Setting up your own ASN'
 description: How to set up your personal ASN
 date: 2024-04-24T20:35:00+08:00
+lastmod: 2024-04-27T20:07:00+08:00
 tags:
   - ASN
   - IPv6
@@ -21,7 +22,7 @@ A [PeeringDB](https://www.peeringdb.com) is essentially a social media for your 
 ## A domain name for your ASN
 
 If you already have a domain name, you can create a subdomain on it and host a simple website about your ASN.\
-This domain name is also where we will host our geofeed later on.
+This domain name is also where we will host our geofeed and forward-confirmed reverse DNS (FCrDNS) later on.
 
 If you want to, you can register a 1.111B class domain on the .xyz TLD with your AS number, and it will only cost you 99¢ per year, just like my ASN on [as.215150.xyz](https://as.215150.xyz).
 
@@ -36,7 +37,7 @@ If you want to, you can register a 1.111B class domain on the .xyz TLD with your
 ## Create a route6 object in the RIPE IRR database
 
 Internet Routing Registry (IRR) is a database used to record a connection between an IPv6 address and the originating AS number.\
-They say that your ASN is authorized to announce your IPv6 prefix.
+A route6 object say that your ASN is authorized to announce your IPv6 prefix.
 
 1. Go to [RIPE database's Create an Object](https://apps.db.ripe.net/db-web-ui/webupdates/select).
 2. Under Object type, select route6, and click create.
@@ -51,7 +52,7 @@ origin: AS215150
 
 ## Create a routing policy statement on your ASN
 
-The import and export statements describe your ASN routing policy. They say that your upstream ASN is authorized to announce your ASN.\
+The import and export statements describe your ASN routing policy. Those statements say that your upstream ASN is authorized to announce your ASN.\
 Some providers like iFog GmbH uses import and export statements to verify that you own your ASN.
 
 Some LIRs like Lagrange Cloud automatically add an import and export statement using the 2 peering details when you first acquire your ASN. If this happens, you already have the required import and export statements.

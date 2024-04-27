@@ -2,6 +2,7 @@
 title: My ASN Journey
 description: A comprehensive beginners guide about getting your own ASN and own IP address
 date: 2024-04-24T20:05:00+08:00
+lastmod: 2024-04-28T00:47:00+08:00
 tags:
   - ASN
   - IPv6
@@ -21,12 +22,13 @@ There are still no concrete tutorials on how to set up BGP from the ground up, s
 1. [My ASN Journey: Acquiring your own ASN](../my-asn-journey-acquiring-your-own-asn/)
 2. [My ASN Journey: Setting up your own ASN](../my-asn-journey-setting-up-your-own-asn/)
 3. [My ASN Journey: Configuring BGP on VPS](../my-asn-journey-configuring-bgp-on-vps/)
-4. My ASN Journey: Bring home the IPv6 via SOCKS5 (TBD)
+4. [My ASN Journey: Bring home the IPv6 via SOCKS5](../my-asn-journey-bring-home-the-ipv6-via-socks5/)
 5. My ASN Journey: Bring home the IPv6 via WireGuard (TBD)
 6. My ASN Journey: Setting up IP geolocation (TBD)
 7. My ASN Journey: Acquiring more IPv6 prefixes (TBD)
-8. My ASN Journey: Joining an Internet Exchange (IX) (TBD)
+8. My ASN Journey: Joining an Internet Exchange (IXP) (TBD)
 9. My ASN Journey: Setting up RPKI (TBD)
+10. My ASN Journey: Setting up reverse DNS (rDNS) (TBD)
 
 ## Rationale
 
@@ -38,6 +40,7 @@ By getting your own ASN and IPv6, you get IPv6 connectivity.
 What if someone is abusive? Then that IPv4 address gets banned, and you are also banned.\
 Since you are the only one who uses that IPv6 prefix, then your IPv6 prefix is tagged clean.
 3. This is basically a VPN, but your IP address is not tagged as a proxy, allowing you to edit on Wikipedia or watch Netflix for example.
+4. No more CAPTCHAs since you are the only one using your own IPv6 address.
 
 ## Limitations
 
@@ -60,7 +63,7 @@ Every website you visit using your own IP address has a name tag to you.
 No, you can ask your provider to announce the IPs for you via a private ASN, but I have not seen a provider that is cheap enough to do BYOIP without an ASN. Getting your own ASN is the best option.
 
 2. Is it possible to get your own IPv4 address?\
-Yes, but make sure you have big pockets ready, this is why this tutorial will focus more about IPv6.
+Yes, but make sure you have deep pockets ready, this is why this tutorial will focus more about IPv6.
 
 3. Difference between IP transit and peering?
    * IP transit: You will get all prefixes on the internet or a default route.

@@ -2,6 +2,7 @@
 title: 'My ASN Journey: Configuring BGP on VPS'
 description: How to configure BGP using BIRD and announce your IPv6 prefix on VPS
 date: 2024-04-24T22:24:00+08:00
+lastmod: 2024-04-28T00:45:00+08:00
 tags:
   - ASN
   - BGP
@@ -163,7 +164,7 @@ We can't just set the source IP of an IP packet without the source IP being assi
 
 ### Set up a dummy interface
 
-We need to create a dummy interface in order for us to have an interface where we assign the IP address. We can't just assign our IP address to `eth0` since your IPv6 prefix technically does not exist within the `eth0` interface.
+We need to create a dummy interface in order for us to have an interface where we assign the IP address. We can't just assign our IP address to `eth0` since your IPv6 prefix technically does not exist within the `eth0` interface. A dummy interface works like a loopback interface.
 
 1. Create a dummy interface configuration.\
 `sudo nano /etc/network/interfaces.d/dummy1`
@@ -171,7 +172,7 @@ We need to create a dummy interface in order for us to have an interface where w
 2. Paste this configuration and edit.
 ```
 auto dummy1
-iface dummy1 inet static
+iface dummy1 inet6 static
     address <IPv6 address to assign from your IPv6 prefix>
     pre-up ip link add $IFACE type dummy
     post-down ip link del $IFACE
@@ -193,11 +194,26 @@ iface dummy1 inet6 static
 4. Check the status of your prefix to see if it is now reachable. If it says unicast, it means that your IPv6 address is now reachable to the internet.\
 `sudo /usr/sbin/birdc show route export <BGP session name> all`
 
-5. Since your IPv6 address is now reachable, you can now ping your IPv6 address at home or even connect to your VPS via SSH using that announced prefix.
+5. Since your IPv6 address is now reachable, you can now ping your IPv6 address at home or even connect to your VPS via SSH using that announced prefix after the prefix has propagated over the internet.
+
+#### Manual configuration
+
+This does not persist after a reboot.
+
+1. Create a dummy interface.\
+`ip link add dummy1 type dummy`
+
+2. Assign an IPv6 address to the dummy1 interface.\
+`ip -6 addr add <IPv6 address to assign from your IPv6 prefix> dev dummy1`
+
+Example: `ip -6 addr add 2a0f:85c1:3b2::/48 dev dummy1`
 
 ### BGP route propagation
 
-Just like DNS (It's Always DNS!), it takes time for the route that tells your IPv6 prefix where it is, to be propagated across the routers. It can take up to 72 hours for the whole internet to accept your prefixes.
+Just like DNS (It's Always DNS!), it takes time for the route that tells your IPv6 prefix where it is, to be propagated across the routers. It can take up to 72 hours for the whole internet to accept your prefixes.\
+During the period where the route has not yet propagated, you can't ping or use your IPv6 address as a source IP in the meantime.
+
+You can use [NLNOG Looking Glass](https://lg.ring.nlnog.net) to check the status of your route propagation by entering your IPv6 prefix there.
 
 ## Use your IPv6 address as a source IP
 
@@ -247,12 +263,37 @@ default via <Gateway IPv6 address> dev eth0 metric 1024 onlink pref medium
 4. Check using curl without a specified address if the source IP is correct.\
 `curl api.myip.com`
 
-## Cheet sheets
+## Using a different IPv6 address from your prefix.
+
+One of the benefits of IPv6 is you have huge number of IP address to use from.\
+What if I wanted to use `2a0f:85c1:3b2::1:5ee:900d:c0de` (I see good code) as my IPv6 address?
+
+1. Assign your chosen IPv6 address to the dummy1 interface
+
+Automatic: Add your chosen IPv6 address to `/etc/network/interfaces.d/dummy1`.
+```
+auto dummy1
+iface dummy1 inet6 static
+    address 2a0f:85c1:3b2::/48
+    address 2a0f:85c1:3b2::1:5ee:900d:c0de/48
+    pre-up ip link add $IFACE type dummy
+    post-down ip link del $IFACE
+```
+
+Manual: `ip -6 addr add 2a0f:85c1:3b2::1:5ee:900d:c0de/48 dev dummy1`
+
+2. Use curl to check if you are getting the right IPv6 address.\
+`curl --interface 2a0f:85c1:3b2::1:5ee:900d:c0de api.myip.com`
+
+Now that we have your own IPv6 prefix working on your VPS, it is time to [bring home the IPv6 using SOCKS5](../my-asn-journey-bring-home-the-ipv6-via-socks5/).
+
+## Shell cheat sheets
 
 ### BIRD Internet Routing Daemon systemd service
 ```sh
 sudo systemctl start bird.service
 sudo systemctl stop bird.service
+sudo systemctl restart bird.service
 sudo systemctl status bird.service
 ```
 
@@ -260,6 +301,12 @@ sudo systemctl status bird.service
 ```sh
 sudo ifup dummy1
 sudo ifdown dummy1
+```
+
+### IPv6 address
+```sh
+ip -6 addr add <Your chosen IPv6 address> dev dummy1
+ip -6 addr del <Your chosen IPv6 address> dev dummy1
 ```
 
 ### Routing table
