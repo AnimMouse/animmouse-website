@@ -1,7 +1,8 @@
 ---
 title: 'My ASN Journey: Bring home the IPv6 via SOCKS5'
-description: How to use your IPv6 address at home using SOCKS5
+description: How to bring your announced IPv6 prefix to home using Dante SOCKS5 proxy
 date: 2024-04-28T00:09:00+08:00
+lastmod: 2024-04-28T18:54:00+08:00
 tags:
   - ASN
   - VPS
@@ -11,7 +12,7 @@ tags:
 Now that we have our own IPv6 address working, it's time to use it as a proxy to your home.
 
 This tutorial assumes you have Debian installed on your VPS.\
-Take note that SOCKS5 is unencrypted, you should only run it inside a SSH tunnel or a WireGuard tunnel.
+Take note that SOCKS5 is unencrypted, you should only run it inside an SSH tunnel or a WireGuard tunnel.
 
 Since Dante can use a specified source IP, it does not require setting a source IP on the routing table.
 
@@ -35,7 +36,7 @@ user.privileged: root
 user.unprivileged: nobody
 
 # The listening network interface or address.
-internal: 0.0.0.0 port=1080
+internal: 127.0.0.1 port=1080 # Only listen to localhost
 
 # The proxying network interface or address.
 external: <Your IPv6 address assigned to your dummy1>
@@ -51,6 +52,7 @@ client pass {
     from: 127.0.0.0/8 to: 0.0.0.0/0
 }
 
+# Block anything not from localhost
 client block {
     from: 0.0.0.0/0 to: 0.0.0.0/0
     log: connect error
@@ -69,7 +71,7 @@ user.privileged: root
 user.unprivileged: nobody
 
 # The listening network interface or address.
-internal: 0.0.0.0 port=1080
+internal: 0.0.0.0 port=1080 # Listen to the whole IPv4 internet
 
 # The proxying network interface or address.
 external: <Your IPv6 address assigned to your dummy1>
@@ -90,6 +92,7 @@ client pass {
     from: 127.0.0.0/8 to: 0.0.0.0/0
 }
 
+# Block anything not from Cloudflare WARP or localhost
 client block {
     from: 0.0.0.0/0 to: 0.0.0.0/0
     log: connect error
@@ -109,7 +112,7 @@ user.privileged: root
 user.unprivileged: nobody
 
 # The listening network interface or address.
-internal: 0.0.0.0 port=1080
+internal: 0.0.0.0 port=1080 # Listen to the whole IPv4 internet
 
 # The proxying network interface or address.
 external: <Your IPv6 address assigned to your dummy1>
@@ -132,6 +135,7 @@ client pass {
     from: 127.0.0.0/8 to: 0.0.0.0/0
 }
 
+# Block anything not from Cloudflare WARP or localhost
 client block {
     from: 0.0.0.0/0 to: 0.0.0.0/0
     log: connect error
@@ -150,7 +154,7 @@ user.privileged: root
 user.unprivileged: nobody
 
 # The listening network interface or address.
-internal: 0.0.0.0 port=1080
+internal: 0.0.0.0 port=1080 # Listen to the whole IPv4 internet
 
 # The proxying network interface or address.
 external: 2a0f:85c1:3b2::
@@ -173,6 +177,7 @@ client pass {
     from: 127.0.0.0/8 to: 0.0.0.0/0
 }
 
+# Block anything not from Cloudflare WARP or localhost
 client block {
     from: 0.0.0.0/0 to: 0.0.0.0/0
     log: connect error
@@ -197,14 +202,14 @@ Now that the SOCKS5 proxy is working, we can verify if it is working.
 
 1. Connect to your VPS server using SSH with SSH port forwarding.
 
-2. Use curl to check if the proxy is working and if is returning right IPv6 address.\
+2. Use curl to check if the proxy is working and if is returning the right IPv6 address.\
 `curl -x socks5://localhost:1080 api.myip.com`
 
-If it returns your IPv6 prefix, it is now working and you can use it on a browser like Firefox.
+If it returns your IPv6 prefix, it is now working, and you can use it on a browser like Firefox.
 
 ### Using Cloudflare WARP WireGuard
 
-1. Use curl to check if the proxy is working and if is returning right IPv6 address.\
+1. Use curl to check if the proxy is working and if is returning the right IPv6 address.\
 `curl -x socks5://<IPv4 address of the server on Cloudflare WARP>:1080 -6 api.myip.com`
 
 Example: `curl -x socks5://100.96.0.6:1080 api.myip.com`

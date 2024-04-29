@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Configuring BGP on VPS'
 description: How to configure BGP using BIRD and announce your IPv6 prefix on VPS
 date: 2024-04-24T22:24:00+08:00
-lastmod: 2024-04-28T00:45:00+08:00
+lastmod: 2024-04-29T18:41:00+08:00
 tags:
   - ASN
   - BGP
@@ -149,13 +149,13 @@ peers:
 4. Generate BIRD2 config from Pathvector.\
 `sudo pathvector generate`
 5. Check BGP session. If you see "Established", then BGP session is working.\
-`sudo /usr/sbin/birdc show protocol`
+`sudo birdc show protocol`
 6. Check BGP session on a specific session. Replace `<BGP session name>` with name from step 5.\
-`sudo /usr/sbin/birdc show protocol all <BGP session name>`\
-Example: `sudo /usr/sbin/birdc show protocol all IFOG_AS34927_v6`
+`sudo birdc show protocol all <BGP session name>`\
+Example: `sudo birdc show protocol all IFOG_AS34927_v6`
 7. Check the status of your prefix if it is being exported/announced. If your prefix is there, it means it is currently exported/announced to the internet. It is normal for it to be unreachable as we haven't assigned the IPv6 address to an interface yet.\
-`sudo /usr/sbin/birdc show route export <BGP session name> all`\
-Example: `sudo /usr/sbin/birdc show route export IFOG_AS34927_v6 all`
+`sudo birdc show route export <BGP session name> all`\
+Example: `sudo birdc show route export IFOG_AS34927_v6 all`
 
 ## Set up your IPv6 prefix on your VPS
 
@@ -192,7 +192,7 @@ iface dummy1 inet6 static
 `sudo ifup dummy1`
 
 4. Check the status of your prefix to see if it is now reachable. If it says unicast, it means that your IPv6 address is now reachable to the internet.\
-`sudo /usr/sbin/birdc show route export <BGP session name> all`
+`sudo birdc show route export <BGP session name> all`
 
 5. Since your IPv6 address is now reachable, you can now ping your IPv6 address at home or even connect to your VPS via SSH using that announced prefix after the prefix has propagated over the internet.
 
@@ -201,12 +201,12 @@ iface dummy1 inet6 static
 This does not persist after a reboot.
 
 1. Create a dummy interface.\
-`ip link add dummy1 type dummy`
+`sudo ip link add dummy1 type dummy`
 
 2. Assign an IPv6 address to the dummy1 interface.\
-`ip -6 addr add <IPv6 address to assign from your IPv6 prefix> dev dummy1`
+`sudo ip -6 addr add <IPv6 address to assign from your IPv6 prefix> dev dummy1`
 
-Example: `ip -6 addr add 2a0f:85c1:3b2::/48 dev dummy1`
+Example: `sudo ip -6 addr add 2a0f:85c1:3b2::/48 dev dummy1`
 
 ### BGP route propagation
 
@@ -268,7 +268,7 @@ default via <Gateway IPv6 address> dev eth0 metric 1024 onlink pref medium
 One of the benefits of IPv6 is you have huge number of IP address to use from.\
 What if I wanted to use `2a0f:85c1:3b2::1:5ee:900d:c0de` (I see good code) as my IPv6 address?
 
-1. Assign your chosen IPv6 address to the dummy1 interface
+1. Assign your chosen IPv6 address to the dummy1 interface.
 
 Automatic: Add your chosen IPv6 address to `/etc/network/interfaces.d/dummy1`.
 ```
@@ -285,7 +285,7 @@ Manual: `ip -6 addr add 2a0f:85c1:3b2::1:5ee:900d:c0de/48 dev dummy1`
 2. Use curl to check if you are getting the right IPv6 address.\
 `curl --interface 2a0f:85c1:3b2::1:5ee:900d:c0de api.myip.com`
 
-Now that we have your own IPv6 prefix working on your VPS, it is time to [bring home the IPv6 using SOCKS5](../my-asn-journey-bring-home-the-ipv6-via-socks5/).
+Now that we have your own IPv6 prefix working on your VPS, it is time to bring home the IPv6 using [SOCKS5](../my-asn-journey-bring-home-the-ipv6-via-socks5/) or [WireGuard](../my-asn-journey-bring-home-the-ipv6-via-wireguard/).
 
 ## Shell cheat sheets
 
@@ -305,8 +305,8 @@ sudo ifdown dummy1
 
 ### IPv6 address
 ```sh
-ip -6 addr add <Your chosen IPv6 address> dev dummy1
-ip -6 addr del <Your chosen IPv6 address> dev dummy1
+sudo ip -6 addr add <Your chosen IPv6 address> dev dummy1
+sudo ip -6 addr del <Your chosen IPv6 address> dev dummy1
 ```
 
 ### Routing table

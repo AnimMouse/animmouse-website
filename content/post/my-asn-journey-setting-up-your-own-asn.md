@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Setting up your own ASN'
 description: How to set up your personal ASN
 date: 2024-04-24T20:35:00+08:00
-lastmod: 2024-04-27T20:07:00+08:00
+lastmod: 2024-04-29T18:44:00+08:00
 tags:
   - ASN
   - IPv6
@@ -22,7 +22,7 @@ A [PeeringDB](https://www.peeringdb.com) is essentially a social media for your 
 ## A domain name for your ASN
 
 If you already have a domain name, you can create a subdomain on it and host a simple website about your ASN.\
-This domain name is also where we will host our geofeed and forward-confirmed reverse DNS (FCrDNS) later on.
+This domain name is also where we will host our geofeed, forward-confirmed reverse DNS (FCrDNS), and Network Operations Center (NOC) email later on.
 
 If you want to, you can register a 1.111B class domain on the .xyz TLD with your AS number, and it will only cost you 99¢ per year, just like my ASN on [as.215150.xyz](https://as.215150.xyz).
 

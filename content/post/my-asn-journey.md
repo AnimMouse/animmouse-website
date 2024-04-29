@@ -2,7 +2,7 @@
 title: My ASN Journey
 description: A comprehensive beginners guide about getting your own ASN and own IP address
 date: 2024-04-24T20:05:00+08:00
-lastmod: 2024-04-28T00:47:00+08:00
+lastmod: 2024-04-29T18:40:00+08:00
 tags:
   - ASN
   - IPv6
@@ -23,7 +23,7 @@ There are still no concrete tutorials on how to set up BGP from the ground up, s
 2. [My ASN Journey: Setting up your own ASN](../my-asn-journey-setting-up-your-own-asn/)
 3. [My ASN Journey: Configuring BGP on VPS](../my-asn-journey-configuring-bgp-on-vps/)
 4. [My ASN Journey: Bring home the IPv6 via SOCKS5](../my-asn-journey-bring-home-the-ipv6-via-socks5/)
-5. My ASN Journey: Bring home the IPv6 via WireGuard (TBD)
+5. [My ASN Journey: Bring home the IPv6 via WireGuard](../my-asn-journey-bring-home-the-ipv6-via-wireguard/)
 6. My ASN Journey: Setting up IP geolocation (TBD)
 7. My ASN Journey: Acquiring more IPv6 prefixes (TBD)
 8. My ASN Journey: Joining an Internet Exchange (IXP) (TBD)
@@ -83,3 +83,4 @@ Use Cloudflare WARP. Or better yet setup Cloudflare WARP-to-WARP on your router.
 * [What I wish I knew when I got my ASN](https://quantum5.ca/2023/10/10/what-i-wish-i-knew-when-i-got-my-asn)
 * [The Beginner’s Guide: ASN Setup](https://www.lir.services/blog/asn-setup/)
 * [BGP.training](https://bgp.training)
+* [ASN number registration - Start your own ASN](https://as204406.net/asn-number-registration/)
