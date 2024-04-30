@@ -1,7 +1,7 @@
 ---
 title: 'My ASN Journey: Bring home the IPv6 via WireGuard'
 description: How to bring your announced IPv6 prefix to your home router using WireGuard on MikroTik
-date: 2024-04-29T18:29:00+08:00
+date: 2024-04-29T19:17:00+08:00
 tags:
   - ASN
   - VPS
@@ -29,8 +29,10 @@ We will also use MikroTik RouterOS to assign IPv6 addresses to our devices.
 3. Generate public key.\
 `sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public.key`
 
+Since I'm using an IPv6 only server and I have Cloudflare WARP running at `wg0`, I will use `wg1` in this tutorial. If you don't have any other WireGuard interface running, you can use `wg0`.
+
 4. Create WireGuard configuration.\
-`sudo nano /etc/wireguard/wg0.conf`
+`sudo nano /etc/wireguard/wg1.conf`
 
 Here is an example config for WireGuard.
 
@@ -65,8 +67,6 @@ Input your IPv6 prefix on that site like `2a0f:85c1:3b2::/48`, and select the nu
 In this example, my chosen IPv6 prefix to assign to the WireGuard interface is `2a0f:85c1:3b2:4400::/56`.
 
 ### WireGuard Interface configuration
-
-Since I'm using an IPv6 only server and I have Cloudflare WARP running at `wg0`, I will use `wg1` in this tutorial. If you don't have any other WireGuard interface running, you can use `wg0`.
 
 1. Create WireGuard interface configuration.\
 `sudo nano /etc/network/interfaces.d/wg1`

@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Configuring BGP on VPS'
 description: How to configure BGP using BIRD and announce your IPv6 prefix on VPS
 date: 2024-04-24T22:24:00+08:00
-lastmod: 2024-04-29T18:41:00+08:00
+lastmod: 2024-05-01T00:37:00+08:00
 tags:
   - ASN
   - BGP
@@ -17,6 +17,7 @@ Your first BGP session, a comprehensive beginners guide to BGP.
 You can find VPS providers here that provides BGP session.
 * [BGP Services](https://bgp.services)
 * [BGP Cheap](https://bgp.cheap)
+* [BGP Directory](https://bgp.directory)
 * [Networking: IPv6 Discord server](https://discord.gg/ipv6)
 
 For this tutorial, I use a BGP IPv6 only VPS from [iFog GmbH](https://my.ifog.ch/order/main/packages/ipv6-only-vps/?a=MTUyNQ==) since it is very cheap.\
@@ -50,11 +51,11 @@ export: to <VPS provider's ASN> announce <Your ASN>
 The BGP router ID is a 4-byte unique identifier of a BGP router in an AS. It is formatted like an IPv4 address. (`0.0.0.0` to `255.255.255.255`)\
 If your VPS already has an IPv4 address, you can use your VPS's IPv4 address as a router ID. If your VPS does not have an IPv4 address, you can use my own conventions:
 
-1. Use your ASN number for the 1st and 2nd octet, and choose your own number for the 3rd and 4th octet.\
-Example: My ASN is AS215150, the 1st and 2nd octet is `215.150`, then I can increment by 1 the 3rd and 4th octet like this `215.150.0.0` or generate a random number like this `215.150.247.224`.\
-If your ASN's 1st or 2nd octet is higher than 256 like AS200879, you can limit the big number to 256 like this `200.256.0.0` or just generate a random number for the big number like this `200.247.0.0`.
+1. Use 0, 10, 127, or 240-255 as the 1st octet, since those are reserved IPv4 address, and use your ASN number for the 2nd and 3rd octet, and choose your own number for the 4th octet.\
+Example: My ASN is AS215150, the 2nd and 3rd octet is `215.150`, then I choose a number for the 4th octet like this `10.215.150.0` or generate a random number like this `10.215.150.247`.\
+If your ASN's 1st or 2nd octet is higher than 256 like AS200879, you can limit the big number to 256 like this `10.200.256.0` or just generate a random number for the big number like this `10.200.247.0`.
 
-2. Generate a random number. Use 10 as the 1st octet, and generate a random number for the 2nd, 3rd and 4th octet like this `10.215.150.247`.
+2. Generate a random number. Use 0, 10, 127, or 240-255 as the 1st octet, and generate a random number for the 2nd, 3rd and 4th octet like this `10.215.150.247`.
 
 ## Set up BGP on your VPS
 
@@ -113,7 +114,7 @@ Here is an example config with my ASN using iFog as the upstream.
 
 ```yaml
 asn: 215150
-router-id: 215.150.44.44
+router-id: 10.215.150.44
 accept-default: true
 default-route: false
 keep-filtered: true
@@ -215,6 +216,8 @@ During the period where the route has not yet propagated, you can't ping or use 
 
 You can use [NLNOG Looking Glass](https://lg.ring.nlnog.net) to check the status of your route propagation by entering your IPv6 prefix there.
 
+If after 72 hours and still your prefix is still not reachable, you can use [NLNOG IRR Explorer](https://irrexplorer.nlnog.net) to check if you have a valid route6 object, and if you don't have any RPKI invalids.
+
 ## Use your IPv6 address as a source IP
 
 Now that we can now ping our announced IPv6 prefix to the internet, we can now eyeball contents on the internet using your IPv6 prefix.
@@ -280,7 +283,7 @@ iface dummy1 inet6 static
     post-down ip link del $IFACE
 ```
 
-Manual: `ip -6 addr add 2a0f:85c1:3b2::1:5ee:900d:c0de/48 dev dummy1`
+Manual: `sudo ip -6 addr add 2a0f:85c1:3b2::1:5ee:900d:c0de/48 dev dummy1`
 
 2. Use curl to check if you are getting the right IPv6 address.\
 `curl --interface 2a0f:85c1:3b2::1:5ee:900d:c0de api.myip.com`
