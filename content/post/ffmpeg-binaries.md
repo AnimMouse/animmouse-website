@@ -2,7 +2,7 @@
 title: FFmpeg Binaries
 description: FFmpeg Binaries Builds Downloads
 date: 2021-05-14T23:40:10+08:00
-lastmod: 2024-01-27T18:45:00+08:00
+lastmod: 2024-05-12T16:31:00+08:00
 tags:
   - FFmpeg
   - downloads
@@ -12,12 +12,12 @@ List of all [FFmpeg](https://ffmpeg.org) binaries/builds that I can find.
 
 ## [Official](https://ffmpeg.org/download.html)
 ### Windows
-* [Gyan Doshi](https://www.gyan.dev/ffmpeg/builds/) (GPL, master & release, amd64, static & shared)
 * [BtbN](https://github.com/BtbN/FFmpeg-Builds/releases) (GPL & LGPL, master & release, amd64, static & shared)
+* [Gyan Doshi](https://www.gyan.dev/ffmpeg/builds/) (GPL, master & release, amd64, static & shared)
 
 ### Linux
-* [John Van Sickle](https://johnvansickle.com/ffmpeg/) (GPL, master & release, amd64 & i686 & arm64 & armhf & armel, static)
 * [BtbN](https://github.com/BtbN/FFmpeg-Builds/releases) (GPL & LGPL, master & release, amd64 & arm64, static & shared)
+* [John Van Sickle](https://johnvansickle.com/ffmpeg/) (GPL, master & release, amd64 & i686 & arm64 & armhf & armel, static)
 
 ### macOS
 * [EverMeet](https://evermeet.cx/ffmpeg/) (GPL, master & release, amd64, static)
@@ -35,10 +35,9 @@ List of all [FFmpeg](https://ffmpeg.org) binaries/builds that I can find.
 * [maeyanie](https://jenkins.maeyanie.com/job/ffmpeg/) (GPL, master, amd64 & i686, static)[^1]
 * [sudo-nautilus](https://github.com/sudo-nautilus/FFmpeg-Builds-Win32/releases) ([BtbN], GPL & LGPL, master & release, i686, static & shared)[^1]
 * [wang-bin avbuild prebuilt](https://github.com/wang-bin/avbuild) [SourceForge](https://sourceforge.net/projects/avbuild/files/) ([avbuild], LGPL, master & release, amd64 & i686 & arm64, shared)[^1]
-* [MPlayer Sherpya FFmpeg Builds](https://oss.netfarm.it/mplayer/) [SourceForge](https://sourceforge.net/projects/mplayer-win32/files/FFmpeg/) (GPL, master, amd64 & i686, static)
 * [ffmpeg for homebridge](https://github.com/homebridge/ffmpeg-for-homebridge) (nonfree, release, amd64, static)
 * [ShareX](https://github.com/ShareX/FFmpeg) (GPL, release, amd64 & i686, static)
-* [q3aql ffmpeg-builds](https://gitlab.com/q3aql/ffmpeg-builds) (nonfree, release, amd64, shared)[^2]
+* [q3aql ffmpeg-builds](https://git.q3aql.dev/q3aql/ffmpeg-builds) (nonfree, release, amd64, shared)[^2]
 * [yt-dlp FFmpeg-Builds](https://github.com/yt-dlp/FFmpeg-Builds/releases) ([BtbN], GPL, master & release, amd64 & i686, static & shared)
 * [streamlink FFmpeg-Builds](https://github.com/streamlink/FFmpeg-Builds/releases) ([BtbN], GPL, release, amd64 & i686, static)[^2]
 
@@ -63,7 +62,7 @@ List of all [FFmpeg](https://ffmpeg.org) binaries/builds that I can find.
 * [ffmpeg for homebridge](https://github.com/homebridge/ffmpeg-for-homebridge) (nonfree, release, amd64 & arm64, static)
 * [wang-bin avbuild prebuilt](https://github.com/wang-bin/avbuild) [SourceForge](https://sourceforge.net/projects/avbuild/files/) ([avbuild], LGPL, master & release, amd64 & arm64 & armhf, shared)[^1]
 * [Martin Riedl](https://ffmpeg.martin-riedl.de) (nonfree, master & release, amd64 & arm64, static)[^2]
-* [q3aql ffmpeg-builds](https://gitlab.com/q3aql/ffmpeg-builds) (nonfree, release, amd64, static)[^2]
+* [q3aql ffmpeg-builds](https://git.q3aql.dev/q3aql/ffmpeg-builds) (nonfree, release, amd64, static)[^2]
 * [yt-dlp FFmpeg-Builds](https://github.com/yt-dlp/FFmpeg-Builds/releases) ([BtbN], GPL, master & release, amd64 & arm64, static)
 
 #### Repackers

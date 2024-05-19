@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Setting up your own ASN'
 description: How to set up your personal ASN
 date: 2024-04-24T20:35:00+08:00
-lastmod: 2024-04-29T18:44:00+08:00
+lastmod: 2024-05-19T22:53:00+08:00
 tags:
   - ASN
   - IPv6
@@ -78,7 +78,7 @@ export: to AS34927 announce AS215150
 
 ## Create an AS-SET (Optional)
 
-Some providers require you to create an AS-SET. If required, here's how to create an AS-SET for your ASN.
+Some providers and IXPs require you to create an AS-SET. If required, here's how to create an AS-SET for your ASN.
 
 1. Go to the [RIPE database's Create an Object](https://apps.db.ripe.net/db-web-ui/webupdates/select).
 2. Under Object type, select as-set, and click create.

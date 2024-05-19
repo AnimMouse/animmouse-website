@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Configuring BGP on VPS'
 description: How to configure BGP using BIRD and announce your IPv6 prefix on VPS
 date: 2024-04-24T22:24:00+08:00
-lastmod: 2024-05-01T00:37:00+08:00
+lastmod: 2024-05-20T00:15:00+08:00
 tags:
   - ASN
   - BGP
@@ -39,12 +39,11 @@ export: to <VPS provider's ASN> announce <Your ASN>
 1. A [BGP VPS](#finding-a-vps-that-can-provide-bgp-session) preferably with Debian installed.
 2. Your own ASN. `<Your ASN>`
 3. VPS provider's ASN. `<VPS provider's ASN>`
-4. Your VPS's IPv6 address. `<Your VPS's IPv6 address>`
-5. VPS provider's peering IPv6 address. `<VPS provider's IPv6 address>`
-6. Your IPv6 prefix. `<Your IPv6 prefix>`
-7. Your BGP router ID. `<Your router ID>`
-8. [A route6 object at the RIPE IRR database.](../my-asn-journey-setting-up-your-own-asn/#create-a-route6-object-in-the-ripe-irr-database)
-9. [A routing policy statement on your ASN.](../my-asn-journey-setting-up-your-own-asn/#create-a-routing-policy-statement-on-your-asn)
+4. VPS provider's peering IPv6 address. `<VPS provider's IPv6 address>`
+5. Your IPv6 prefix. `<Your IPv6 prefix>`
+6. Your BGP router ID. `<Your router ID>`
+7. [A route6 object at the RIPE IRR database.](../my-asn-journey-setting-up-your-own-asn/#create-a-route6-object-in-the-ripe-irr-database)
+8. [A routing policy statement on your ASN.](../my-asn-journey-setting-up-your-own-asn/#create-a-routing-policy-statement-on-your-asn)
 
 ## Creating your own BGP router ID
 
@@ -59,21 +58,26 @@ If your ASN's 1st or 2nd octet is higher than 256 like AS200879, you can limit t
 
 ## Set up BGP on your VPS
 
-1. Install BIRD2. This will become our BGP daemon so that we can export our prefixes to the internet.\
-`sudo apt install bird2`
+1. Install BIRD2. This will become our BGP daemon so that we can export our prefixes to the internet.
+```sh
+sudo wget -O /usr/share/keyrings/cznic-labs-pkg.gpg https://pkg.labs.nic.cz/gpg
+echo "deb [signed-by=/usr/share/keyrings/cznic-labs-pkg.gpg] https://pkg.labs.nic.cz/bird2 $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cznic-labs-bird2.list
+sudo apt update
+sudo apt install bird2
+```
 2. Install Pathvector. This is an abstraction to BIRD2's config, which makes it easier to configure BIRD2.
 ```sh
-sudo -i
-curl https://repo.pathvector.io/pgp.asc > /usr/share/keyrings/pathvector.asc
-echo "deb [signed-by=/usr/share/keyrings/pathvector.asc] https://repo.pathvector.io/apt/ stable main" > /etc/apt/sources.list.d/pathvector.list
-apt install pathvector
+sudo wget -O /usr/share/keyrings/pathvector.asc https://repo.pathvector.io/pgp.asc
+echo "deb [signed-by=/usr/share/keyrings/pathvector.asc] https://repo.pathvector.io/apt/ stable main"  | sudo tee /etc/apt/sources.list.d/pathvector.list
+sudo apt update
+sudo apt install pathvector
 ```
 3. Create the Pathvector config.\
 `sudo nano /etc/pathvector.yml`
 
 For our first BGP session, here is an example config for a single upstream provider.\
-This is also a default route config by not importing the routes to the kernel. Default route config is easier to understand for beginners.\
-Don't worry we will move to full table config when we have 2 or more peers.
+This is also a default route config by not exporting the routes to the kernel. Default route config is easier to understand for beginners and for understanding the theory.\
+We will move to full table config later on when we will join an IXP and have 2 or more peers.
 
 ```yaml
 asn: <Your ASN>
@@ -87,9 +91,7 @@ prefixes:
   - <Your IPv6 prefix>
 
 kernel:
-  export: false # Don't import the routes from BGP to our kernel
-  statics:
-    "<Your IPv6 prefix>": "<Your VPS's IPv6 address>" # Tells your peers via BGP that <Your IPv6 prefix> is accessible via <Your VPS's IPv6 address>
+  export: false # Don't exporting the routes from BGP to our kernel
 
 templates:
   upstream:
@@ -102,10 +104,7 @@ templates:
 peers:
   <VPS provider's name>:
     asn: <VPS provider's ASN>
-    multihop: true
     template: upstream
-    enforce-peer-nexthop: false
-    enforce-first-as: false
     neighbors:
       - <VPS provider's IPv6 address>
 ```
@@ -124,9 +123,7 @@ prefixes:
   - 2a0f:85c1:3b2::/48
 
 kernel:
-  export: false # Don't import the routes from BGP to our kernel
-  statics:
-    "2a0f:85c1:3b2::/48": "2a0c:9a40:2510:1001::10fa" # Tells your peers via BGP that 2a0f:85c1:3b2::/48 is accessible via 2a0c:9a40:2510:1001::10fa
+  export: false
 
 templates:
   upstream:
@@ -139,10 +136,7 @@ templates:
 peers:
   iFog:
     asn: 34927
-    multihop: true
     template: upstream
-    enforce-peer-nexthop: false
-    enforce-first-as: false
     neighbors:
       - 2a0c:9a40:2510:1001::1
 ```
@@ -151,6 +145,13 @@ peers:
 `sudo pathvector generate`
 5. Check BGP session. If you see "Established", then BGP session is working.\
 `sudo birdc show protocol`
+
+Example output:
+```
+BIRD 2.15.1 ready.
+Name       Proto      Table      State  Since         Info
+IFOG_AS34927_v6 BGP        ---        up     2024-04-24 00:00:00  Established
+```
 6. Check BGP session on a specific session. Replace `<BGP session name>` with name from step 5.\
 `sudo birdc show protocol all <BGP session name>`\
 Example: `sudo birdc show protocol all IFOG_AS34927_v6`
@@ -158,9 +159,18 @@ Example: `sudo birdc show protocol all IFOG_AS34927_v6`
 `sudo birdc show route export <BGP session name> all`\
 Example: `sudo birdc show route export IFOG_AS34927_v6 all`
 
+Example output:
+```
+BIRD 2.15.1 ready.
+Table master6:
+2a0f:85c1:3b2::/48   unreachable [static6 2024-04-24 00:00:00] * (200)
+        Type: static univ
+        BGP.as_path:
+```
+
 ## Set up your IPv6 prefix on your VPS
 
-Now that we have successfully told the internet that your prefix can be accessible to your VPS, the next step is to assign an IPv6 address to your VPS from your IPv6 prefix.\
+Now that we have successfully told the internet that your prefix is accessible to your VPS, the next step is to assign an IPv6 address to your VPS from your IPv6 prefix.\
 We can't just set the source IP of an IP packet without the source IP being assigned to an interface.
 
 ### Set up a dummy interface
@@ -192,8 +202,19 @@ iface dummy1 inet6 static
 3. Now let's bring the dummy interface up.\
 `sudo ifup dummy1`
 
-4. Check the status of your prefix to see if it is now reachable. If it says unicast, it means that your IPv6 address is now reachable to the internet.\
-`sudo birdc show route export <BGP session name> all`
+4. Check the status of your prefix to see if it is now reachable. If it says unicast, it means that your IPv6 address is now reachable over the internet.\
+`sudo birdc show route export <BGP session name> all`\
+Example: `sudo birdc show route export IFOG_AS34927_v6 all`
+
+Example output:
+```
+BIRD 2.15.1 ready.
+Table master6:
+2a0f:85c1:3b2::/48   unicast [direct1 2024-04-24 00:00:00] * (240)
+        dev dummy1
+        Type: device univ
+        BGP.as_path:
+```
 
 5. Since your IPv6 address is now reachable, you can now ping your IPv6 address at home or even connect to your VPS via SSH using that announced prefix after the prefix has propagated over the internet.
 
@@ -216,11 +237,11 @@ During the period where the route has not yet propagated, you can't ping or use 
 
 You can use [NLNOG Looking Glass](https://lg.ring.nlnog.net) to check the status of your route propagation by entering your IPv6 prefix there.
 
-If after 72 hours and still your prefix is still not reachable, you can use [NLNOG IRR Explorer](https://irrexplorer.nlnog.net) to check if you have a valid route6 object, and if you don't have any RPKI invalids.
+If after 72 hours and your prefix is still not reachable, you can use [NLNOG IRR Explorer](https://irrexplorer.nlnog.net) to check if you have a valid route6 object, and if you don't have any RPKI invalids.
 
 ## Use your IPv6 address as a source IP
 
-Now that we can now ping our announced IPv6 prefix to the internet, we can now eyeball contents on the internet using your IPv6 prefix.
+Now that we can now ping our announced IPv6 prefix over the internet, we can now eyeball contents on the internet using your IPv6 prefix.
 
 ### Programs that support setting source IP on itself
 
