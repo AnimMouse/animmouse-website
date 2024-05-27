@@ -2,6 +2,7 @@
 title: 'My ASN Journey: Joining an Internet Exchange'
 description: How to join an IXP using your ASN and peer with other ASNs
 date: 2024-05-19T21:14:00+08:00
+lastmod: 2024-05-28T00:34:00+08:00
 tags:
   - ASN
   - BGP
@@ -23,14 +24,14 @@ The IXP you can join is limited to what your provider can provide. Since my BGP 
 
 ## Joining an IXP
 
-Before joining an IXP, run `ip -6 addr` first. This will list all of your current interfaces, so you can easily know later what interface is added later on when you have joined an IXP.
+Before joining an IXP, run `ip link show` first. This will list all of your current interfaces, so you can easily know later what interface is added later on when you have joined an IXP.
 
 Joining an IXP can either be done using your VPS provider's panel, by opening a support ticket, or on IXP's website.
 
 After the IXP granted you membership, they will send you your IXP Manager credentials via email or via ticket.\
 Login to your IXP's IXP Manager and you will get your own peering IPv6 address and the route server's IPv6 address.
 
-Run `ip -6 addr` again, and then you will see a new interface has been added to your VPS. In my case and for this tutorial, it is `ens19`.
+Run `ip link show` again, and then you will see a new interface has been added to your VPS. In my case and for this tutorial, it is `ens19`.
 
 ## Set up IXP on your VPS
 
@@ -44,7 +45,7 @@ For example: `sudo nano /etc/network/interfaces.d/ens19`
 auto <Interface name>
 iface <Interface name> inet6 static
     address <Your IPv6 address that the IXP assigned to you>/64
-    pre-up sysctl net.ipv6.conf.$IFACE.accept_ra=0 # Disable SLAAC and RA on that interface
+    accept_ra 0 # Disable SLAAC and RA on that interface
 ```
 
 Here is an example config with my interface and my IPv6 address from FogIXP.
@@ -53,7 +54,7 @@ Here is an example config with my interface and my IPv6 address from FogIXP.
 auto ens19
 iface ens19 inet6 static
     address 2001:7f8:ca:1::21:5150:1/64
-    pre-up sysctl net.ipv6.conf.$IFACE.accept_ra=0
+    accept_ra 0
 ```
 
 3. Reload the interface so we get rid of the autoconfigured IPv6 address and apply our assigned IPv6 address.
@@ -145,7 +146,10 @@ peers:
 
 If you contacted someone on the IXP and they wanted to peer with you, you can establish a direct BGP session with both of you, bypassing the route servers.
 
-1. Add a peer template to your Pathvector config.
+1. Install bgpq4.\
+`sudo apt install bgpq4`
+
+2. Add a peer template to your Pathvector config.
 ```yaml
 templates:
   peer:
@@ -172,7 +176,7 @@ templates:
     add-on-import: [ "215150:0:14" ]
 ```
 
-2. Add the peer to your peer list.
+3. Add the peer to your peer list.
 ```yaml
   <Your peer's name>:
     asn: <Your peer's ASN>

@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Configuring BGP on VPS'
 description: How to configure BGP using BIRD and announce your IPv6 prefix on VPS
 date: 2024-04-24T22:24:00+08:00
-lastmod: 2024-05-20T00:15:00+08:00
+lastmod: 2024-05-26T01:31:00+08:00
 tags:
   - ASN
   - BGP
@@ -299,10 +299,12 @@ Automatic: Add your chosen IPv6 address to `/etc/network/interfaces.d/dummy1`.
 auto dummy1
 iface dummy1 inet6 static
     address 2a0f:85c1:3b2::/48
-    address 2a0f:85c1:3b2::1:5ee:900d:c0de/48
     pre-up ip link add $IFACE type dummy
     post-down ip link del $IFACE
+iface dummy1 inet6 static
+    address 2a0f:85c1:3b2::1:5ee:900d:c0de/48
 ```
+Then reload the interface. `sudo ifdown dummy1 && sudo ifup dummy1`
 
 Manual: `sudo ip -6 addr add 2a0f:85c1:3b2::1:5ee:900d:c0de/48 dev dummy1`
 

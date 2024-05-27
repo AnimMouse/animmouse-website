@@ -2,7 +2,7 @@
 title: FFmpeg Binaries
 description: FFmpeg Binaries Builds Downloads
 date: 2021-05-14T23:40:10+08:00
-lastmod: 2024-05-12T16:31:00+08:00
+lastmod: 2024-05-21T17:10:00+08:00
 tags:
   - FFmpeg
   - downloads
@@ -38,8 +38,10 @@ List of all [FFmpeg](https://ffmpeg.org) binaries/builds that I can find.
 * [ffmpeg for homebridge](https://github.com/homebridge/ffmpeg-for-homebridge) (nonfree, release, amd64, static)
 * [ShareX](https://github.com/ShareX/FFmpeg) (GPL, release, amd64 & i686, static)
 * [q3aql ffmpeg-builds](https://git.q3aql.dev/q3aql/ffmpeg-builds) (nonfree, release, amd64, shared)[^2]
-* [yt-dlp FFmpeg-Builds](https://github.com/yt-dlp/FFmpeg-Builds/releases) ([BtbN], GPL, master & release, amd64 & i686, static & shared)
+* [yt-dlp FFmpeg-Builds](https://github.com/yt-dlp/FFmpeg-Builds/releases) ([BtbN], GPL, master & release, amd64 & i686 & arm64, static & shared)
 * [streamlink FFmpeg-Builds](https://github.com/streamlink/FFmpeg-Builds/releases) ([BtbN], GPL, release, amd64 & i686, static)[^2]
+* [marierose147](https://github.com/marierose147/ffmpeg_windows_exe_with_fdk_aac) ([FWBH], nonfree, release, amd64, static)
+* [ffmpeg-wos-arm64-build](https://github.com/dvhh/ffmpeg-wos-arm64-build) (GPL, release, arm64, shared)[^2]
 
 #### Repackers
 * [FFBinaries](https://ffbinaries.com/downloads)
@@ -54,9 +56,7 @@ List of all [FFmpeg](https://ffmpeg.org) binaries/builds that I can find.
 * [Zeranoe win64](https://web.archive.org/web/20200918193258/https://ffmpeg.zeranoe.com/builds/win64/) (GPL & LGPL, master & release, amd64, static & shared)
 * [Zeranoe win32](https://web.archive.org/web/20200918193245/https://ffmpeg.zeranoe.com/builds/win32/) (GPL & LGPL, master & release, i686, static & shared)
 * [Ottverse](https://ottverse.com/ffmpeg-builds/) (GPL, master, amd64, static & shared)
-* [marierose147](https://github.com/marierose147/ffmpeg_windows_exe_with_fdk_aac) ([FWBH], nonfree, release, amd64, static)
 * [MPlayer Sherpya FFmpeg Builds](https://oss.netfarm.it/mplayer/) [SourceForge](https://sourceforge.net/projects/mplayer-win32/files/FFmpeg/) (GPL, master, amd64 & i686, static)
-* [ffmpeg-wos-arm64-build](https://github.com/dvhh/ffmpeg-wos-arm64-build) (GPL, release, arm64, shared)[^2]
 
 ### Linux
 * [ffmpeg for homebridge](https://github.com/homebridge/ffmpeg-for-homebridge) (nonfree, release, amd64 & arm64, static)

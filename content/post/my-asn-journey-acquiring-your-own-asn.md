@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Acquiring your own ASN'
 description: How to buy and get your own personal ASN
 date: 2024-04-24T20:22:00+08:00
-lastmod: 2024-04-28T00:42:00+08:00
+lastmod: 2024-05-28T00:37:00+08:00
 tags:
   - ASN
   - tutorials
@@ -43,7 +43,7 @@ Non-exhaustive list of LIRs in the RIPE NCC.
 1. [Lagrange Cloud](https://lagrange.cloud/products/lir)
 2. [iFog GmbH](https://ifog.ch/en/ip/lir-services)
 3. [Bakker IT](https://www.bakker-it.eu/lir-services/)
-4. [FREETRANSIT](https://freetransit.ch)
+4. [Freetransit](https://freetransit.ch)
 5. [Scaleblade](https://scaleblade.com/products/lir)
 6. [Glauca Digital](https://glauca.digital/lir/)
 7. [Servperso](https://www.servperso.net/ripe-ncc-lir-services)
@@ -55,12 +55,11 @@ More LIRs can be found at [Networking: IPv6 Discord server](https://discord.gg/i
 
 ## Prerequisites
 
-1. Money.
-2. Credit card or prepaid card.
-3. Valid government ID.
-4. Account at [RIPE NCC Access](https://access.ripe.net/registration).
-5. Your chosen LIR.
-6. Your country must not be sanctioned by the European Union.
+1. Credit card or prepaid card.
+2. Valid government ID.
+3. Account at [RIPE NCC Access](https://access.ripe.net/registration).
+4. Your chosen LIR.
+5. Your country must not be sanctioned by the European Union.
 
 ## Buying your ASN
 
