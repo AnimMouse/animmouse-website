@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Joining an Internet Exchange'
 description: How to join an IXP using your ASN and peer with other ASNs
 date: 2024-05-19T21:14:00+08:00
-lastmod: 2024-05-28T00:34:00+08:00
+lastmod: 2024-06-03T23:04:00+08:00
 tags:
   - ASN
   - BGP
@@ -184,13 +184,19 @@ templates:
     neighbors:
       - <Your peer's IPv6 address>
 ```
-Example with my peer AS200879 on FogIXP:
+Example with my peers AS200879 and AS199676 on FogIXP:
 ```yaml
   Olideles:
     asn: 200879
     template: peer
     neighbors:
       - 2001:7f8:ca:1::20:0879:1
+
+  Navarro:
+    asn: 199676
+    template: peer
+    neighbors:
+      - 2001:7f8:ca:1::19:9676:1
 ```
 
 ### Establish the BGP sessions
@@ -255,17 +261,24 @@ peers:
     template: peer
     neighbors:
       - 2001:7f8:ca:1::20:0879:1
+
+  Navarro:
+    asn: 199676
+    template: peer
+    neighbors:
+      - 2001:7f8:ca:1::19:9676:1
 ```
 
 1. Generate BIRD2 config from Pathvector.\
 `sudo pathvector generate`
-2. Check BGP session. If you see "Established", then the BGP session is working.\
+2. Check the BGP session. If you see "Established", then the BGP session is working.\
 `sudo birdc show protocol`
 
 Example output:
 ```
 BIRD 2.15.1 ready.
 Name       Proto      Table      State  Since         Info
+NAVARRO_AS199676_v6 BGP        ---        up     2024-05-19 00:00:00  Established
 OLIDELES_AS200879_v6 BGP        ---        up     2024-05-19 00:00:00  Established
 IFOG_AS34927_v6 BGP        ---        up     2024-05-19 00:00:00  Established
 FOGIXP_AS47498_v6 BGP        ---        up     2024-05-19 00:00:00  Established

@@ -2,6 +2,7 @@
 title: 'My ASN Journey: Bring home the IPv6 via WireGuard'
 description: How to bring your announced IPv6 prefix to your home router using WireGuard on MikroTik
 date: 2024-04-29T19:17:00+08:00
+lastmod: 2024-06-03T20:58:00+08:00
 tags:
   - ASN
   - VPS
@@ -11,7 +12,8 @@ tags:
   - IPv6
   - tutorials
 ---
-One of the benefits of IPv6 is that you have a huge number of IP addresses that you can assign to all of your devices.
+One of the benefits of IPv6 is that you have a huge number of IP addresses that you can assign to all of your devices.\
+Also, unlike IPv4, you don't need to worry about masquerading aka NAT.
 
 This tutorial assumes you have Debian installed on your VPS.\
 We will also use MikroTik RouterOS to assign IPv6 addresses to our devices.
@@ -77,8 +79,8 @@ Here is an example config for WireGuard interface.
 auto wg1
 iface wg1 inet6 static
     address <Your chosen IPv6 prefix from your announced IPv6 prefix>
-    pre-up ip link add $IFACE type wireguard
-    pre-up wg setconf $IFACE /etc/wireguard/$IFACE.conf
+    pre-up ip link add $IFACE type wireguard # Add a WireGuard interface
+    pre-up wg setconf $IFACE /etc/wireguard/$IFACE.conf # Set the configuration of the WireGuard interface
     pre-up sysctl net.ipv6.conf.all.forwarding=1 # This will enable IPv6 forwarding on your VPS
     post-down ip link del $IFACE
     post-down sysctl net.ipv6.conf.all.forwarding=0
@@ -92,7 +94,7 @@ iface wg1 inet6 static
     address 2a0f:85c1:3b2:4400::/56
     pre-up ip link add $IFACE type wireguard
     pre-up wg setconf $IFACE /etc/wireguard/$IFACE.conf
-    pre-up sysctl net.ipv6.conf.all.forwarding=1 # This will enable IPv6 forwarding on your VPS
+    pre-up sysctl net.ipv6.conf.all.forwarding=1
     post-down ip link del $IFACE
     post-down sysctl net.ipv6.conf.all.forwarding=0
 ```

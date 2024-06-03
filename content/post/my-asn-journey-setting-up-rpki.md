@@ -2,6 +2,7 @@
 title: 'My ASN Journey: Setting up RPKI'
 description: How to set up RPKI ROA on your prefix and enable RPKI route filtering
 date: 2024-05-28T00:29:00+08:00
+lastmod: 2024-06-03T23:04:00+08:00
 tags:
   - ASN
   - BGP
@@ -39,10 +40,20 @@ rtr-server: rtr-v6.215150.xyz:3323
 2. Generate BIRD2 config from Pathvector.\
 `sudo pathvector generate`
 
-3. Reload all BIRD routes to start rejecting RPKI invalids.\
+3. Check the BGP session. If you see "Established" on rpki1, then the RPKI is working.\
+`sudo birdc show protocol`
+
+Example output:
+```
+BIRD 2.15.1 ready.
+Name       Proto      Table      State  Since         Info
+rpki1      RPKI       ---        up     2024-05-28 00:00:00  Established
+```
+
+4. Reload all BIRD routes to start rejecting RPKI invalids.\
 `sudo birdc reload in all`
 
-Now try to ping `invalid.rpki.isbgpsafeyet.com`. It is says no route to host, it means that you are now filtering RPKI invalids.
+Now try to ping `invalid.rpki.isbgpsafeyet.com`. If it says no route to host, it means that you are now filtering RPKI invalids.
 
 ### RTRTR over HTTPS
 
@@ -88,3 +99,9 @@ unit = "as215150-v6-json"
 ```yaml
 rtr-server: ip6-localhost:3323
 ```
+
+6. Generate BIRD2 config from Pathvector.\
+`sudo pathvector generate`
+
+7. Check the BGP session. If you see "Established" on rpki1, then the RPKI is working.\
+`sudo birdc show protocol`
