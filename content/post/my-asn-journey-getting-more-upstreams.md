@@ -2,6 +2,7 @@
 title: 'My ASN Journey: Getting more upstreams'
 description: How to get more upstreams/transit on your ASN
 date: 2024-06-03T23:12:00+08:00
+lastmod: 2024-06-09T02:26:00+08:00
 tags:
   - ASN
   - BGP
@@ -69,21 +70,21 @@ peers:
 
 If your ping on those upstreams is higher than your main upstream, like my latency to those is 11 ms, and my main upstream is just at 0.1 ms, you should deprioritize those upstreams to maintain optimal latency.
 
-If your default local-pref at the upstream template is 80, set the local-pref of those upstreams lower than 80, like 79.
+If your default local-pref at the upstream template is 80, set the local-pref of those upstreams lower than 80, like 70.
 
 ```yaml
 peers:
   Freetransit:
     asn: 41051
     template: upstream
-    local-pref: 79
+    local-pref: 70
     neighbors:
       - 2001:7f8:ca:1::22
 
   HYEHOST:
     asn: 47272
     template: upstream
-    local-pref: 79
+    local-pref: 70
     neighbors:
       - 2001:7f8:ca:1:0:4:7272:1
 ```
@@ -152,14 +153,14 @@ peers:
   Freetransit:
     asn: 41051
     template: upstream
-    local-pref: 79
+    local-pref: 70
     neighbors:
       - 2001:7f8:ca:1::22
 
   HYEHOST:
     asn: 47272
     template: upstream
-    local-pref: 79
+    local-pref: 70
     neighbors:
       - 2001:7f8:ca:1:0:4:7272:1
 

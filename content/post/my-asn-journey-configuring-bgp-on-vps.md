@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Configuring BGP on VPS'
 description: How to configure BGP using BIRD and announce your IPv6 prefix on VPS
 date: 2024-04-24T22:24:00+08:00
-lastmod: 2024-05-26T01:31:00+08:00
+lastmod: 2024-06-09T02:15:00+08:00
 tags:
   - ASN
   - BGP
@@ -82,8 +82,8 @@ We will move to full table config later on when we will join an IXP and have 2 o
 ```yaml
 asn: <Your ASN>
 router-id: <Your router ID>
-accept-default: true
-default-route: false
+accept-default: true # Accept default route from upstreams
+default-route: false # Allows BIRD to put the default route that came from the upstream
 keep-filtered: true
 bgpq-args: -S AFRINIC,APNIC,ARIN,LACNIC,RIPE
 
@@ -91,15 +91,15 @@ prefixes:
   - <Your IPv6 prefix>
 
 kernel:
-  export: false # Don't exporting the routes from BGP to our kernel
+  export: false # Don't export the routes from the BGP to our kernel aka default route config
 
 templates:
   upstream:
     allow-local-as: true
-    announce: [ "<Your ASN>:0:15" ]
+    announce: [ "<Your ASN>:0:15" ] # Also announce routes with BGP community attribute entitled "Learned from downstream"
     remove-all-communities: <Your ASN>
     local-pref: 80
-    add-on-import: [ "<Your ASN>:0:12" ]
+    add-on-import: [ "<Your ASN>:0:12" ] # Add a BGP community attribute entitled "Learned from upstream" on routes imported here
 
 peers:
   <VPS provider's name>:

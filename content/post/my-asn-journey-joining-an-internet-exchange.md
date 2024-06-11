@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Joining an Internet Exchange'
 description: How to join an IXP using your ASN and peer with other ASNs
 date: 2024-05-19T21:14:00+08:00
-lastmod: 2024-06-03T23:04:00+08:00
+lastmod: 2024-06-11T21:06:00+08:00
 tags:
   - ASN
   - BGP
@@ -70,9 +70,9 @@ sudo ifup <Interface name>
 ### Moving to full table config
 
 If you followed my [tutorial](../my-asn-journey-configuring-bgp-on-vps/#set-up-bgp-on-your-vps) on how we set up our first BGP session, take note that we used a default route config by not exporting the routes to the kernel. Now that we are going to have multiple peers, it is time to do a full table config.\
-Take note that this will consume more RAM, so much better you have set up a swap space first just in case.
+Take note that this will consume more RAM, so it is much better if you set up a swap space first just in case.
 
-1. Comment out or remove this line in order for BIRD to export the routes to the kernel.
+1. Comment out or remove this lines in order for BIRD to export the routes to the kernel.
 ```yaml
 #kernel:
 #  export: true
@@ -101,12 +101,12 @@ templates:
   routeserver:
     filter-transit-asns: true
     auto-import-limits: true
-    enforce-peer-nexthop: false
-    enforce-first-as: false
-    announce: [ "<Your ASN>:0:15" ]
+    enforce-peer-nexthop: false # Allow routes with next hop not equal to the configured neighbor address, good for route servers
+    enforce-first-as: false # Allow routes with first AS in AS path not equal to the configured AS number, good for route servers
+    announce: [ "<Your ASN>:0:15" ] # Also announce routes with BGP community attribute entitled "Learned from downstream"
     remove-all-communities: <Your ASN>
     local-pref: 90
-    add-on-import: [ "<Your ASN>:0:13" ]
+    add-on-import: [ "<Your ASN>:0:13" ] # Add a BGP community attribute entitled "Learned from route server" on routes imported here
 ```
 Example with my ASN:
 ```yaml
@@ -157,10 +157,10 @@ templates:
     filter-transit-asns: true
     auto-import-limits: true
     auto-as-set: true
-    announce: [ "<Your ASN>:0:15" ]
+    announce: [ "<Your ASN>:0:15" ] # Also announce routes with BGP community attribute entitled "Learned from downstream"
     remove-all-communities: <Your ASN>
     local-pref: 100
-    add-on-import: [ "<Your ASN>:0:14" ]
+    add-on-import: [ "<Your ASN>:0:14" ] # Add a BGP community attribute entitled "Learned from peer" on routes imported here
 ```
 Example with my ASN:
 ```yaml
