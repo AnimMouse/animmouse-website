@@ -2,7 +2,7 @@
 title: My ASN Journey
 description: A comprehensive beginners guide about getting your own ASN and own IP address
 date: 2024-04-24T20:05:00+08:00
-lastmod: 2024-06-03T23:13:00+08:00
+lastmod: 2024-06-30T23:03:00+08:00
 tags:
   - ASN
   - IPv6
@@ -86,3 +86,5 @@ Use Cloudflare WARP. Or better yet setup Cloudflare WARP-to-WARP on your router.
 * [BGP.training](https://bgp.training)
 * [ASN number registration - Start your own ASN](https://as204406.net/asn-number-registration/)
 * [How to Build Your Own ISP](https://ezrizhu.com/blog/build-your-own-isp)
+* [Creating an Autonomous System for Fun and Profit](https://blog.thelifeofkenneth.com/2017/11/creating-autonomous-system-for-fun-and.html)
+* [LoA Generator](https://loa.tools)

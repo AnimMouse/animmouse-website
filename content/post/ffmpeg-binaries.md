@@ -24,8 +24,8 @@ List of all [FFmpeg](https://ffmpeg.org) binaries/builds that I can find.
 
 ## Unofficial
 ### Windows
-* [AnimMouse ffmpeg-autobuild](https://github.com/AnimMouse/ffmpeg-autobuild) ([FWBH], nonfree, master, amd64 & i686, static)
-* [AnimMouse ffmpeg-stable-autobuild](https://github.com/AnimMouse/ffmpeg-stable-autobuild) ([FWBH], nonfree, release, amd64 & i686, static)
+* [Anim Mouse ffmpeg-autobuild](https://github.com/AnimMouse/ffmpeg-autobuild) ([FWBH], nonfree, master, amd64 & i686, static)
+* [Anim Mouse ffmpeg-stable-autobuild](https://github.com/AnimMouse/ffmpeg-stable-autobuild) ([FWBH], nonfree, release, amd64 & i686, static)
 * [nanake ffmpeg-tinderbox](https://github.com/nanake/ffmpeg-tinderbox) ([BtbN], nonfree, master, amd64 & i686, static & shared)
 * [kusaanko FFmpeg-Auto-Build](https://github.com/kusaanko/FFmpeg-Auto-Build) ([FWBH], GPL & LGPL, master & release, amd64 & i686, static & shared)
 * [jeremylee](https://jeremylee.sh/bin.html) ([MBS], GPL, master, amd64, static)

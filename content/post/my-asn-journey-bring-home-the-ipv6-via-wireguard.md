@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Bring home the IPv6 via WireGuard'
 description: How to bring your announced IPv6 prefix to your home router using WireGuard on MikroTik
 date: 2024-04-29T19:17:00+08:00
-lastmod: 2024-06-03T20:58:00+08:00
+lastmod: 2024-06-30T22:59:00+08:00
 tags:
   - ASN
   - VPS
@@ -63,8 +63,8 @@ AllowedIPs = 2a0f:85c1:3b2::/48
 ### IPv6 subnetting
 
 In this example, my IPv6 prefix is `2a0f:85c1:3b2::/48`, we need to assign our WireGuard interface its own `/56` IPv6 prefix from that prefix.\
-You can use the [IPv6 Subnet Calculator Tool](https://www.site24x7.com/tools/ipv6-subnetcalculator.html) to choose what prefix you can use.\
-Input your IPv6 prefix on that site like `2a0f:85c1:3b2::/48`, and select the number of subnets to "/56 (256) subnets."
+You can use the [IPv6 Subnet Calculator Tool] to choose what prefix you can use.\
+Input your IPv6 prefix on that site like `2a0f:85c1:3b2::/48`, and select the number of subnets to "256 Subnets (/56)."
 
 In this example, my chosen IPv6 prefix to assign to the WireGuard interface is `2a0f:85c1:3b2:4400::/56`.
 
@@ -134,8 +134,8 @@ Example with my IPv6 prefix:\
 ### LAN side
 
 Now we need to assign our devices its own IPv6 address from your prefix, but it needs to be a `/64` to be given via SLAAC.\
-You can use the [IPv6 Subnet Calculator Tool](https://www.site24x7.com/tools/ipv6-subnetcalculator.html) to choose what prefix you can use.\
-Input your IPv6 prefix on that site like `2a0f:85c1:3b2:4400::/56`, and select the number of subnets to "/64 (256) subnets."
+You can use the [IPv6 Subnet Calculator Tool] to choose what prefix you can use.\
+Input your IPv6 prefix on that site like `2a0f:85c1:3b2:4400::/56`, and select the number of subnets to "256 Subnets (/64)."
 
 In this example, my chosen IPv6 prefix to be given to our devices is `2a0f:85c1:3b2:4444::/64`.
 
@@ -148,3 +148,5 @@ Example with my IPv6 prefix:\
 `/ipv6 address add address=2a0f:85c1:3b2:4444::/64 advertise=yes interface=bridge`
 
 Your devices will now receive their own IPv6 address from your own IPv6 prefix.
+
+[IPv6 Subnet Calculator Tool]: https://ipv6.tools/#eyJwYWdlIjoic3VicyIsInZhbHMiOnt9fQ==
