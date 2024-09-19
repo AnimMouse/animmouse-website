@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Joining an Internet Exchange'
 description: How to join an IXP using your ASN and peer with other ASNs
 date: 2024-05-19T21:14:00+08:00
-lastmod: 2024-06-11T21:06:00+08:00
+lastmod: 2024-09-17T00:09:00+08:00
 tags:
   - ASN
   - BGP
@@ -75,7 +75,7 @@ Take note that this will consume more RAM, so it is much better if you set up a 
 1. Comment out or remove this lines in order for BIRD to export the routes to the kernel.
 ```yaml
 #kernel:
-#  export: true
+#  export: false
 ```
 
 As BIRD will now export the route to the kernel, every route should have a source IP. Remember what we [did last time](../my-asn-journey-configuring-bgp-on-vps/#setting-the-source-ip-via-the-routing-table) by setting the source IP to the default route?\
@@ -221,6 +221,7 @@ templates:
     remove-all-communities: 215150
     local-pref: 80
     add-on-import: [ "215150:0:12" ]
+    import-limit6: 300000
 
   routeserver:
     filter-transit-asns: true

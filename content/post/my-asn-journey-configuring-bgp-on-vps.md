@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Configuring BGP on VPS'
 description: How to configure BGP using BIRD and announce your IPv6 prefix on VPS
 date: 2024-04-24T22:24:00+08:00
-lastmod: 2024-06-09T02:15:00+08:00
+lastmod: 2024-09-17T00:06:00+08:00
 tags:
   - ASN
   - BGP
@@ -100,6 +100,7 @@ templates:
     remove-all-communities: <Your ASN>
     local-pref: 80
     add-on-import: [ "<Your ASN>:0:12" ] # Add a BGP community attribute entitled "Learned from upstream" on routes imported here
+    import-limit6: 300000
 
 peers:
   <VPS provider's name>:
@@ -132,6 +133,7 @@ templates:
     remove-all-communities: 215150
     local-pref: 80
     add-on-import: [ "215150:0:12" ]
+    import-limit6: 300000
 
 peers:
   iFog:

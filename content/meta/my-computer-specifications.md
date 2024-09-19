@@ -2,7 +2,7 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-lastmod: 2024-03-04T22:11:00+08:00
+lastmod: 2024-09-14T12:38:00+08:00
 categories:
   - meta
 ---
@@ -27,7 +27,7 @@ categories:
 * 2017 - 2022: Palit Nvidia GeForce GTX 1050 Ti StormX
 
 ### RAM
-* 2022 - present: TeamGroup T-Create Expert OC10L 32 GB (4x8 GB) DDR4-3600 (running on DDR4-3200)
+* 2022 - present: TeamGroup T-Create Expert OC10L 32 GB (4x8 GB) DDR4-3600
 * 2017 - 2022: Kingmax GLJF62F-D8KFG4 8 GB (2x4 GB) DDR4-2133
 * 2015 - 2017: 4 GB (1x4 GB) DDR3-1333
 
@@ -140,3 +140,6 @@ categories:
 
 ## Laptop 3
 * 2010 - present: ASUS K40IJ
+
+## Laptop 4
+* 2024 - present: HONOR MagicBook X 16 Pro AMD 2023
