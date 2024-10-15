@@ -11,7 +11,7 @@ jobs:
   update:
     uses: ./.github/workflows/update-hugo-cloudflare-pages.yaml
     with:
-      project_name: ${{ vars.CF_PROJECT_NAME }}
-      account_id: ${{ vars.CF_ACCOUNT_ID }}
+      project_name: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+      account_id: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
     secrets:
-      api_token: ${{ secrets.CF_API_TOKEN }}
+      api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
