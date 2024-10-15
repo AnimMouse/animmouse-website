@@ -2,7 +2,7 @@
 title: Get IPv6 Connectivity on MikroTik Using Cloudflare WARP
 description: Connect to IPv6 only servers on your IPv4 only internet using Cloudflare WARP on RouterOS
 date: 2022-10-31T01:34:12+08:00
-lastmod: 2024-04-15T21:36:00+08:00
+lastmod: 2024-10-15T17:47:00+08:00
 tags:
   - Cloudflare
   - RouterOS
@@ -41,7 +41,7 @@ Endpoint = engage.cloudflareclient.com:2408
 1. Add new WireGuard interface with private key from wgcf-profile.conf.\
 `/interface wireguard add mtu=1420 name=Cloudflare-WARP private-key="your_private_key"`
 2. Add WireGuard peer to connect to Cloudflare WARP with endpoint address and port, and public key from wgcf-profile.conf.\
-`/interface wireguard peers add allowed-address=::/0 endpoint-address=engage.cloudflareclient.com endpoint-port=2408 interface=Cloudflare-WARP public-key="bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="`
+`/interface wireguard peers add allowed-address=::/0 endpoint-address=engage.cloudflareclient.com endpoint-port=2408 interface=Cloudflare-WARP name=Cloudflare-PoP public-key="bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="`
 
 ## Setup IPv6
 

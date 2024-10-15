@@ -1,7 +1,7 @@
 ---
 title: Favorite Quotes
 date: 2020-09-21T00:33:48+08:00
-lastmod: 2024-06-14T16:29:00+08:00
+lastmod: 2024-10-15T17:40:00+08:00
 categories:
   - meta
 ---
@@ -70,6 +70,18 @@ categories:
 > The opposite of love is not hate, it's indifference.
 > — <cite>Elie Wiesel[^21]</cite>
 
+> Just like that, everyone's technical debt is gone.
+> — <cite>mecha_flake[^22]</cite>
+
+> The unstoppable marching of time that is slowly guiding us all towards an inevitable death.
+> — <cite>Obvious Plant (Dylan)[^23]</cite>
+
+> You start with a random clump of atoms, and if you shine light on it for long enough, it should not be so surprising that you get a plant.
+> — <cite>Jeremy England[^24]</cite>
+
+> You wake up one day, and your legs... They just give, and you just can't run anymore.
+> — <cite>Michael De Santa[^25]</cite>
+
 [^1]: [Albert Einstein](https://www.goodreads.com/quotes/8136665-everybody-is-a-genius-but-if-you-judge-a-fish)
 [^2]: [Antoine de Saint-Exupéry](https://www.goodreads.com/quotes/87476-a-goal-without-a-plan-is-just-a-wish)
 [^3]: [Maimonides](https://www.brainyquote.com/quotes/maimonides_326751) and [Anne Isabella Thackeray Ritchie](https://en.wiktionary.org/wiki/give_a_man_a_fish_and_you_feed_him_for_a_day;_teach_a_man_to_fish_and_you_feed_him_for_a_lifetime)
@@ -91,3 +103,7 @@ categories:
 [^19]: [Rabbi Schneiderman](https://young-sheldon.com/quotes/quote/1885)
 [^20]: [Samuel Colt](https://en.wikipedia.org/wiki/Samuel_Colt)
 [^21]: [Elie Wiesel](https://www.oxfordreference.com/display/10.1093/acref/9780191826719.001.0001/q-oro-ed4-00011516)
+[^22]: [mecha_flake](https://www.reddit.com/r/networking/comments/m1plux/comment/gqg5v0m/)
+[^23]: [Obvious Plant (Dylan)](https://www.instagram.com/p/BLv9lX6D7JI)
+[^24]: [Jeremy England](https://www.quantamagazine.org/a-new-thermodynamics-theory-of-the-origin-of-life-20140122/)
+[^25]: [Michael De Santa](https://www.goodreads.com/quotes/11237854-look-you-wake-up-one-day-and-and-your-legs)

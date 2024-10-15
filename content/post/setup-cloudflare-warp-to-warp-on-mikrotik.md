@@ -2,7 +2,7 @@
 title: Setup Cloudflare WARP-to-WARP on MikroTik
 description: Setup Cloudflare Zero Trust and port forwarding on RouterOS
 date: 2023-08-27T00:16:00+08:00
-lastmod: 2024-04-15T21:27:00+08:00
+lastmod: 2024-10-15T17:54:00+08:00
 tags:
   - Cloudflare
   - RouterOS
@@ -19,24 +19,24 @@ Because Cloudflare WARP uses WireGuard, we can run Cloudflare WARP on MikroTik a
 
 ### Cloudflare WARP-to-WARP
 
-1. Go to Settings, and Network.
+1. Go to Settings, and then Network.
 2. Enable Proxy.
 3. Check UDP and ICMP.
-4. Enable WARP to WARP.
+4. Enable Allow WARP to WARP connection.
 
 ### Let Cloudflare assign the WARP-to-WARP IPv4 range to devices
 
 Instead of getting the same IP address of `172.16.0.2` to every device, we instead enable "Override local interface IP" so that devices get their own unique IP from `100.96.0.0/12`.
 
-1. Go to Settings, and WARP Client.
+1. Go to Settings, and then WARP Client.
 2. Enable Override local interface IP.
 
 ### Configure Split Tunneling
 
 This allows Cloudflare WARP-to-WARP traffic to pass though the WireGuard instead of getting handled as local traffic.
 
-1. Go to Settings, and WARP Client.
-2. Click Default profile, and configure.
+1. Go to Settings, and then WARP Client.
+2. Click "Default" profile, and then click Edit.
 3. Make sure split tunnels is set to Exclude IPs and domains.
 4. Click "Manage" on Split Tunnels.
 5. Remove IP range `100.64.0.0/10` and `fd00::/8`.
@@ -73,7 +73,7 @@ Endpoint = engage.cloudflareclient.com:2408
 1. Add a new WireGuard interface.\
 `/interface wireguard add mtu=1420 name=Cloudflare-WARP private-key="your_private_key"`
 2. Add WireGuard peer to connect to Cloudflare WARP. For Zero Trust, `162.159.193.1` should be the endpoint.[^1] Persistent keepalive is enabled so that the tunnel will not timeout when not in use.\
-`/interface wireguard peers add allowed-address=0.0.0.0/0,::/0 endpoint-address=162.159.193.1 endpoint-port=2408 interface=Cloudflare-WARP persistent-keepalive=2m public-key="bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="`
+`/interface wireguard peers add allowed-address=0.0.0.0/0,::/0 endpoint-address=162.159.193.1 endpoint-port=2408 interface=Cloudflare-WARP name=Cloudflare-PoP persistent-keepalive=2m public-key="bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="`
 
 ## Setup IPv4
 
