@@ -1,5 +1,5 @@
 baseurl: https://www.animmouse.com
-languageCode: en-us
+languageCode: en
 theme: hugo-theme-stack
 paginate: 10
 title: Anim Mouse
