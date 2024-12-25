@@ -1,10 +1,12 @@
 baseurl: https://www.animmouse.com
 languageCode: en
 theme: hugo-theme-stack
-paginate: 10
 title: Anim Mouse
 
 DefaultContentLanguage: en
+
+pagination:
+    pagerSize: 10
 
 permalinks:
     post: /p/:slug/
@@ -147,6 +149,18 @@ related:
 
 markup:
     goldmark:
+        extensions:
+            passthrough:
+                enable: true
+                delimiters:
+                    block:
+                        - - \[
+                          - \]
+                        - - $$
+                          - $$
+                    inline:
+                        - - \(
+                          - \)
         renderer:
             unsafe: false
     tableOfContents:

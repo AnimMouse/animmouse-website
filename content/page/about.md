@@ -2,7 +2,7 @@
 title: About
 description: About Anim Mouse
 date: 2020-12-30T15:40:00+08:00
-lastmod: 2024-07-24T00:27:00+08:00
+lastmod: 2024-12-25T18:21:00+08:00
 menu:
   main:
     weight: -90
@@ -34,12 +34,11 @@ Donations:
 * Ko-fi: [Anim Mouse](https://ko-fi.com/animmouse)
 * Bitcoin: `bc1qlmhwry8denqxgzkewlmssswsft2r6y270hhswg`
 * Bitcoin Cash: `bitcoincash:qp7q4pujg5gd9gmlwlgs26aj8j8nf8w4jcjd7fpkhu`
-* Ethereum: `0xB94aF482f8eF4425E7d239e7DFfa66Cd5B6FEa2A`
-* Ronin: `0x1731a674157f5661a38ac4c426f43b13d5f868ad`
+* Ethereum & ERC-20 (including EVM chains like Base, Arbitrum, Polygon, Ronin, etc.): `0xB94aF482f8eF4425E7d239e7DFfa66Cd5B6FEa2A` ([animmouse.unstoppable](https://ud.me/animmouse.unstoppable))
 * Solana: `CTp7cjyG8CPgKkcvZbH2ENozsKibm6tdb4zFwfiPETN9`
 * Dogecoin: `DAnimMo62ZyyuMYXbWA6kXs4x4cK8z96JD`
 
-Anim Mouse Logo designed by [lilyresh](https://lilyresh.carrd.co).
+Anim Mouse Logo designed by [lilyresh](https://lily-reshy.carrd.co).
 
 [Privacy Policy](https://privacy.animmouse.com)
 

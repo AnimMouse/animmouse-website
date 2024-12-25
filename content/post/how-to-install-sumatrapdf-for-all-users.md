@@ -2,7 +2,7 @@
 title: How to Install Sumatra PDF for All Users
 description: Install Sumatra PDF system wide for all users
 date: 2020-12-18T00:56:17+08:00
-lastmod: 2022-06-09T21:50:00+08:00
+lastmod: 2024-12-25T18:23:00+08:00
 tags:
   - Windows
   - tutorials
@@ -23,9 +23,9 @@ This post is archived for future reference.
 > Replace "C:\Program Files\SumatraPDF" with your preferred install location. (Leave at is if you don't need to change it.)
 >
 > Explanation:\
-> -s : silent installation. Doesn't show any UI\
-> -d <directory> : set directory where program is installed.\
-> -with-preview : install shell preview (for viewing PDF on Explorer)
+> `-s` : silent installation. Don't show any UI\
+> `-d <directory>` : set directory where program is installed.\
+> `-with-preview` : install shell preview (for viewing PDF on Explorer)
 >
 > Sources:
 > [SumatraPDF documentation](https://www.sumatrapdfreader.org/docs/Installer-cmd-line-arguments.html)\
