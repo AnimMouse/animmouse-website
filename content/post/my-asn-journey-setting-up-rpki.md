@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Setting up RPKI'
 description: How to set up RPKI ROA on your prefix and enable RPKI route filtering
 date: 2024-05-28T00:29:00+08:00
-lastmod: 2024-06-03T23:04:00+08:00
+lastmod: 2024-12-31T02:15:00+08:00
 tags:
   - ASN
   - BGP
@@ -26,8 +26,8 @@ Currently, our configuration accepts a default route from the upstreams. To make
 Comment out or remove this line in order for BIRD to create an unreachable default route.
 
 ```yaml
-#accept-default: true
-#default-route: false
+#accept-default: true # Don't accept default route from upstreams
+#default-route: false # Allows BIRD to make a default route that is blackholed
 ```
 
 ### Plain RPKI to Router (RTR)
@@ -55,9 +55,9 @@ rpki1      RPKI       ---        up     2024-05-28 00:00:00  Established
 
 Now try to ping `invalid.rpki.isbgpsafeyet.com`. If it says no route to host, it means that you are now filtering RPKI invalids.
 
-### RTRTR over HTTPS
+### RTR over HTTPS (RTRTR)
 
-Since plain RTR is insecure, some people recommend to use RTRTR to get RTR over HTTPS.
+Since plain RTR is insecure, it is recommend to use RTRTR to get RTR over HTTPS.
 
 1. Install RTRTR.
 ```sh
@@ -105,3 +105,15 @@ rtr-server: ip6-localhost:3323
 
 7. Check the BGP session. If you see "Established" on rpki1, then the RPKI is working.\
 `sudo birdc show protocol`
+
+## List of RTRTR servers (RTR over HTTPS)
+1. AS215150 (IPv6 ROAs only): `https://rpki.215150.xyz/rpki-v6.json`
+2. AS54148 (IPv6 ROAs only): `https://rpki.as54148.net/rpki-v6.json`
+3. AS200351 (IPv6 ROAs only, only accessible on IPv4): `https://rpki.as200351.net/rpki-v6.json`
+4. AS13335 (IPv6 and IPv4 ROAs): `https://rpki.cloudflare.com/rpki.json`
+
+## List of RTR servers (plain RTR)
+1. AS215150 (IPv6 ROAs only, only accessible on IPv6): `rtr-v6.215150.xyz:3323`
+2. AS47272 UK (IPv6 and IPv4 ROAs): `rtr.47272.net:3323`
+3. AS47272 US (IPv6 and IPv4 ROAs): `rtr-us.47272.net:3323`
+4. AS52210 (IPv6 and IPv4 ROAs): `rtr.accuris.ca:3323`

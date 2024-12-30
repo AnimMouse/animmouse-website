@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Bring home the IPv6 via WireGuard'
 description: How to bring your announced IPv6 prefix to your home router using WireGuard on MikroTik
 date: 2024-04-29T19:17:00+08:00
-lastmod: 2024-06-30T22:59:00+08:00
+lastmod: 2024-12-31T00:50:00+08:00
 tags:
   - ASN
   - VPS
@@ -57,16 +57,16 @@ ListenPort = 51820
 
 [Peer]
 PublicKey = <Your client public key>
-AllowedIPs = 2a0f:85c1:3b2::/48
+AllowedIPs = 2a0a:6044:accd::/48
 ```
 
 ### IPv6 subnetting
 
-In this example, my IPv6 prefix is `2a0f:85c1:3b2::/48`, we need to assign our WireGuard interface its own `/56` IPv6 prefix from that prefix.\
+In this example, my IPv6 prefix is `2a0a:6044:accd::/48`, we need to assign our WireGuard interface its own `/56` IPv6 prefix from that prefix.\
 You can use the [IPv6 Subnet Calculator Tool] to choose what prefix you can use.\
-Input your IPv6 prefix on that site like `2a0f:85c1:3b2::/48`, and select the number of subnets to "256 Subnets (/56)."
+Input your IPv6 prefix on that site like `2a0a:6044:accd::/48`, and select the number of subnets to "256 Subnets (/56)."
 
-In this example, my chosen IPv6 prefix to assign to the WireGuard interface is `2a0f:85c1:3b2:4400::/56`.
+In this example, my chosen IPv6 prefix to assign to the WireGuard interface is `2a0a:6044:accd:4400::/56`.
 
 ### WireGuard Interface configuration
 
@@ -91,7 +91,7 @@ Example with my IPv6 prefix:
 ```text
 auto wg1
 iface wg1 inet6 static
-    address 2a0f:85c1:3b2:4400::/56
+    address 2a0a:6044:accd:4400::/56
     pre-up ip link add $IFACE type wireguard
     pre-up wg setconf $IFACE /etc/wireguard/$IFACE.conf
     pre-up sysctl net.ipv6.conf.all.forwarding=1
@@ -117,27 +117,27 @@ If your VPS has an IPv4 address, you can use its IPv4 address as the endpoint ad
 ## Set up IPv6 on MikroTik
 
 The MikroTik WireGuard interface must also have its own IPv6 address.\
-Since the IPv6 address of our VPS WireGuard interface is `2a0f:85c1:3b2:4400::/56`, I chose the prefix `2a0f:85c1:3b2:4400::1/56` as our MikroTik's IPv6 address.
+Since the IPv6 address of our VPS WireGuard interface is `2a0a:6044:accd:4400::/56`, I chose the prefix `2a0a:6044:accd:4400::1/56` as our MikroTik's IPv6 address.
 
 ### WAN side
 
 1. Add your chosen IPv6 prefix to the WireGuard interface.\
 `/ipv6 address add address=<Your chosen MikroTik IPv6 prefix from your announced IPv6 prefix> interface=IPv6-Tunnel`\
 Example with my IPv6 prefix:\
-`/ipv6 address add address=2a0f:85c1:3b2:4400::1/56 interface=IPv6-Tunnel`
+`/ipv6 address add address=2a0a:6044:accd:4400::1/56 interface=IPv6-Tunnel`
 
 2. Add IPv6 route that goes to your VPS's WireGuard interface.\
 `/ipv6 route add dst-address=::/0 gateway=<IPv6 address of VPS WireGuard interface>`\
 Example with my IPv6 prefix:\
-`/ipv6 route add dst-address=::/0 gateway=2a0f:85c1:3b2:4400::`
+`/ipv6 route add dst-address=::/0 gateway=2a0a:6044:accd:4400::`
 
 ### LAN side
 
 Now we need to assign our devices its own IPv6 address from your prefix, but it needs to be a `/64` to be given via SLAAC.\
 You can use the [IPv6 Subnet Calculator Tool] to choose what prefix you can use.\
-Input your IPv6 prefix on that site like `2a0f:85c1:3b2:4400::/56`, and select the number of subnets to "256 Subnets (/64)."
+Input your IPv6 prefix on that site like `2a0a:6044:accd:4400::/56`, and select the number of subnets to "256 Subnets (/64)."
 
-In this example, my chosen IPv6 prefix to be given to our devices is `2a0f:85c1:3b2:4444::/64`.
+In this example, my chosen IPv6 prefix to be given to our devices is `2a0a:6044:accd:4444::/64`.
 
 1. Set the Neighbor Discovery to the correct interface. By default, Neighbor Discovery is enabled for all interfaces, but it's better to run it just on the LAN. Take note of the MTU. Since the default MTU of WireGuard is 1420, set the MTU of ND to 1420 so that the packets don't fragment.\
 `/ipv6 nd set [ find default=yes ] interface=bridge mtu=1420`
@@ -145,7 +145,7 @@ In this example, my chosen IPv6 prefix to be given to our devices is `2a0f:85c1:
 2. Add your chosen IPv6 prefix to your LAN interface.\
 `/ipv6 address add address=<Your chosen /64 IPv6 prefix from your MikroTik IPv6 prefix> advertise=yes interface=bridge`\
 Example with my IPv6 prefix:\
-`/ipv6 address add address=2a0f:85c1:3b2:4444::/64 advertise=yes interface=bridge`
+`/ipv6 address add address=2a0a:6044:accd:4444::/64 advertise=yes interface=bridge`
 
 Your devices will now receive their own IPv6 address from your own IPv6 prefix.
 

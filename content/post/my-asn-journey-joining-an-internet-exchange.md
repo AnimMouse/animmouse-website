@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Joining an Internet Exchange'
 description: How to join an IXP using your ASN and peer with other ASNs
 date: 2024-05-19T21:14:00+08:00
-lastmod: 2024-09-17T00:09:00+08:00
+lastmod: 2024-12-31T01:22:00+08:00
 tags:
   - ASN
   - BGP
@@ -87,7 +87,7 @@ source6: "<Your IPv6 address assigned to your dummy1>"
 ```
 Example with my announced IPv6 address:
 ```yaml
-source6: "2a0f:85c1:3b2::"
+source6: "2a0a:6044:accd::"
 ```
 
 ### Set up a BGP session with a route server
@@ -209,10 +209,10 @@ accept-default: true
 default-route: false
 keep-filtered: true
 bgpq-args: -S AFRINIC,APNIC,ARIN,LACNIC,RIPE
-source6: "2a0f:85c1:3b2::"
+source6: "2a0a:6044:accd::"
 
 prefixes:
-  - 2a0f:85c1:3b2::/48
+  - 2a0a:6044:accd::/48
 
 templates:
   upstream:
@@ -293,10 +293,10 @@ Example output:
 ```
 BIRD 2.15.1 ready.
 Table master6:
-2a0f:85c1:3b2::/48   unicast [direct1 2024-05-19 00:00:00] * (240)
+2a0a:6044:accd::/48   unicast [direct1 2024-05-19 00:00:00] * (240)
         dev dummy1
         Type: device univ
         BGP.as_path:
 ```
 4. If you are also a member of FogIXP, you can check my prefix if it goes to the route server than your upstream. The highest route is the preferred route.\
-`sudo birdc show route 2a0f:85c1:3b2::/48`
+`sudo birdc show route 2a0a:6044:accd::/48`

@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Getting more upstreams'
 description: How to get more upstreams/transit on your ASN
 date: 2024-06-03T23:12:00+08:00
-lastmod: 2024-06-09T02:26:00+08:00
+lastmod: 2024-12-31T01:26:00+08:00
 tags:
   - ASN
   - BGP
@@ -109,11 +109,11 @@ accept-default: true
 default-route: false
 keep-filtered: true
 bgpq-args: -S AFRINIC,APNIC,ARIN,LACNIC,RIPE
-source6: "2a0f:85c1:3b2::"
+source6: "2a0a:6044:accd::"
 merge-paths: true
 
 prefixes:
-  - 2a0f:85c1:3b2::/48
+  - 2a0a:6044:accd::/48
 
 templates:
   upstream:
@@ -211,7 +211,7 @@ Example output:
 ```
 BIRD 2.15.1 ready.
 Table master6:
-2a0f:85c1:3b2::/48   unicast [direct1 2024-06-03 00:00:00] * (240)
+2a0a:6044:accd::/48   unicast [direct1 2024-06-03 00:00:00] * (240)
         dev dummy1
         Type: device univ
         BGP.as_path:

@@ -2,7 +2,7 @@
 title: My ASN Journey
 description: A comprehensive beginners guide about getting your own ASN and own IP address
 date: 2024-04-24T20:05:00+08:00
-lastmod: 2024-06-30T23:03:00+08:00
+lastmod: 2024-12-31T00:10:00+08:00
 tags:
   - ASN
   - IPv6
@@ -56,7 +56,13 @@ Every website you visit using your own IP address has a name tag to you.
 ## Costs and expenses
 
 * ASN: £15 one-off fee from [Lagrange Cloud](https://lagrange.cloud/products/lir).
-* BGP IPv6 only VPS: 5 CHF per 3 months from [iFog GmbH](https://my.ifog.ch/order/main/packages/ipv6-only-vps/?a=MTUyNQ==).
+* RIPE ASN Fee: £54.99 per year.
+* BGP IPv6 only VPS: 5 CHF per 3 months from [iFog GmbH](https://my.ifog.ch/order/main/index/BGP-Basic).
+
+### Optional expenses
+
+* FogIXP for BGP IPv6 only VPS: Additional 3 CHF per 3 months from iFog GmbH.
+* BGP VPS with ONIX: $3 per month from [HYEHOST](https://hyehost.store/store/toronto-vps-kvm).
 
 ## FAQs
 
