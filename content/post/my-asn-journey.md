@@ -2,7 +2,7 @@
 title: My ASN Journey
 description: A comprehensive beginners guide about getting your own ASN and own IP address
 date: 2024-04-24T20:05:00+08:00
-lastmod: 2024-12-31T00:10:00+08:00
+lastmod: 2025-01-02T00:52:00+08:00
 tags:
   - ASN
   - IPv6
@@ -26,10 +26,11 @@ There are still no concrete tutorials on how to set up BGP from the ground up, s
 5. [My ASN Journey: Bring home the IPv6 via WireGuard](../my-asn-journey-bring-home-the-ipv6-via-wireguard/)
 6. [My ASN Journey: Joining an Internet Exchange (IXP)](../my-asn-journey-joining-an-internet-exchange/)
 7. [My ASN Journey: Getting more upstreams](../my-asn-journey-getting-more-upstreams/)
-8. My ASN Journey: Setting up IP geolocation (TBD)
+8. [My ASN Journey: Setting up IP geolocation](../my-asn-journey-setting-up-ip-geolocation/)
 9. My ASN Journey: Acquiring more IPv6 prefixes (TBD)
 10. [My ASN Journey: Setting up RPKI](../my-asn-journey-setting-up-rpki/)
 11. My ASN Journey: Setting up reverse DNS (rDNS) (TBD)
+12. My ASN Journey: Free IPv6 transit with Hurricane Electric (TBD)
 
 ## Rationale
 

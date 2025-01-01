@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Joining an Internet Exchange'
 description: How to join an IXP using your ASN and peer with other ASNs
 date: 2024-05-19T21:14:00+08:00
-lastmod: 2024-12-31T01:22:00+08:00
+lastmod: 2025-01-02T00:50:00+08:00
 tags:
   - ASN
   - BGP
@@ -299,4 +299,4 @@ Table master6:
         BGP.as_path:
 ```
 4. If you are also a member of FogIXP, you can check my prefix if it goes to the route server than your upstream. The highest route is the preferred route.\
-`sudo birdc show route 2a0a:6044:accd::/48`
+`sudo birdc show route 2a0a:6044:acc2::/48`

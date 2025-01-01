@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Setting up your own ASN'
 description: How to set up your personal ASN
 date: 2024-04-24T20:35:00+08:00
-lastmod: 2024-12-25T19:50:00+08:00
+lastmod: 2025-01-02T01:02:00+08:00
 tags:
   - ASN
   - IPv6
@@ -74,17 +74,16 @@ Some providers like iFog GmbH uses import and export statements to verify that y
 
 Some LIRs like Lagrange Cloud automatically add an import and export statement using the 2 peering details when you first acquire your ASN. If this happens, you already have the required import and export statements.
 
-1. Go to the [RIPE database's My Resources](https://apps.db.ripe.net/db-web-ui/webupdates/select).
-2. Click ASN tab.
-3. Click on your ASN.
-4. Click Update object.
-5. At the sponsoring-org attribute, click the + (plus) icon.
-6. Select import, and click add.
-7. On import, input your upstream ASN following this convention:\
+1. Go to the [RIPE database's My Resources (ASN)](https://apps.db.ripe.net/db-web-ui/myresources/overview?type=aut-num).
+2. Click on your ASN.
+3. Click Update object.
+4. At the sponsoring-org attribute, click the + (plus) icon.
+5. Select import, and click add.
+6. On import, input your upstream ASN following this convention:\
 `from <Upstream ASN> accept ANY`
-5. At the import attribute, click the + (plus) icon.
-6. Select export, and click add.
-7. On export, input your upstream ASN and your ASN following this convention:\
+7. At the import attribute, click the + (plus) icon.
+8. Select export, and click add.
+9. On export, input your upstream ASN and your ASN following this convention:\
 `to <Upstream ASN> announce <Your ASN>`
 
 Here is an example of my routing policy statement authorizing iFog GmbH AS34927 to announce my ASN AS215150:
