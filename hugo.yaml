@@ -1,5 +1,5 @@
 baseurl: https://www.animmouse.com
-languageCode: en
+languageCode: en-us
 theme: hugo-theme-stack
 title: Anim Mouse
 
@@ -24,7 +24,7 @@ params:
     favicon: /favicon.ico
 
     footer:
-        since: 2017
+        since: 2019
         customText: By Shawn M.
 
     dateFormat:

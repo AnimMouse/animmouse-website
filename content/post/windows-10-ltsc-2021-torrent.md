@@ -4,7 +4,7 @@ description: Windows 10 LTSC 2021 Torrent Download
 date: 2021-11-26T00:30:00+08:00
 lastmod: 2023-01-19T23:20:00+08:00
 tags:
-  - Windows 10 LTSC
+  - Windows LTSC
   - Windows
   - torrent
   - downloads

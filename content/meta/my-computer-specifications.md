@@ -2,7 +2,7 @@
 title: My Computer Specifications
 description: History of my computer specification
 date: 2022-12-27T00:54:33+08:00
-lastmod: 2024-09-14T12:38:00+08:00
+lastmod: 2025-02-03T23:01:00+08:00
 categories:
   - meta
 ---
@@ -108,7 +108,8 @@ categories:
 * 2017 - 2022: LG E1941T-BN
 
 ## Smartphone
-* 2020 - present: Doogee S90
+* 2025 - present: Nothing Phone (2a) Plus
+* 2020 - 2025: Doogee S90
 * 2017 - 2020: Oppo Neo 5 1201
 * 2017 - 2017: Lenovo A1000
 * 2015 - 2017: Lenovo A316i

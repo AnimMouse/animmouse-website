@@ -4,7 +4,7 @@ description: List of programs to install on Windows 10 LTSC
 date: 2021-07-09T01:07:00+08:00
 lastmod: 2024-03-04T22:24:00+08:00
 tags:
-  - Windows 10 LTSC
+  - Windows LTSC
   - Windows
   - downloads
   - sysadmin

@@ -4,7 +4,7 @@ description: Windows 10 LTSC 2019 Torrent Download
 date: 2021-03-20T18:47:53+08:00
 lastmod: 2023-01-19T23:20:00+08:00
 tags:
-  - Windows 10 LTSC
+  - Windows LTSC
   - Windows
   - torrent
   - downloads
