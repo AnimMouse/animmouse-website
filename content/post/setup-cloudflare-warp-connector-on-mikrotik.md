@@ -2,6 +2,7 @@
 title: Setup Cloudflare WARP Connector on MikroTik
 description: Setup Cloudflare Zero Trust site-to-site VPN on RouterOS
 date: 2025-03-10T00:04:00+08:00
+lastmod: 2025-03-20T13:24:00+08:00
 tags:
   - Cloudflare
   - RouterOS
@@ -103,8 +104,16 @@ Endpoint = 162.159.193.1:2408
 
 1. Add Cloudflare WARP's IPv4 address to the WireGuard interface.\
 `/ip address add address=100.96.0.1/12 interface=Cloudflare-WARP`
-2. Enable NAT44. The `to-address` should be set to the IPv4 address of the WireGuard interface.\
-`/ip firewall nat add action=src-nat chain=srcnat dst-address=!100.96.0.0/12 out-interface=Cloudflare-WARP to-addresses=100.96.0.1`
+
+### Routing other site's IPv4 range
+
+If you have another site that is also routed to Cloudflare WARP, you can route it's IPv4 range so that your MikroTik can access it.\
+For example, if your other site's IPv4 range is `192.168.2.0/24`:
+```
+/ip route add dst-address=192.168.2.0/24 gateway=Cloudflare-WARP
+```
+
+You can repeat multiple times if you have multiple sites.
 
 ## Setup IPv6
 
