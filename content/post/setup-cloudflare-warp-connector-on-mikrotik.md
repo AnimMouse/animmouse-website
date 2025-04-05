@@ -2,7 +2,7 @@
 title: Setup Cloudflare WARP Connector on MikroTik
 description: Setup Cloudflare Zero Trust site-to-site VPN on RouterOS
 date: 2025-03-10T00:04:00+08:00
-lastmod: 2025-03-20T13:24:00+08:00
+lastmod: 2025-04-05T23:44:00+08:00
 tags:
   - Cloudflare
   - RouterOS
@@ -41,7 +41,8 @@ This allows Cloudflare WARP-to-WARP traffic to pass though the WireGuard instead
 2. Click "Default" profile, and then click Edit.
 3. Make sure split tunnels is set to Exclude IPs and domains.
 4. Click "Manage" on Split Tunnels.
-5. Remove IP range `100.64.0.0/10` and `fd00::/8`.
+5. Remove IP range `100.64.0.0/10`.
+6. Add IP range `100.64.0.0/11` and `100.112.0.0/12`. (Optional)
 
 ### Create WARP Connector tunnel
 
@@ -79,7 +80,7 @@ The program will output a file wgcf-connector-<registration_id>.conf in your cur
 # Organization: organization_name
 [Interface]
 PrivateKey = your_private_key
-Address = 2606:4700:110:8ced:11b5:d064:abc:ee89/128
+Address = 2606:4700:cf1:1000::1/64
 Address = 100.96.0.1/12
 DNS = 2606:4700:4700::1111
 DNS = 1.1.1.1
@@ -107,7 +108,7 @@ Endpoint = 162.159.193.1:2408
 
 ### Routing other site's IPv4 range
 
-If you have another site that is also routed to Cloudflare WARP, you can route it's IPv4 range so that your MikroTik can access it.\
+If you have another site that is also routed to Cloudflare WARP, you can route its IPv4 range so that your MikroTik can access it.\
 For example, if your other site's IPv4 range is `192.168.2.0/24`:
 ```
 /ip route add dst-address=192.168.2.0/24 gateway=Cloudflare-WARP
@@ -117,17 +118,16 @@ You can repeat multiple times if you have multiple sites.
 
 ## Setup IPv6
 
-If you already have native IPv6, you probably don't need to set this up. If you don't have native IPv6, this allows you to get IPv6 connectivity to your devices.\
 Cloudflare WARP Connector does not support site-to-site IPv6, so IPv6 port forwarding is needed.\
 It is recommended to just set a static IPv6 address to every device that needs IPv6 port forwarding instead of relying on SLAAC so that the IPv6 address for port forwarding does not change.
 
 1. Add Cloudflare WARP's IPv6 address to the WireGuard interface.\
-`/ipv6 address add address=2606:4700:110:8ced:11b5:d064:abc:ee89/128 interface=Cloudflare-WARP`
-2. Add IPv6 ULA to your LAN interface. Make sure the prefix you chose does not conflict with the Cloudflare WARP-to-WARP IPv6 range.\
+`/ipv6 address add address=2606:4700:cf1:1000::1/64 interface=Cloudflare-WARP`
+2. [Generate IPv6 ULA](https://unique-local-ipv6.com) and add it to your LAN interface.\
 `/ipv6 address add address=fd00:1234:5678:9abc::/64 advertise=no interface=bridge`
 3. Enable NAT66. Yes, I know NAT is bad, awful when we are talking about IPv6, but since Cloudflare WARP only provides a single IPv6 address, it's necessary to use NAT in IPv6. The `to-address` should be set to the IPv6 address of the WireGuard interface.\
-`/ipv6 firewall nat add action=src-nat chain=srcnat out-interface=Cloudflare-WARP to-address=2606:4700:110:8b7b:2edb:5201:dddd:19fd/128`
-4. Add an IPv6 route. If you have native IPv6 connectivity, use Cloudflare WARP-to-WARP IPv6 range `fd00::/8`, if you don't have native IPv6, use `::/0`.\
+`/ipv6 firewall nat add action=src-nat chain=srcnat out-interface=Cloudflare-WARP to-address=2606:4700:cf1:1000::1`
+4. Add an IPv6 route. If you already have native IPv6, you probably don't need to set this up. If you don't have native IPv6, this allows you to get IPv6 connectivity to your devices. (Optional)\
 `/ipv6 route add dst-address=::/0 gateway=Cloudflare-WARP`
 5. Allow the IPv6 firewall to accept packets that are port forwarded. (Optional if you want to port forward on IPv6.)\
 `/ipv6 firewall filter set [find action=drop chain=forward in-interface-list="!LAN"] comment="defconf: drop everything else not coming from LAN not DSTNATed" connection-nat-state=!dstnat`
@@ -138,10 +138,14 @@ The `dst-address` should be set to the IPv6 address of the WireGuard interface.
 
 To port forward TCP port `8080` of `fd00:1234:5678:9abc::1`:
 ```
-/ipv6 firewall nat add action=dst-nat chain=dstnat dst-address=2606:4700:110:8b7b:2edb:5201:dddd:19fd/128 dst-port=8080 in-interface=Cloudflare-WARP protocol=tcp to-addresses=fd00:1234:5678:9abc::1/128
+/ipv6 firewall nat add action=dst-nat chain=dstnat dst-address=2606:4700:cf1:1000::1 dst-port=8080 in-interface=Cloudflare-WARP protocol=tcp to-address=fd00:1234:5678:9abc::1
 ```
 
 ## Test site-to-site VPN
+
+### On your device inside your LAN
+
+1. Try to ping and access the server that is on the other site's IP range.
 
 ### On your device outside your LAN
 

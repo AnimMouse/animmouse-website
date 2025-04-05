@@ -2,7 +2,7 @@
 title: Setup Cloudflare WARP-to-WARP on MikroTik
 description: Setup Cloudflare Zero Trust and port forwarding on RouterOS
 date: 2023-08-27T00:16:00+08:00
-lastmod: 2025-03-10T00:04:00+08:00
+lastmod: 2025-04-05T23:52:00+08:00
 tags:
   - Cloudflare
   - RouterOS
@@ -15,7 +15,7 @@ Cloudflare WARP-to-WARP is an overlay network just like ZeroTier and Tailscale b
 
 Because Cloudflare WARP uses WireGuard, we can run Cloudflare WARP on MikroTik and port forward on our virtual network at Cloudflare.
 
-Update: A new tutorial that uses WARP Connector instead is [here](../setup-cloudflare-warp-connector-on-mikrotik/). You don't need to port forward anymore.
+Update: A new tutorial that uses WARP Connector instead is [here](../setup-cloudflare-warp-connector-on-mikrotik/). It works the same but you don't need to port forward anymore.
 
 ## Cloudflare Zero Trust settings
 
@@ -42,6 +42,7 @@ This allows Cloudflare WARP-to-WARP traffic to pass though the WireGuard instead
 3. Make sure split tunnels is set to Exclude IPs and domains.
 4. Click "Manage" on Split Tunnels.
 5. Remove IP range `100.64.0.0/10` and `fd00::/8`.
+6. Add IP range `100.64.0.0/11` and `100.112.0.0/12`. (Optional)
 
 ## Generate Cloudflare Zero Trust WireGuard configuration
 
@@ -57,7 +58,7 @@ The program will output a WireGuard configuration like this:
 # routing-id: 0x000000
 [Interface]
 PrivateKey = your_private_key
-Address = 2606:4700:110:8ced:11b5:d064:abc:ee89/128
+Address = 2606:4700:cf1:1000::1/128
 Address = 100.96.0.1/32
 DNS = 1.1.1.1
 DNS = 2606:4700:4700::1111
@@ -82,7 +83,7 @@ Endpoint = engage.cloudflareclient.com:2408
 1. Add Cloudflare WARP's IPv4 address to the WireGuard interface. Replace `/32` subnet to `/12` so that a dynamic IPv4 route will automatically be created.\
 `/ip address add address=100.96.0.1/12 interface=Cloudflare-WARP`
 2. Enable NAT44. The `to-address` should be set to the IPv4 address of the WireGuard interface.\
-`/ip firewall nat add action=src-nat chain=srcnat out-interface=Cloudflare-WARP to-addresses=100.96.0.1`
+`/ip firewall nat add action=src-nat chain=srcnat out-interface=Cloudflare-WARP to-address=100.96.0.1`
 
 ### IPv4 port forwarding example
 
@@ -90,21 +91,20 @@ The `dst-address` should be set to the IPv4 address of the WireGuard interface.
 
 To port forward TCP port `8080` of `192.168.1.2`:
 ```
-/ip firewall nat add action=dst-nat chain=dstnat dst-address=100.96.0.1 dst-port=8080 in-interface=Cloudflare-WARP protocol=tcp to-addresses=192.168.1.2
+/ip firewall nat add action=dst-nat chain=dstnat dst-address=100.96.0.1 dst-port=8080 in-interface=Cloudflare-WARP protocol=tcp to-address=192.168.1.2
 ```
 
 ## Setup IPv6
 
-If you already have native IPv6, you probably don't need to set this up. If you don't have native IPv6, this allows you to get IPv6 connectivity to your devices.\
 It is recommended to just set a static IPv6 address to every device that needs IPv6 port forwarding instead of relying on SLAAC so that the IPv6 address for port forwarding does not change.
 
-1. Add Cloudflare WARP's IPv6 address to the WireGuard interface.\
-`/ipv6 address add address=2606:4700:110:8ced:11b5:d064:abc:ee89/128 interface=Cloudflare-WARP`
-2. Add IPv6 ULA to your LAN interface. Make sure the prefix you chose does not conflict with the Cloudflare WARP-to-WARP IPv6 range.\
+1. Add Cloudflare WARP's IPv6 address to the WireGuard interface. Replace `/128` subnet to `/64` so that a dynamic IPv6 route will automatically be created.\
+`/ipv6 address add address=2606:4700:cf1:1000::1/64 interface=Cloudflare-WARP`
+2. [Generate IPv6 ULA](https://unique-local-ipv6.com) and add it to your LAN interface.\
 `/ipv6 address add address=fd00:1234:5678:9abc::/64 advertise=no interface=bridge`
 3. Enable NAT66. Yes, I know NAT is bad, awful when we are talking about IPv6, but since Cloudflare WARP only provides a single IPv6 address, it's necessary to use NAT in IPv6. The `to-address` should be set to the IPv6 address of the WireGuard interface.\
-`/ipv6 firewall nat add action=src-nat chain=srcnat out-interface=Cloudflare-WARP to-address=2606:4700:110:8b7b:2edb:5201:dddd:19fd/128`
-4. Add an IPv6 route. If you have native IPv6 connectivity, use Cloudflare WARP-to-WARP IPv6 range `fd00::/8`, if you don't have native IPv6, use `::/0`.\
+`/ipv6 firewall nat add action=src-nat chain=srcnat out-interface=Cloudflare-WARP to-address=2606:4700:cf1:1000::1`
+4. Add an IPv6 route. If you already have native IPv6, you probably don't need to set this up. If you don't have native IPv6, this allows you to get IPv6 connectivity to your devices. (Optional)\
 `/ipv6 route add dst-address=::/0 gateway=Cloudflare-WARP`
 5. Allow the IPv6 firewall to accept packets that are port forwarded. (Optional if you want to port forward on IPv6.)\
 `/ipv6 firewall filter set [find action=drop chain=forward in-interface-list="!LAN"] comment="defconf: drop everything else not coming from LAN not DSTNATed" connection-nat-state=!dstnat`
@@ -115,7 +115,7 @@ The `dst-address` should be set to the IPv6 address of the WireGuard interface.
 
 To port forward TCP port `8080` of `fd00:1234:5678:9abc::1`:
 ```
-/ipv6 firewall nat add action=dst-nat chain=dstnat dst-address=2606:4700:110:8b7b:2edb:5201:dddd:19fd/128 dst-port=8080 in-interface=Cloudflare-WARP protocol=tcp to-addresses=fd00:1234:5678:9abc::1/128
+/ipv6 firewall nat add action=dst-nat chain=dstnat dst-address=2606:4700:cf1:1000::1 dst-port=8080 in-interface=Cloudflare-WARP protocol=tcp to-address=fd00:1234:5678:9abc::1
 ```
 
 ## Test port forwarding
@@ -125,17 +125,17 @@ To port forward TCP port `8080` of `fd00:1234:5678:9abc::1`:
 1. Go to My Team, and Devices.
 2. Select the device name besides the email that you used for your MikroTik router.
 
-For this example, the IP addresses are `100.96.0.1` and `fd10:ec7e:5e94::1`
+For this example, the IP addresses are `100.96.0.1` and `2606:4700:cf1:1000::1`
 
 ### On your device outside your LAN
 
 1. Download Cloudflare WARP on your device.
 2. Login to Cloudflare Zero Trust.
 3. Turn on Cloudflare Zero Trust.
-4. Try to ping and access the server that is port forwarded at `100.96.0.1` and `fd10:ec7e:5e94::1`.
+4. Try to ping and access the server that is port forwarded at `100.96.0.1` and `2606:4700:cf1:1000::1`.
 
 ## DNS hostnames
 
-If you own a domain name, you can use a subdomain that is pointed at `100.96.0.1` and `fd10:ec7e:5e94::1` since the IP allocation on the Cloudflare virtual network is static.
+If you own a domain name, you can use a subdomain that is pointed at `100.96.0.1` and `2606:4700:cf1:1000::1` since the IP allocation on the Cloudflare virtual network is static.
 
 [^1]: [WARP with firewall: WARP ingress IP](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/firewall/#warp-ingress-ip)
