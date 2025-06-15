@@ -16,7 +16,7 @@ Windows 11 2024 Update (24H2)
 
 ## Torrent Download Link (Magnet Link):
 
-[Windows 11 IoT LTSC 2024 26100.1742](magnet:?xt=urn:btih:e6153168671baaf17aef71584d194147033180fd)\
+[Windows 11 LTSC 2024 26100.1742](magnet:?xt=urn:btih:e6153168671baaf17aef71584d194147033180fd)\
 64-bit torrent
 
 ```
