@@ -1,0 +1,26 @@
+name: Deploy to Cloudflare Pages
+on:
+  push:
+    branches: [main]
+    paths: [assets/**, content/**, layouts/**, static/**, themes/**, hugo.yaml]
+  pull_request_target:
+    branches: [main]
+    paths: [assets/**, content/**, layouts/**, static/**, themes/**, hugo.yaml]
+  workflow_dispatch:
+  
+concurrency:
+  group: ${{ github.workflow }}
+  
+jobs:
+  deploy:
+    if: github.triggering_actor == github.repository_owner || (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]')
+    uses: AnimMouse/Hugo-Deploy-Workflow/.github/workflows/cloudflare-pages.yaml@v1
+    with:
+      project_name: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+      account_id: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+      branch: ${{ github.head_ref || 'main' }}
+      ref: ${{ github.event.pull_request.head.sha }}
+      cache_resources: true
+      extended: true
+    secrets:
+      api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
