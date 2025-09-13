@@ -1,7 +1,7 @@
 ---
 title: Favorite Quotes
 date: 2020-09-21T00:33:48+08:00
-lastmod: 2024-10-15T17:40:00+08:00
+lastmod: 2025-09-14T04:22:00+08:00
 categories:
   - meta
 ---
@@ -82,6 +82,18 @@ categories:
 > You wake up one day, and your legs... They just give, and you just can't run anymore.
 > — Michael De Santa[^25]
 
+> And that is why the buddy system is invented. Send your buddy first.
+> — 72jon[^26]
+
+> Don't be a slave to the metrics. We're data-informed, not data-driven. Data informs; people drive.
+> — bonniemuffin[^27]
+
+> A computer can never be held accountable, therefore a computer must never make a management decision.
+> — IBM Training Manual[^28]
+
+> If it’s my destiny to end up a statistic, there’s no one else I’d rather become a statistic with than you.
+> — Colleen Hoover[^29]
+
 [^1]: [Albert Einstein](https://www.goodreads.com/quotes/8136665-everybody-is-a-genius-but-if-you-judge-a-fish)
 [^2]: [Antoine de Saint-Exupéry](https://www.goodreads.com/quotes/87476-a-goal-without-a-plan-is-just-a-wish)
 [^3]: [Maimonides](https://www.brainyquote.com/quotes/maimonides_326751) and [Anne Isabella Thackeray Ritchie](https://en.wiktionary.org/wiki/give_a_man_a_fish_and_you_feed_him_for_a_day;_teach_a_man_to_fish_and_you_feed_him_for_a_lifetime)
@@ -107,3 +119,7 @@ categories:
 [^23]: [Obvious Plant (Dylan)](https://www.instagram.com/p/BLv9lX6D7JI)
 [^24]: [Jeremy England](https://www.quantamagazine.org/a-new-thermodynamics-theory-of-the-origin-of-life-20140122/)
 [^25]: [Michael De Santa](https://www.goodreads.com/quotes/11237854-look-you-wake-up-one-day-and-and-your-legs)
+[^26]: [72jon](https://www.reddit.com/r/4x4/comments/1abu2kd/comment/kjq7nmz/)
+[^27]: [bonniemuffin](https://news.ycombinator.com/item?id=17325258)
+[^28]: [IBM Training Manual](https://www.ibm.com/think/insights/ai-decision-making-where-do-businesses-draw-the-line)
+[^29]: [Colleen Hoover](https://www.goodreads.com/quotes/11411264-if-it-s-my-destiny-to-end-up-a-statistic-there-s)

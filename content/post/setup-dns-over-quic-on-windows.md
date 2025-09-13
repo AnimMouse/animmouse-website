@@ -2,7 +2,7 @@
 title: Setup DNS over QUIC on Windows
 description: Install dnsproxy and use DNS over QUIC on Windows
 date: 2024-04-17T00:12:00+08:00
-lastmod: 2024-04-18T21:57:00+08:00
+lastmod: 2025-09-14T04:28:00+08:00
 tags:
   - DNS
   - Windows
@@ -41,11 +41,11 @@ Unlike DNS over HTTPS and HTTPS/3 (DoH and DoH3), DoQ does not attempt to hide i
 Here is an example config that uses NextDNS's DNS-over-QUIC resolver:\
 Note that you need to specify a bootstrap server since by default, dnsproxy uses a system-provided DNS server, which is the dnsproxy itself `127.0.0.1` which causes a loop.
 ```
--l 127.0.0.1 -u quic://dns.nextdns.io -b 192.168.1.1
+-l 127.0.0.1 -l ::1 -u quic://dns.nextdns.io -b 1.1.1.1 -b 2606:4700:4700::1111
 ```
-If you have local DNS server at `192.168.1.1`, you can specify `home.arpa` to resolve at `192.168.1.1`. Also enable cache.
+If you have local DNS server at `192.168.1.1`, you can specify `home.arpa` to resolve at `192.168.1.1`. Also enable cache and EDNS.
 ```
--l 127.0.0.1 -u quic://dns.nextdns.io -u [/home.arpa/]192.168.1.1 -b 192.168.1.1 --cache --cache-optimistic
+-l 127.0.0.1 -l ::1 -u quic://dns.nextdns.io -u [/home.arpa/]192.168.1.1 -b 1.1.1.1 -b 2606:4700:4700::1111 --cache --cache-optimistic --edns
 ```
 5. Click OK.
 
@@ -73,5 +73,11 @@ Network Connectivity Status Indicator is a feature in Windows that determines if
 5. Click OK.
 
 ## Setup Windows DNS to use DNS Proxy
-1. Change the "Preferred DNS server" setting on your network interface to `127.0.0.1`.
+
+### IPv4
+1. Change the "Preferred DNS server" setting on your network interface' IPv4 to `127.0.0.1`.
+2. Leave the "Alternate DNS server" setting to blank.
+
+### IPv6
+1. Change the "Preferred DNS server" setting on your network interface' IPv6 to `::1`.
 2. Leave the "Alternate DNS server" setting to blank.
