@@ -2,14 +2,14 @@
 title: About
 description: About Anim Mouse
 date: 2020-12-30T15:40:00+08:00
-lastmod: 2024-12-25T18:21:00+08:00
+lastmod: 2025-10-21T03:24:00+08:00
 menu:
   main:
     weight: -90
     params:
       icon: user
 ---
-Hi! I’m a person with interest and knowledge who loves to harness the power of computers. I'm currently pursuing Computer Science.
+Hi! I’m a person with interest and knowledge who loves to harness the power of computers. I graduated with a degree in Computer Science and currently working at [Byrdson Services](https://byrdsonservices.com) as a DevOps Engineer.
 
 My computer journey:\
 My mother and father met online, specifically Yahoo! Messenger—that is why computers were a big part of me before I was even born.\

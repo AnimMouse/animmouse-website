@@ -1,7 +1,7 @@
 ---
 title: Favorite Quotes
 date: 2020-09-21T00:33:48+08:00
-lastmod: 2025-09-14T04:22:00+08:00
+lastmod: 2025-10-21T03:17:00+08:00
 categories:
   - meta
 ---
@@ -94,6 +94,15 @@ categories:
 > If it’s my destiny to end up a statistic, there’s no one else I’d rather become a statistic with than you.
 > — Colleen Hoover[^29]
 
+> If at first you don’t succeed, rearrange your internal organs.
+> — black_flag_4ever[^30]
+
+> Self snitching removes all plausible deniability.
+> — truth_hurtsm8ey[^31]
+
+> If you are asking the question then you don’t know.
+> — emats12[^32]
+
 [^1]: [Albert Einstein](https://www.goodreads.com/quotes/8136665-everybody-is-a-genius-but-if-you-judge-a-fish)
 [^2]: [Antoine de Saint-Exupéry](https://www.goodreads.com/quotes/87476-a-goal-without-a-plan-is-just-a-wish)
 [^3]: [Maimonides](https://www.brainyquote.com/quotes/maimonides_326751) and [Anne Isabella Thackeray Ritchie](https://en.wiktionary.org/wiki/give_a_man_a_fish_and_you_feed_him_for_a_day;_teach_a_man_to_fish_and_you_feed_him_for_a_lifetime)
@@ -123,3 +132,6 @@ categories:
 [^27]: [bonniemuffin](https://news.ycombinator.com/item?id=17325258)
 [^28]: [IBM Training Manual](https://www.ibm.com/think/insights/ai-decision-making-where-do-businesses-draw-the-line)
 [^29]: [Colleen Hoover](https://www.goodreads.com/quotes/11411264-if-it-s-my-destiny-to-end-up-a-statistic-there-s)
+[^30]: [black_flag_4ever](https://www.reddit.com/r/todayilearned/comments/neu1du/comment/gyj5qrt/)
+[^31]: [truth_hurtsm8ey](https://www.reddit.com/r/wallstreetbets/comments/1axv7j0/comment/krr25k2/)
+[^32]: [emats12](https://www.reddit.com/r/LGOLED/comments/17gl9m0/comment/k6hesad/)

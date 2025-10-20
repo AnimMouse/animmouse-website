@@ -73,9 +73,6 @@ links:
   - title: 0000004.xyz
     description: Anim Mouse’s FreeDNS domain
     website: https://www.0000004.xyz
-  - title: Chess.com
-    description: Chess.com Account
-    website: https://www.chess.com/member/AnimMouse
 menu:
   main:
     weight: -50
