@@ -34,10 +34,7 @@ params:
     sidebar:
         emoji:
         subtitle: A person who loves to harness the power of computers.
-        avatar:
-            enabled: true
-            local: true
-            src: img/animmouse.png
+        avatar: img/animmouse.png
 
     article:
         math: false
