@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Configuring BGP on VPS'
 description: How to configure BGP using BIRD and announce your IPv6 prefix on VPS
 date: 2024-04-24T22:24:00+08:00
-lastmod: 2024-12-31T00:45:00+08:00
+lastmod: 2026-02-14T20:11:00+08:00
 tags:
   - ASN
   - BGP
@@ -17,7 +17,6 @@ Your first BGP session, a comprehensive beginners guide to BGP.
 You can find VPS providers here that provides BGP session.
 * [BGP Services](https://bgp.services)
 * [BGP Cheap](https://bgp.cheap)
-* [BGP Directory](https://bgp.directory)
 * [Networking: IPv6 Discord server](https://discord.gg/ipv6)
 
 For this tutorial, I use a BGP IPv6 only VPS from [iFog GmbH](https://my.ifog.ch/order/main/index/BGP-Basic) since it is very cheap.\
@@ -100,7 +99,7 @@ templates:
     remove-all-communities: <Your ASN>
     local-pref: 80
     add-on-import: [ "<Your ASN>:0:12" ] # Add a BGP community attribute entitled "Learned from upstream" on routes imported here
-    import-limit6: 300000
+    import-limit6: 300000 # Pathvector has not been updated yet to support the current IPv6 route table
 
 peers:
   <VPS provider's name>:
@@ -196,7 +195,7 @@ Here is an example config that assigns the first IPv6 address from my IPv6 prefi
 ```
 auto dummy1
 iface dummy1 inet6 static
-    address 2a0a:6044:accd::/48
+    address 2a0a:6044:accd::1/48
     pre-up ip link add $IFACE type dummy
     post-down ip link del $IFACE
 ```
@@ -230,7 +229,7 @@ This does not persist after a reboot.
 2. Assign an IPv6 address to the dummy1 interface.\
 `sudo ip -6 addr add <IPv6 address to assign from your IPv6 prefix> dev dummy1`
 
-Example: `sudo ip -6 addr add 2a0a:6044:accd::/48 dev dummy1`
+Example: `sudo ip -6 addr add 2a0a:6044:accd::1/48 dev dummy1`
 
 ### BGP route propagation
 
@@ -251,11 +250,11 @@ Some programs like ping and curl can bind to specific address on itself.
 
 1. Ping a server using your announced IPv6 address.\
 `ping -I <Your IPv6 address assigned to your dummy1> <IPv6 address to ping>`\
-Example: `ping -I 2a0a:6044:accd:: 2001:4860:4860::8888`
+Example: `ping -I 2a0a:6044:accd::1 2001:4860:4860::8888`
 
 2. Get the IPv6 address of your server using curl.\
 `curl --interface <Your IPv6 address assigned to your dummy1> api.myip.com`\
-Example: `curl --interface 2a0a:6044:accd:: api.myip.com`
+Example: `curl --interface 2a0a:6044:accd::1 api.myip.com`
 
 ### Setting the source IP via the routing table
 
@@ -277,7 +276,7 @@ We can add a new default route with a lower metric than that default route but w
 2. Create a new default route with a lower metric and a source IP address.\
 `sudo ip -6 route add default via <Gateway IPv6 address> dev eth0 src <Your IPv6 address assigned to your dummy1> metric 512`\
 Example with my gateway and announced IPv6 address:\
-`sudo ip -6 route add default via 2a0c:9a40:2510:1001::1 dev eth0 src 2a0a:6044:accd:: metric 512`
+`sudo ip -6 route add default via 2a0c:9a40:2510:1001::1 dev eth0 src 2a0a:6044:accd::1 metric 512`
 
 3. Check the routing table again. Take note that there are 2 default routes, but 1 default route with a source IP is higher.\
 `ip -6 route`
@@ -300,15 +299,15 @@ Automatic: Add your chosen IPv6 address to `/etc/network/interfaces.d/dummy1`.
 ```
 auto dummy1
 iface dummy1 inet6 static
-    address 2a0a:6044:accd::/48
+    address 2a0a:6044:accd::1/48
     pre-up ip link add $IFACE type dummy
     post-down ip link del $IFACE
 iface dummy1 inet6 static
-    address 2a0a:6044:accd::1:5ee:900d:c0de/48
+    address 2a0a:6044:accd::1:5ee:900d:c0de/128
 ```
 Then reload the interface. `sudo ifdown dummy1 && sudo ifup dummy1`
 
-Manual: `sudo ip -6 addr add 2a0a:6044:accd::1:5ee:900d:c0de/48 dev dummy1`
+Manual: `sudo ip -6 addr add 2a0a:6044:accd::1:5ee:900d:c0de/128 dev dummy1`
 
 2. Use curl to check if you are getting the right IPv6 address.\
 `curl --interface 2a0a:6044:accd::1:5ee:900d:c0de api.myip.com`

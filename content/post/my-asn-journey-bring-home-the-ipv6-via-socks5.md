@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Bring home the IPv6 via SOCKS5'
 description: How to bring your announced IPv6 prefix to home using Dante SOCKS5 proxy
 date: 2024-04-28T00:09:00+08:00
-lastmod: 2024-12-31T00:47:00+08:00
+lastmod: 2026-02-14T20:13:00+08:00
 tags:
   - ASN
   - VPS
@@ -157,7 +157,7 @@ user.unprivileged: nobody
 internal: 0.0.0.0 port=1080 # Listen to the whole IPv4 internet
 
 # The proxying network interface or address.
-external: 2a0a:6044:accd::
+external: 2a0a:6044:accd::1
 # IPv4 from Cloudflare WARP WireGuard
 external: wg0
 

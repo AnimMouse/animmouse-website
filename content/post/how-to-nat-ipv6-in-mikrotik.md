@@ -2,7 +2,7 @@
 title: How to NAT IPv6 in MikroTik
 description: IPv6 NAT and port forwarding in RouterOS
 date: 2022-10-28T20:29:22+08:00
-lastmod: 2023-10-31T22:58:00+08:00
+lastmod: 2026-02-14T23:36:00+08:00
 tags:
   - RouterOS
   - MikroTik
@@ -38,7 +38,7 @@ RouterOS v7.1 and up supports NAT66.
 4. Make sure you have an IPv6 route that goes to the gateway on where the IPv6 connectivity is coming from. If the route does not exist, add a route.
    1. Choose the right gateway depending on where the IPv6 connectivity is coming from.
    2. Add route entry.\
-   `/ipv6 route add dst-address=2000::/3 gateway=ether1`
+   `/ipv6 route add dst-address=::/0 gateway=ether1`
 
 5. Allow IPv6 firewall to accept packets that are port forwarded. (Optional)\
 `/ipv6 firewall filter set [find action=drop chain=forward in-interface-list="!LAN"] comment="defconf: drop everything else not coming from LAN not DSTNATed" connection-nat-state=!dstnat`
