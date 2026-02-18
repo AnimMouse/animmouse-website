@@ -2,7 +2,7 @@
 title: 'My ASN Journey: Bring home the IPv6 via WireGuard'
 description: How to bring your announced IPv6 prefix to your home router using WireGuard on MikroTik
 date: 2024-04-29T19:17:00+08:00
-lastmod: 2026-02-14T21:08:00+08:00
+lastmod: 2026-02-19T01:54:00+08:00
 tags:
   - ASN
   - VPS
@@ -128,12 +128,12 @@ iface wg1 inet6 static
 If your VPS has a UFW firewall, add this below the `post-up`:
 
 ```
-    post-up ufw allow 51820 # Allow WireGuard port
+    post-up ufw allow 51820/udp # Allow WireGuard port
     post-up ufw route allow in on $IFACE out on <Your VPS network interface> # Allow site-to-internet routing
     post-up ufw route allow in on $IFACE out on $IFACE # Allow site-to-site routing
     pre-down ufw route delete allow in on $IFACE out on $IFACE
     pre-down ufw route delete allow in on $IFACE out on <Your VPS network interface>
-    pre-down ufw delete allow 51820
+    pre-down ufw delete allow 51820/udp
 ```
 
 ## Set up MikroTik WireGuard

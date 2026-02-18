@@ -2,7 +2,7 @@
 title: How to NAT IPv6 in MikroTik
 description: IPv6 NAT and port forwarding in RouterOS
 date: 2022-10-28T20:29:22+08:00
-lastmod: 2026-02-14T23:36:00+08:00
+lastmod: 2026-02-19T02:07:00+08:00
 tags:
   - RouterOS
   - MikroTik
@@ -17,13 +17,15 @@ So we need to perform NAT66 or masquerade to be able to access the IPv6 internet
 
 RouterOS v7.1 and up supports NAT66.
 
+You can also use [NPTv6](../how-to-perform-nptv6-in-ipv6-on-mikrotik/) if your ISP or VPN at least gives `/64`.
+
 ## Setup IPv6 NAT
 
 1. Set the Neighbor Discovery to the correct interface. By default, Neighbor Discovery is enabled for all interfaces, but it's better to run it just at LAN.\
 `/ipv6 nd set [ find default=yes ] interface=bridge`
 
 2. Add a Unique Local Address. This is equivalent to IPv4 private network addressing.
-   1. Choose your ULA prefix on `fd00::/8`. Example: `fd00:1234:5678:9abc::/64`
+   1. [Generate your ULA prefix](https://unique-local-ipv6.com) on `fd00::/8`. Example: `fd00:1234:5678:9abc::/64`
    2. Add IPv6 ULA in your LAN interface.\
    `/ipv6 address add address=fd00:1234:5678:9abc::/64 advertise=yes interface=bridge`
 

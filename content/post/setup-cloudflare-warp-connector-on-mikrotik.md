@@ -2,7 +2,7 @@
 title: Setup Cloudflare WARP Connector on MikroTik
 description: Setup Cloudflare Zero Trust site-to-site VPN on RouterOS
 date: 2025-03-10T00:04:00+08:00
-lastmod: 2025-09-01T08:32:00+08:00
+lastmod: 2026-02-19T02:14:00+08:00
 tags:
   - Cloudflare
   - RouterOS
@@ -25,8 +25,8 @@ Follow this [tutorial](../setup-cloudflare-warp-connector-using-wireguard/) in o
 
 For example, your MikroTik is in IP range `192.168.1.0/24` and you want other devices in your Cloudflare WARP site-to-site VPN to access all devices under `192.168.1.0/24`.
 
-1. Go to [Networks, and then Routes](https://one.dash.cloudflare.com/?to=/:account/networks/routes).
-2. Click [Create route](https://one.dash.cloudflare.com/?to=/:account/networks/routes/add).
+1. Go to [Networks → Routes](https://one.dash.cloudflare.com/?to=/:account/networks/routes).
+2. Click [Add CIDR route](https://one.dash.cloudflare.com/?to=/:account/networks/routes/add).
 3. Input your MikroTik's IP range in CIDR, like `192.168.1.0/24`.
 4. Select your WARP Connector tunnel name in Tunnel.
 5. Click Create.
@@ -35,10 +35,11 @@ For example, your MikroTik is in IP range `192.168.1.0/24` and you want other de
 
 This allows your private IP range traffic to pass though the WireGuard instead of getting handled as local traffic.
 
-1. Go to [Settings, and WARP Client](https://one.dash.cloudflare.com/?to=/:account/settings/devices).
-2. Click [Default profile, and configure](https://one.dash.cloudflare.com/?to=/:account/settings/devices/profile-settings/default).
-4. Click ["Manage" on Split Tunnels](https://one.dash.cloudflare.com/?to=/:account/settings/devices/profile-settings/default/split-tunnels/exclude/exclude_office_ips_disabled).
-5. Remove IP range that is in your MikroTik IP range. For example, your MikroTik is in IP range `192.168.1.0/24`, then remove `192.168.0.0/16`.
+1. Go to [Team & Resources → Devices → Device profiles](https://one.dash.cloudflare.com/?to=/:account/team-resources/devices/profiles).
+2. Click [Default profile → Edit](https://one.dash.cloudflare.com/?to=/:account/team-resources/devices/device-profiles/default).
+3. Click ["Manage" on Split Tunnels](https://one.dash.cloudflare.com/?to=/:account/team-resources/devices/device-profiles/default/split-tunnels/exclude/exclude_office_ips_disabled).
+4. Remove IP range that is in your MikroTik IP range. For example, your MikroTik is in IP range `192.168.1.0/24`, then remove `192.168.0.0/16`.
+5. Apply the same step on the "WARP Connector" profile you [duplicated earlier](../setup-cloudflare-warp-connector-using-wireguard/#create-a-separate-device-profile-for-warp-connector).
 
 ## Setup MikroTik Cloudflare WARP WireGuard
 

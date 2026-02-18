@@ -2,7 +2,7 @@
 title: Get IPv6 Connectivity on MikroTik Using Cloudflare WARP
 description: Connect to IPv6 only servers on your IPv4 only internet using Cloudflare WARP on RouterOS
 date: 2022-10-31T01:34:12+08:00
-lastmod: 2024-10-15T17:47:00+08:00
+lastmod: 2026-02-19T02:20:00+08:00
 tags:
   - Cloudflare
   - RouterOS
@@ -14,6 +14,8 @@ tags:
 You don't have an IPv6 connection but the server you need to connect has only an IPv6 address because of the IPv4 address exhaustion and some providers are now requiring you to pay to have an IPv4 address.
 
 Note that this will only provide an IPv6 connectivity, not a public IPv6 address that you can connect to from the outside, since Cloudflare WARP only provides a single NATed IPv6.
+
+Update: If you have a Cloudflare account, a new tutorial that uses WARP Connector instead is [here](../setup-cloudflare-warp-connector-on-mikrotik/). It works the same but you will get free WARP Plus routing.
 
 ## Generate Cloudflare WARP account
 

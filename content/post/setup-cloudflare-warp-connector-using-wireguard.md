@@ -2,6 +2,7 @@
 title: Setup Cloudflare WARP Connector using WireGuard
 description: Extract Cloudflare WARP Connector WireGuard configuration for use in WireGuard
 date: 2025-09-01T08:37:00+08:00
+lastmod: 2026-02-17T05:52:00+08:00
 tags:
   - Cloudflare
   - WireGuard
@@ -18,34 +19,44 @@ Because Cloudflare WARP uses WireGuard, we can run Cloudflare WARP Connector on 
 
 ### Cloudflare WARP-to-WARP
 
-1. Go to [Settings, and Network](https://one.dash.cloudflare.com/?to=/:account/settings/network).
-2. Enable Proxy.
-3. Check UDP and ICMP.
-4. Enable "Allow WARP to WARP connection".
+1. Go to [Team & Resources → Devices → Management].
+2. Enable "Allow all Cloudflare One traffic to reach enrolled devices".
 
 ### Let Cloudflare assign the WARP-to-WARP IPv4 range to devices
 
 Instead of getting the same IP address of `172.16.0.2` to every device, we instead enable "Override local interface IP" so that devices get their own unique IP from `100.96.0.0/12`.
 
-1. Go to [Settings, and WARP Client](https://one.dash.cloudflare.com/?to=/:account/settings/devices).
-2. Enable "Override local interface IP".
+1. Go to [Team & Resources → Devices → Management].
+2. Enable "Assign a unique IP address to each device".
 
 ### Configure Split Tunneling
 
 This allows Cloudflare WARP-to-WARP traffic to pass though the WireGuard instead of getting handled as local traffic.
 
-1. Go to [Settings, and WARP Client](https://one.dash.cloudflare.com/?to=/:account/settings/devices).
-2. Click [Default profile, and configure](https://one.dash.cloudflare.com/?to=/:account/settings/devices/profile-settings/default).
+1. Go to [Team & Resources → Devices → Device profiles].
+2. Click [Default profile → Edit](https://one.dash.cloudflare.com/?to=/:account/team-resources/devices/device-profiles/default).
 3. Make sure split tunnels is set to Exclude IPs and domains.
-4. Click ["Manage" on Split Tunnels](https://one.dash.cloudflare.com/?to=/:account/settings/devices/profile-settings/default/split-tunnels/exclude/exclude_office_ips_disabled).
+4. Click ["Manage" on Split Tunnels](https://one.dash.cloudflare.com/?to=/:account/team-resources/devices/device-profiles/default/split-tunnels/exclude/exclude_office_ips_disabled).
 5. Remove IP range `100.64.0.0/10`.
 6. Add IP range `100.64.0.0/11` and `100.112.0.0/12`. (Optional)
 
+### Create a separate device profile for WARP Connector
+
+To ensure that WARP Connector clients will only get a WireGuard configuration instead of a MASQUE configuration.
+
+1. Go to [Team & Resources → Devices → Device profiles].
+2. Duplicate the Default profile.
+3. Name the profile "WARP Connector".
+4. On the "Build an expression", set\
+"User email is `warp_connector@<your-team-name>.cloudflareaccess.com`".
+5. Make sure the Device tunnel protocol is set to WireGuard.
+6. Click "Save profile".
+
 ### Create WARP Connector tunnel
 
-1. Go to [Networks, and then Tunnels](https://one.dash.cloudflare.com/?to=/:account/networks/tunnels).
-2. Click [Create a tunnel](https://one.dash.cloudflare.com/?to=/:account/networks/tunnels/new).
-3. Select [WARP Connector](https://one.dash.cloudflare.com/?to=/:account/networks/tunnels/add/warp).
+1. Go to [Networks → Connectors](https://one.dash.cloudflare.com/?to=/:account/networks/connectors).
+2. Click [Create a tunnel](https://one.dash.cloudflare.com/?to=/:account/networks/connectors/cloudflare-tunnels/new).
+3. Select [WARP Connector](https://one.dash.cloudflare.com/?to=/:account/networks/connectors/cloudflare-tunnels/add/warp).
 4. Make sure all prerequisites are enabled, and then next step.
 5. Name your tunnel, and then Create tunnel.
 6. Copy the WARP Connector token at step 3 that starts with `eyJhIjoi`, and then click next step.
@@ -79,3 +90,6 @@ Endpoint = 162.159.193.1:2408
 ```
 
 Now you can use that WireGuard configuration to any devices that can use WireGuard in order to connect to Cloudflare Zero Trust.
+
+[Team & Resources → Devices → Management]: https://one.dash.cloudflare.com/?to=/:account/team-resources/devices/management
+[Team & Resources → Devices → Device profiles]: https://one.dash.cloudflare.com/?to=/:account/team-resources/devices/profiles

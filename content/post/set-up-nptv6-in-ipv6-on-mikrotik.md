@@ -1,7 +1,8 @@
 ---
-title: How to perform NPTv6 in IPv6 on MikroTik
+title: Set up NPTv6 in IPv6 on MikroTik
 description: Perform IPv6 Network Prefix Translation in RouterOS
 date: 2026-02-14T23:35:00+08:00
+lastmod: 2026-02-19T02:08:00+08:00
 tags:
   - RouterOS
   - MikroTik
@@ -17,12 +18,15 @@ This allows for:
 3. Stateless: No port-mapping or state tables required.
 
 Example Mapping:
-* Internal: `fd00::1` → External: `2001:db8::1`
-* Internal: `fd00::2` → External: `2001:db8::2`
+* Internal: `fd00::1` → Desired External: `2001:db8::1` → Actual External: `2001:db8::cf47:0:0:1`
+* Internal: `fd00::2` → Desired External: `2001:db8::2` → Actual External: `2001:db8::cf47:0:0:2`
+
+Take note that actual external IP will be different, as NPTv6 will perform a checksum-neutral mapping.
 
 Use cases:
 1. ISPs or VPNs that only provides /64 and does not provide prefix delegation. You can give your end devices IPv6 connectivity while retaining end-to-end connectivity.
 2. Deprioritizing IPv6 tunnel broker connection. You typically don't want to use the IPv6 tunnel broker connection as it has higher latency than native IPv4, so you deprioritize it by using ULA while retaining the ability to host globally accessible services without the complexity of traditional NAT.
+3. Handling dynamic IPv6 prefix by the ISP. Some ISP gives dynamic prefix, which means you have to renumber again if the prefix changes. NPTv6 makes your internal prefix stable.
 
 ## Setup IPv6 NPTv6
 
@@ -30,7 +34,7 @@ Use cases:
 `/ipv6 nd set [ find default=yes ] interface=bridge`
 
 2. Add a Unique Local Address. This is equivalent to IPv4 private network addressing.
-   1. Choose your ULA prefix on `fd00::/8`. Example: `fd00:1234:5678:9abc::/64`
+   1. [Generate your ULA prefix](https://unique-local-ipv6.com) on `fd00::/8`. Example: `fd00:1234:5678:9abc::/64`
    2. Add IPv6 ULA in your LAN interface.\
    `/ipv6 address add address=fd00:1234:5678:9abc::/64 advertise=yes interface=bridge`
 
@@ -42,8 +46,10 @@ Use cases:
    `/ipv6 firewall mangle add action=dnpt chain=prerouting in-interface=ether1 dst-address=2001:db8::/64 src-prefix=2001:db8::/64 dst-prefix=fd00:1234:5678:9abc::/64`
 
 4. Disable connection tracking on the ULA prefix. NPTv6 is supposed to be stateless but MikroTik tracks it and drops the packets as invalid, so we need to disable connection tracking.
-   1. `/ipv6 firewall raw add action=notrack chain=prerouting src-address=fd00:1234:5678:9abc::/64`
-   2. `/ipv6 firewall raw add action=notrack chain=prerouting dst-address=2001:db8::/64`
+   1. Add raw entry for outgoing traffic.\
+   `/ipv6 firewall raw add action=notrack chain=prerouting src-address=fd00:1234:5678:9abc::/64`
+   2. Add raw entry for incoming traffic.\
+   `/ipv6 firewall raw add action=notrack chain=prerouting dst-address=2001:db8::/64`
 
 5. Make sure you have an IPv6 route that goes to the gateway on where the IPv6 connectivity is coming from. If the route does not exist, add a route.
    1. Choose the right gateway depending on where the IPv6 connectivity is coming from.
