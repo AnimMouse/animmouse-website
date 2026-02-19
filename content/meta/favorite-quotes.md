@@ -1,7 +1,7 @@
 ---
 title: Favorite Quotes
 date: 2020-09-21T00:33:48+08:00
-lastmod: 2025-10-21T03:17:00+08:00
+lastmod: 2026-02-19T17:24:00+08:00
 categories:
   - meta
 ---
@@ -103,6 +103,24 @@ categories:
 > If you are asking the question then you don’t know.
 > — emats12[^32]
 
+> To break the unbreakable, one must remove its purpose rather than its strength.
+> — Narkk Digger[^33]
+
+> It's not about money... it's about sending a message.
+> — Joker[^34]
+
+> I got caught up in the money, the power...
+> — Big Smoke[^35]
+
+> To err is human; to really foul things up requires a computer.
+> — Paul Ehrlich[^36]
+
+> To make error is human. To propagate error to all server in automatic way is DevOps.
+> — DevOps Borat[^37]
+
+> Some men die of thirst, while others drown.
+> — Unknown
+
 [^1]: [Albert Einstein](https://www.goodreads.com/quotes/8136665-everybody-is-a-genius-but-if-you-judge-a-fish)
 [^2]: [Antoine de Saint-Exupéry](https://www.goodreads.com/quotes/87476-a-goal-without-a-plan-is-just-a-wish)
 [^3]: [Maimonides](https://www.brainyquote.com/quotes/maimonides_326751) and [Anne Isabella Thackeray Ritchie](https://en.wiktionary.org/wiki/give_a_man_a_fish_and_you_feed_him_for_a_day;_teach_a_man_to_fish_and_you_feed_him_for_a_lifetime)
@@ -135,3 +153,8 @@ categories:
 [^30]: [black_flag_4ever](https://www.reddit.com/r/todayilearned/comments/neu1du/comment/gyj5qrt/)
 [^31]: [truth_hurtsm8ey](https://www.reddit.com/r/wallstreetbets/comments/1axv7j0/comment/krr25k2/)
 [^32]: [emats12](https://www.reddit.com/r/LGOLED/comments/17gl9m0/comment/k6hesad/)
+[^33]: [Narkk Digger](https://www.facebook.com/ProjectNightfall/posts/pfbid0sofQJbcdVrUCXiD8rJknd2egHvVZmiEKmNWWhn454SqY2ufVWwoS8i2i4nrMr8QVl?comment_id=896794769369089)
+[^34]: [Joker](https://nolan-batman.fandom.com/wiki/Joker/Quote#The_Dark_Knight)
+[^35]: [Big Smoke](https://gta.fandom.com/wiki/Big_Smoke#Quotes)
+[^36]: [Paul Ehrlich](https://quoteinvestigator.com/2010/12/07/foul-computer/)
+[^37]: [DevOps Borat](https://x.com/DEVOPS_BORAT/status/41587168870797312)
