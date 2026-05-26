@@ -1,8 +1,8 @@
 ---
 title: Set up NPTv6 in IPv6 on MikroTik
-description: Perform IPv6 Network Prefix Translation in RouterOS
+description: Perform IPv6 Network Prefix Translation on RouterOS
 date: 2026-02-14T23:35:00+08:00
-lastmod: 2026-02-19T02:08:00+08:00
+lastmod: 2026-05-27T06:04:00+08:00
 tags:
   - RouterOS
   - MikroTik
@@ -28,6 +28,16 @@ Use cases:
 2. Deprioritizing IPv6 tunnel broker connection. You typically don't want to use the IPv6 tunnel broker connection as it has higher latency than native IPv4, so you deprioritize it by using ULA while retaining the ability to host globally accessible services without the complexity of traditional NAT.
 3. Handling dynamic IPv6 prefix by the ISP. Some ISP gives dynamic prefix, which means you have to renumber again if the prefix changes. NPTv6 makes your internal prefix stable.
 
+Considerations:
+
+Unfortunately, due to the architecture of the Linux Netfilter kernel, you will need to disable IPv6 stateful firewall for packets that are being rewritten on NPTv6 as the mangle table, where the NPTv6 resides, cannot communicate with the conntrack engine that powers the stateful firewall, requiring us to use notrack in order to make NPTv6 work.\
+Because of this, MikroTik tracks the rewritten IPv6 packets and drops the packets as invalid, so we need to disable connection tracking.
+
+You can either:
+1. NPTv6 without a stateful firewall, and then you rely on your end client's own firewall.
+2. NPTv6 with a stateless firewall, but not effective on UDP packets.
+3. Instead of NPTv6, use [IPv6 Netmap](../set-up-ipv6-netmap-on-mikrotik/).
+
 ## Setup IPv6 NPTv6
 
 1. Set the Neighbor Discovery to the correct interface. By default, Neighbor Discovery is enabled for all interfaces, but it's better to run it just at LAN.\
@@ -45,7 +55,8 @@ Use cases:
    3. Add mangle entry for incoming traffic. Source prefix must be the GUA and the destination prefix must be the ULA.\
    `/ipv6 firewall mangle add action=dnpt chain=prerouting in-interface=ether1 dst-address=2001:db8::/64 src-prefix=2001:db8::/64 dst-prefix=fd00:1234:5678:9abc::/64`
 
-4. Disable connection tracking on the ULA prefix. NPTv6 is supposed to be stateless but MikroTik tracks it and drops the packets as invalid, so we need to disable connection tracking.
+4. Disable connection tracking on the ULA prefix.\
+   Warning, this will disable the stateful firewall on every packets rewritten by NPTv6.
    1. Add raw entry for outgoing traffic.\
    `/ipv6 firewall raw add action=notrack chain=prerouting src-address=fd00:1234:5678:9abc::/64`
    2. Add raw entry for incoming traffic.\
@@ -56,5 +67,5 @@ Use cases:
    2. Add route entry.\
    `/ipv6 route add dst-address=::/0 gateway=ether1`
 
-6. Try to ping an IPv6 server or use [test-ipv6.com](https://test-ipv6.com).\
-If you get "Your browser has a real working IPV6 address but is avoiding using it." on test-ipv6.com, this is normal as IPv4 has higher metric than IPv6 ULA. To prefer IPv6, either change the metric on your device or use an unallocated address like `ace:cab:deca:deed::/64`.
+6. Try to ping an IPv6 server or use [test-ipv6.run](https://test-ipv6.run).\
+If you get "Your browser uses IPv4 by default" on test-ipv6.run, this is normal as IPv4 has higher metric than IPv6 ULA. To prefer IPv6, either change the metric on your device or use an unallocated address like `ace:cab:deca:deed::/64`.
